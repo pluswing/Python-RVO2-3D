@@ -64,6 +64,12 @@ cdef extern from "RVOSimulator.h" namespace "RVO":
 
         void setAgentVelocity(size_t agentNo, const Vector3 & velocity)
         void setTimeStep(float timeStep)
+        
+        # 加速度制限機能
+        float getAgentMaxAcceleration(size_t agentNo) const
+        float getAgentMaxDeceleration(size_t agentNo) const
+        void setAgentMaxAcceleration(size_t agentNo, float maxAcceleration)
+        void setAgentMaxDeceleration(size_t agentNo, float maxDeceleration)
 
 
 cdef class PyRVOSimulator:
@@ -166,3 +172,25 @@ cdef class PyRVOSimulator:
         self.thisptr.setAgentVelocity(agent_no, c_velocity)
     def setTimeStep(self, float time_step):
         self.thisptr.setTimeStep(time_step)
+    
+    # 加速度制限機能のメソッド
+    def getAgentMaxAcceleration(self, size_t agent_no):
+        """エージェントの最大加速度を取得"""
+        return self.thisptr.getAgentMaxAcceleration(agent_no)
+    
+    def getAgentMaxDeceleration(self, size_t agent_no):
+        """エージェントの最大減速度を取得"""
+        return self.thisptr.getAgentMaxDeceleration(agent_no)
+    
+    def setAgentMaxAcceleration(self, size_t agent_no, float max_acceleration):
+        """エージェントの最大加速度を設定"""
+        self.thisptr.setAgentMaxAcceleration(agent_no, max_acceleration)
+    
+    def setAgentMaxDeceleration(self, size_t agent_no, float max_deceleration):
+        """エージェントの最大減速度を設定"""
+        self.thisptr.setAgentMaxDeceleration(agent_no, max_deceleration)
+    
+    def setAgentAccelerationLimits(self, size_t agent_no, float max_acceleration, float max_deceleration):
+        """エージェントの加速度・減速度制限を同時設定（便利メソッド）"""
+        self.setAgentMaxAcceleration(agent_no, max_acceleration)
+        self.setAgentMaxDeceleration(agent_no, max_deceleration)

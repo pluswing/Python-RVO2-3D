@@ -105,7 +105,7 @@ namespace RVO {
 	 */
 	void linearProgram4(const std::vector<Plane> &planes, size_t beginPlane, float radius, Vector3 &result);
 
-	Agent::Agent(RVOSimulator *sim) : sim_(sim), id_(0), maxNeighbors_(0), maxSpeed_(0.0f), neighborDist_(0.0f), radius_(0.0f), timeHorizon_(0.0f) { }
+	Agent::Agent(RVOSimulator *sim) : sim_(sim), id_(0), maxNeighbors_(0), maxSpeed_(0.0f), neighborDist_(0.0f), radius_(0.0f), timeHorizon_(0.0f), maxAcceleration_(10.0f), maxDeceleration_(15.0f) { }
 
 	void Agent::computeNeighbors()
 	{
@@ -213,7 +213,42 @@ namespace RVO {
 
 	void Agent::update()
 	{
-		velocity_ = newVelocity_;
+		// 安全性チェック
+		if (sim_->timeStep_ <= 0.0f) {
+			// timeStepが0以下の場合は位置のみ更新
+			return;
+		}
+		
+		// 速度変化量（加速度ベクトル * timeStep）を計算
+		Vector3 velocityChange = newVelocity_ - velocity_;
+		Vector3 acceleration = velocityChange / sim_->timeStep_;
+		
+		const float accelerationMagnitudeSq = absSq(acceleration);
+		
+		// 加速度制限が必要かチェック
+		if (accelerationMagnitudeSq > RVO_EPSILON) {
+			const float accelerationMagnitude = std::sqrt(accelerationMagnitudeSq);
+			
+			// 加速・減速の判定（現在速度との内積で判断）
+			const float velocityDotChange = velocity_ * velocityChange;
+			const float maxAccelLimit = (velocityDotChange >= 0.0f) ? 
+									   maxAcceleration_ : maxDeceleration_;
+			
+			if (accelerationMagnitude > maxAccelLimit) {
+				// 加速度を制限
+				const Vector3 limitedAcceleration = 
+					(acceleration / accelerationMagnitude) * maxAccelLimit;
+				velocity_ = velocity_ + limitedAcceleration * sim_->timeStep_;
+			} else {
+				// 制限内なのでそのまま適用
+				velocity_ = newVelocity_;
+			}
+		} else {
+			// 加速度がほぼゼロの場合はそのまま適用
+			velocity_ = newVelocity_;
+		}
+		
+		// 位置更新
 		position_ += velocity_ * sim_->timeStep_;
 	}
 

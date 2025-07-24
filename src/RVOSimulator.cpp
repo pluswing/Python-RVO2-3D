@@ -273,6 +273,26 @@ namespace RVO {
 		agents_[agentNo]->velocity_ = velocity;
 	}
 
+	float RVOSimulator::getAgentMaxAcceleration(size_t agentNo) const
+	{
+		return agents_[agentNo]->maxAcceleration_;
+	}
+
+	float RVOSimulator::getAgentMaxDeceleration(size_t agentNo) const
+	{
+		return agents_[agentNo]->maxDeceleration_;
+	}
+
+	void RVOSimulator::setAgentMaxAcceleration(size_t agentNo, float maxAcceleration)
+	{
+		agents_[agentNo]->maxAcceleration_ = maxAcceleration;
+	}
+
+	void RVOSimulator::setAgentMaxDeceleration(size_t agentNo, float maxDeceleration)
+	{
+		agents_[agentNo]->maxDeceleration_ = maxDeceleration;
+	}
+
 	void RVOSimulator::setTimeStep(float timeStep)
 	{
 		timeStep_ = timeStep;

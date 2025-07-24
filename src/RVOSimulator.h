@@ -306,6 +306,34 @@ namespace RVO {
 		RVO_API void setAgentVelocity(size_t agentNo, const Vector3 &velocity);
 
 		/**
+		 * \brief   Returns the maximum acceleration of a specified agent.
+		 * \param   agentNo  The number of the agent whose maximum acceleration is to be retrieved.
+		 * \return  The present maximum acceleration of the agent.
+		 */
+		RVO_API float getAgentMaxAcceleration(size_t agentNo) const;
+
+		/**
+		 * \brief   Returns the maximum deceleration of a specified agent.
+		 * \param   agentNo  The number of the agent whose maximum deceleration is to be retrieved.
+		 * \return  The present maximum deceleration of the agent.
+		 */
+		RVO_API float getAgentMaxDeceleration(size_t agentNo) const;
+
+		/**
+		 * \brief   Sets the maximum acceleration of a specified agent.
+		 * \param   agentNo         The number of the agent whose maximum acceleration is to be modified.
+		 * \param   maxAcceleration The replacement maximum acceleration. Must be non-negative.
+		 */
+		RVO_API void setAgentMaxAcceleration(size_t agentNo, float maxAcceleration);
+
+		/**
+		 * \brief   Sets the maximum deceleration of a specified agent.
+		 * \param   agentNo         The number of the agent whose maximum deceleration is to be modified.
+		 * \param   maxDeceleration The replacement maximum deceleration. Must be non-negative.
+		 */
+		RVO_API void setAgentMaxDeceleration(size_t agentNo, float maxDeceleration);
+
+		/**
 		 * \brief   Sets the time step of the simulation.
 		 * \param   timeStep  The time step of the simulation. Must be positive.
 		 */

@@ -1,0 +1,57 @@
+# Makefile for acceleration test
+# RVO2-3D 加速度制限機能テスト用
+
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall -O2 -Isrc
+LDFLAGS = -lm
+
+# ソースファイル
+RVO_SOURCES = src/Agent.cpp src/RVOSimulator.cpp src/KdTree.cpp
+TEST_SOURCE = test_acceleration.cpp
+
+# オブジェクトファイル
+RVO_OBJECTS = $(RVO_SOURCES:.cpp=.o)
+TEST_OBJECT = $(TEST_SOURCE:.cpp=.o)
+
+# 実行ファイル
+TARGET = test_acceleration
+
+# デフォルトターゲット
+all: $(TARGET)
+
+# 実行ファイルの作成
+$(TARGET): $(RVO_OBJECTS) $(TEST_OBJECT)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
+# オブジェクトファイルの作成
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+# テスト実行
+test: $(TARGET)
+	./$(TARGET)
+
+# 詳細テスト実行（追加情報表示）
+test-verbose: $(TARGET)
+	./$(TARGET) 2>&1 | tee test_results.log
+
+# クリーンアップ
+clean:
+	rm -f $(RVO_OBJECTS) $(TEST_OBJECT) $(TARGET) test_results.log
+
+# ヘルプ
+help:
+	@echo "利用可能なターゲット:"
+	@echo "  all          - テストプログラムをコンパイル"
+	@echo "  test         - テストを実行"
+	@echo "  test-verbose - テストを実行し結果をログに保存"
+	@echo "  clean        - 生成ファイルを削除"
+	@echo "  help         - このヘルプを表示"
+
+# 依存関係（簡易版）
+src/Agent.o: src/Agent.cpp src/Agent.h src/Vector3.h src/RVOSimulator.h
+src/RVOSimulator.o: src/RVOSimulator.cpp src/RVOSimulator.h src/Agent.h src/Vector3.h
+src/KdTree.o: src/KdTree.cpp src/KdTree.h src/Agent.h src/Vector3.h
+test_acceleration.o: test_acceleration.cpp src/RVO.h
+
+.PHONY: all test test-verbose clean help 

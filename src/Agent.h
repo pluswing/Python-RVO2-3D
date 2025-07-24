@@ -91,6 +91,8 @@ namespace RVO {
 		float neighborDist_;
 		float radius_;
 		float timeHorizon_;
+		float maxAcceleration_;
+		float maxDeceleration_;
 		std::vector<std::pair<float, const Agent *> > agentNeighbors_;
 		std::vector<Plane> orcaPlanes_;
 
