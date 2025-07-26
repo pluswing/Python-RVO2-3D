@@ -105,7 +105,7 @@ namespace RVO {
 	 */
 	void linearProgram4(const std::vector<Plane> &planes, size_t beginPlane, float radius, Vector3 &result);
 
-	Agent::Agent(RVOSimulator *sim) : sim_(sim), id_(0), maxNeighbors_(0), maxSpeed_(0.0f), neighborDist_(0.0f), radius_(0.0f), timeHorizon_(0.0f), maxAcceleration_(10.0f), maxDeceleration_(15.0f) { }
+	Agent::Agent(RVOSimulator *sim) : sim_(sim), id_(0), maxNeighbors_(0), maxSpeed_(0.0f), neighborDist_(0.0f), radius_(0.0f), timeHorizon_(0.0f), maxAcceleration_(10.0f), maxDeceleration_(15.0f), maxHorizontalSpeed_(5.0f), maxVerticalUpSpeed_(3.0f), maxVerticalDownSpeed_(3.0f), useDirectionalSpeedLimits_(false) { }
 
 	void Agent::computeNeighbors()
 	{
@@ -211,6 +211,42 @@ namespace RVO {
 		}
 	}
 
+	Vector3 Agent::applyDirectionalSpeedLimits(const Vector3 &velocity)
+	{
+		if (!useDirectionalSpeedLimits_) {
+			// 従来の球体制限を使用
+			const float speedSq = absSq(velocity);
+			if (speedSq > sqr(maxSpeed_)) {
+				return normalize(velocity) * maxSpeed_;
+			}
+			return velocity;
+		}
+		
+		// 水平成分と垂直成分に分解
+		Vector3 result = velocity;
+		const float vx = velocity.x();
+		const float vy = velocity.y();
+		const float vz = velocity.z();
+		
+		// 水平成分の制限 (XY平面での速度)
+		const float horizontalSpeedSq = vx * vx + vy * vy;
+		if (horizontalSpeedSq > sqr(maxHorizontalSpeed_)) {
+			const float horizontalScale = maxHorizontalSpeed_ / std::sqrt(horizontalSpeedSq);
+			result = Vector3(vx * horizontalScale, vy * horizontalScale, vz);
+		}
+		
+		// 垂直成分の制限 (Z軸方向)
+		if (vz > 0.0f && vz > maxVerticalUpSpeed_) {
+			// 上昇速度制限
+			result = Vector3(result.x(), result.y(), maxVerticalUpSpeed_);
+		} else if (vz < 0.0f && -vz > maxVerticalDownSpeed_) {
+			// 下降速度制限
+			result = Vector3(result.x(), result.y(), -maxVerticalDownSpeed_);
+		}
+		
+		return result;
+	}
+
 	void Agent::update()
 	{
 		// 安全性チェック
@@ -247,6 +283,9 @@ namespace RVO {
 			// 加速度がほぼゼロの場合はそのまま適用
 			velocity_ = newVelocity_;
 		}
+		
+		// 方向別速度制限を適用
+		velocity_ = applyDirectionalSpeedLimits(velocity_);
 		
 		// 位置更新
 		position_ += velocity_ * sim_->timeStep_;

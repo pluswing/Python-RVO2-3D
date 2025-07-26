@@ -80,6 +80,13 @@ namespace RVO {
 		 */
 		void update();
 
+		/**
+		 * \brief   Applies directional speed limits to a velocity vector.
+		 * \param   velocity  The velocity vector to limit.
+		 * \return  The velocity vector with directional speed limits applied.
+		 */
+		Vector3 applyDirectionalSpeedLimits(const Vector3 &velocity);
+
 		Vector3 newVelocity_;
 		Vector3 position_;
 		Vector3 prefVelocity_;
@@ -93,6 +100,12 @@ namespace RVO {
 		float timeHorizon_;
 		float maxAcceleration_;
 		float maxDeceleration_;
+		
+		// 方向別速度制限用メンバー変数
+		float maxHorizontalSpeed_;         // 水平方向の最大速度 (m/s)
+		float maxVerticalUpSpeed_;         // 上昇方向の最大速度 (m/s)
+		float maxVerticalDownSpeed_;       // 下降方向の最大速度 (m/s)
+		bool useDirectionalSpeedLimits_;   // 方向別制限を使用するかのフラグ
 		std::vector<std::pair<float, const Agent *> > agentNeighbors_;
 		std::vector<Plane> orcaPlanes_;
 

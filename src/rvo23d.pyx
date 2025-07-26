@@ -71,6 +71,17 @@ cdef extern from "RVOSimulator.h" namespace "RVO":
         void setAgentMaxAcceleration(size_t agentNo, float maxAcceleration)
         void setAgentMaxDeceleration(size_t agentNo, float maxDeceleration)
 
+        # 方向別速度制限機能
+        float getAgentHorizontalSpeed(size_t agentNo) const
+        float getAgentVerticalUpSpeed(size_t agentNo) const
+        float getAgentVerticalDownSpeed(size_t agentNo) const
+        bool getAgentUseDirectionalSpeedLimits(size_t agentNo) const
+        void setAgentHorizontalSpeed(size_t agentNo, float maxHorizontalSpeed)
+        void setAgentVerticalUpSpeed(size_t agentNo, float maxVerticalUpSpeed)
+        void setAgentVerticalDownSpeed(size_t agentNo, float maxVerticalDownSpeed)
+        void setAgentDirectionalSpeeds(size_t agentNo, float maxHorizontalSpeed, float maxVerticalUpSpeed, float maxVerticalDownSpeed)
+        void setAgentUseDirectionalSpeedLimits(size_t agentNo, bool use)
+
 
 cdef class PyRVOSimulator:
     cdef RVOSimulator *thisptr
@@ -194,3 +205,52 @@ cdef class PyRVOSimulator:
         """エージェントの加速度・減速度制限を同時設定（便利メソッド）"""
         self.setAgentMaxAcceleration(agent_no, max_acceleration)
         self.setAgentMaxDeceleration(agent_no, max_deceleration)
+
+    # 方向別速度制限機能のメソッド
+    def getAgentHorizontalSpeed(self, size_t agent_no):
+        """エージェントの水平方向最大速度を取得"""
+        return self.thisptr.getAgentHorizontalSpeed(agent_no)
+    
+    def getAgentVerticalUpSpeed(self, size_t agent_no):
+        """エージェントの上昇方向最大速度を取得"""
+        return self.thisptr.getAgentVerticalUpSpeed(agent_no)
+    
+    def getAgentVerticalDownSpeed(self, size_t agent_no):
+        """エージェントの下降方向最大速度を取得"""
+        return self.thisptr.getAgentVerticalDownSpeed(agent_no)
+    
+    def getAgentUseDirectionalSpeedLimits(self, size_t agent_no):
+        """エージェントが方向別速度制限を使用しているかを取得"""
+        return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)
+    
+    def setAgentHorizontalSpeed(self, size_t agent_no, float max_horizontal_speed):
+        """エージェントの水平方向最大速度を設定"""
+        self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)
+    
+    def setAgentVerticalUpSpeed(self, size_t agent_no, float max_vertical_up_speed):
+        """エージェントの上昇方向最大速度を設定"""
+        self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)
+    
+    def setAgentVerticalDownSpeed(self, size_t agent_no, float max_vertical_down_speed):
+        """エージェントの下降方向最大速度を設定"""
+        self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)
+    
+    def setAgentDirectionalSpeeds(self, size_t agent_no, float max_horizontal_speed, float max_vertical_up_speed, float max_vertical_down_speed):
+        """エージェントの方向別最大速度を一括設定（便利メソッド）"""
+        self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)
+    
+    def setAgentUseDirectionalSpeedLimits(self, size_t agent_no, bool use):
+        """エージェントの方向別速度制限使用フラグを設定"""
+        self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)
+    
+    def enableDirectionalSpeedLimits(self, size_t agent_no, float horizontal_speed=4.0, float vertical_up_speed=3.2, float vertical_down_speed=2.4):
+        """方向別速度制限を有効にし、指定した速度を設定（便利メソッド）
+        
+        Args:
+            agent_no: エージェント番号
+            horizontal_speed: 水平方向最大速度 (デフォルト: 4.0 m/s)
+            vertical_up_speed: 上昇方向最大速度 (デフォルト: 3.2 m/s)
+            vertical_down_speed: 下降方向最大速度 (デフォルト: 2.4 m/s)
+        """
+        self.setAgentDirectionalSpeeds(agent_no, horizontal_speed, vertical_up_speed, vertical_down_speed)
+        self.setAgentUseDirectionalSpeedLimits(agent_no, True)

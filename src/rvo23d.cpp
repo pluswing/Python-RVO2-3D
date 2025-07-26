@@ -1538,7 +1538,7 @@ static const char *__pyx_f[] = {
 /*--- Type declarations ---*/
 struct __pyx_obj_6rvo23d_PyRVOSimulator;
 
-/* "rvo23d.pyx":75
+/* "rvo23d.pyx":86
  * 
  * 
  * cdef class PyRVOSimulator:             # <<<<<<<<<<<<<<
@@ -2223,8 +2223,9 @@ static PyObject *__pyx_builtin_RuntimeError;
 static PyObject *__pyx_builtin_TypeError;
 /* #### Code section: string_decls ### */
 static const char __pyx_k_gc[] = "gc";
-static const char __pyx_k__59[] = "?";
+static const char __pyx_k__76[] = "?";
 static const char __pyx_k_pos[] = "pos";
+static const char __pyx_k_use[] = "use";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_self[] = "self";
@@ -2276,35 +2277,49 @@ static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
 static const char __pyx_k_getAgentMaxSpeed[] = "getAgentMaxSpeed";
 static const char __pyx_k_getAgentPosition[] = "getAgentPosition";
 static const char __pyx_k_getAgentVelocity[] = "getAgentVelocity";
+static const char __pyx_k_horizontal_speed[] = "horizontal_speed";
 static const char __pyx_k_max_acceleration[] = "max_acceleration";
 static const char __pyx_k_max_deceleration[] = "max_deceleration";
 static const char __pyx_k_setAgentDefaults[] = "setAgentDefaults";
 static const char __pyx_k_setAgentMaxSpeed[] = "setAgentMaxSpeed";
 static const char __pyx_k_setAgentPosition[] = "setAgentPosition";
 static const char __pyx_k_setAgentVelocity[] = "setAgentVelocity";
+static const char __pyx_k_vertical_up_speed[] = "vertical_up_speed";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_getAgentTimeHorizon[] = "getAgentTimeHorizon";
 static const char __pyx_k_setAgentTimeHorizon[] = "setAgentTimeHorizon";
+static const char __pyx_k_vertical_down_speed[] = "vertical_down_speed";
 static const char __pyx_k_getAgentMaxNeighbors[] = "getAgentMaxNeighbors";
 static const char __pyx_k_getAgentNeighborDist[] = "getAgentNeighborDist";
 static const char __pyx_k_getAgentPrefVelocity[] = "getAgentPrefVelocity";
+static const char __pyx_k_max_horizontal_speed[] = "max_horizontal_speed";
 static const char __pyx_k_setAgentMaxNeighbors[] = "setAgentMaxNeighbors";
 static const char __pyx_k_setAgentNeighborDist[] = "setAgentNeighborDist";
 static const char __pyx_k_setAgentPrefVelocity[] = "setAgentPrefVelocity";
 static const char __pyx_k_PyRVOSimulator_doStep[] = "PyRVOSimulator.doStep";
 static const char __pyx_k_getAgentAgentNeighbor[] = "getAgentAgentNeighbor";
+static const char __pyx_k_max_vertical_up_speed[] = "max_vertical_up_speed";
 static const char __pyx_k_PyRVOSimulator_addAgent[] = "PyRVOSimulator.addAgent";
+static const char __pyx_k_getAgentHorizontalSpeed[] = "getAgentHorizontalSpeed";
 static const char __pyx_k_getAgentMaxAcceleration[] = "getAgentMaxAcceleration";
 static const char __pyx_k_getAgentMaxDeceleration[] = "getAgentMaxDeceleration";
+static const char __pyx_k_getAgentVerticalUpSpeed[] = "getAgentVerticalUpSpeed";
+static const char __pyx_k_max_vertical_down_speed[] = "max_vertical_down_speed";
+static const char __pyx_k_setAgentHorizontalSpeed[] = "setAgentHorizontalSpeed";
 static const char __pyx_k_setAgentMaxAcceleration[] = "setAgentMaxAcceleration";
 static const char __pyx_k_setAgentMaxDeceleration[] = "setAgentMaxDeceleration";
+static const char __pyx_k_setAgentVerticalUpSpeed[] = "setAgentVerticalUpSpeed";
 static const char __pyx_k_getAgentNumAgentNeighbors[] = "getAgentNumAgentNeighbors";
+static const char __pyx_k_getAgentVerticalDownSpeed[] = "getAgentVerticalDownSpeed";
+static const char __pyx_k_setAgentDirectionalSpeeds[] = "setAgentDirectionalSpeeds";
+static const char __pyx_k_setAgentVerticalDownSpeed[] = "setAgentVerticalDownSpeed";
 static const char __pyx_k_PyRVOSimulator_getTimeStep[] = "PyRVOSimulator.getTimeStep";
 static const char __pyx_k_PyRVOSimulator_setTimeStep[] = "PyRVOSimulator.setTimeStep";
 static const char __pyx_k_setAgentAccelerationLimits[] = "setAgentAccelerationLimits";
 static const char __pyx_k_PyRVOSimulator_getNumAgents[] = "PyRVOSimulator.getNumAgents";
 static const char __pyx_k_PyRVOSimulator_getGlobalTime[] = "PyRVOSimulator.getGlobalTime";
+static const char __pyx_k_enableDirectionalSpeedLimits[] = "enableDirectionalSpeedLimits";
 static const char __pyx_k_PyRVOSimulator_getAgentRadius[] = "PyRVOSimulator.getAgentRadius";
 static const char __pyx_k_PyRVOSimulator_setAgentRadius[] = "PyRVOSimulator.setAgentRadius";
 static const char __pyx_k_PyRVOSimulator___reduce_cython[] = "PyRVOSimulator.__reduce_cython__";
@@ -2318,7 +2333,9 @@ static const char __pyx_k_PyRVOSimulator_setAgentVelocity[] = "PyRVOSimulator.se
 static const char __pyx_k_Either_pass_only_pos_or_pass_all[] = "Either pass only 'pos', or pass all parameters.";
 static const char __pyx_k_Error_adding_agent_to_RVO_simula[] = "Error adding agent to RVO simulation";
 static const char __pyx_k_PyRVOSimulator___setstate_cython[] = "PyRVOSimulator.__setstate_cython__";
+static const char __pyx_k_PyRVOSimulator_enableDirectional[] = "PyRVOSimulator.enableDirectionalSpeedLimits";
 static const char __pyx_k_PyRVOSimulator_getAgentAgentNeig[] = "PyRVOSimulator.getAgentAgentNeighbor";
+static const char __pyx_k_PyRVOSimulator_getAgentHorizonta[] = "PyRVOSimulator.getAgentHorizontalSpeed";
 static const char __pyx_k_PyRVOSimulator_getAgentMaxAccele[] = "PyRVOSimulator.getAgentMaxAcceleration";
 static const char __pyx_k_PyRVOSimulator_getAgentMaxDecele[] = "PyRVOSimulator.getAgentMaxDeceleration";
 static const char __pyx_k_PyRVOSimulator_getAgentMaxNeighb[] = "PyRVOSimulator.getAgentMaxNeighbors";
@@ -2326,14 +2343,24 @@ static const char __pyx_k_PyRVOSimulator_getAgentNeighborD[] = "PyRVOSimulator.g
 static const char __pyx_k_PyRVOSimulator_getAgentNumAgentN[] = "PyRVOSimulator.getAgentNumAgentNeighbors";
 static const char __pyx_k_PyRVOSimulator_getAgentPrefVeloc[] = "PyRVOSimulator.getAgentPrefVelocity";
 static const char __pyx_k_PyRVOSimulator_getAgentTimeHoriz[] = "PyRVOSimulator.getAgentTimeHorizon";
+static const char __pyx_k_PyRVOSimulator_getAgentUseDirect[] = "PyRVOSimulator.getAgentUseDirectionalSpeedLimits";
+static const char __pyx_k_PyRVOSimulator_getAgentVerticalD[] = "PyRVOSimulator.getAgentVerticalDownSpeed";
+static const char __pyx_k_PyRVOSimulator_getAgentVerticalU[] = "PyRVOSimulator.getAgentVerticalUpSpeed";
 static const char __pyx_k_PyRVOSimulator_setAgentAccelerat[] = "PyRVOSimulator.setAgentAccelerationLimits";
+static const char __pyx_k_PyRVOSimulator_setAgentDirection[] = "PyRVOSimulator.setAgentDirectionalSpeeds";
+static const char __pyx_k_PyRVOSimulator_setAgentHorizonta[] = "PyRVOSimulator.setAgentHorizontalSpeed";
 static const char __pyx_k_PyRVOSimulator_setAgentMaxAccele[] = "PyRVOSimulator.setAgentMaxAcceleration";
 static const char __pyx_k_PyRVOSimulator_setAgentMaxDecele[] = "PyRVOSimulator.setAgentMaxDeceleration";
 static const char __pyx_k_PyRVOSimulator_setAgentMaxNeighb[] = "PyRVOSimulator.setAgentMaxNeighbors";
 static const char __pyx_k_PyRVOSimulator_setAgentNeighborD[] = "PyRVOSimulator.setAgentNeighborDist";
 static const char __pyx_k_PyRVOSimulator_setAgentPrefVeloc[] = "PyRVOSimulator.setAgentPrefVelocity";
 static const char __pyx_k_PyRVOSimulator_setAgentTimeHoriz[] = "PyRVOSimulator.setAgentTimeHorizon";
+static const char __pyx_k_PyRVOSimulator_setAgentUseDirect[] = "PyRVOSimulator.setAgentUseDirectionalSpeedLimits";
+static const char __pyx_k_PyRVOSimulator_setAgentVerticalD[] = "PyRVOSimulator.setAgentVerticalDownSpeed";
+static const char __pyx_k_PyRVOSimulator_setAgentVerticalU[] = "PyRVOSimulator.setAgentVerticalUpSpeed";
+static const char __pyx_k_getAgentUseDirectionalSpeedLimit[] = "getAgentUseDirectionalSpeedLimits";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
+static const char __pyx_k_setAgentUseDirectionalSpeedLimit[] = "setAgentUseDirectionalSpeedLimits";
 /* #### Code section: decls ### */
 static int __pyx_pf_6rvo23d_14PyRVOSimulator___cinit__(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, float __pyx_v_timeStep, float __pyx_v_neighborDist, size_t __pyx_v_maxNeighbors, float __pyx_v_timeHorizon, float __pyx_v_radius, float __pyx_v_maxSpeed, PyObject *__pyx_v_velocity); /* proto */
 static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, PyObject *__pyx_v_pos, PyObject *__pyx_v_neighborDist, PyObject *__pyx_v_maxNeighbors, PyObject *__pyx_v_timeHorizon, PyObject *__pyx_v_radius, PyObject *__pyx_v_maxSpeed, PyObject *__pyx_v_velocity); /* proto */
@@ -2367,8 +2394,18 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_56getAgentMaxDeceleration(str
 static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_58setAgentMaxAcceleration(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_acceleration); /* proto */
 static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_60setAgentMaxDeceleration(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_deceleration); /* proto */
 static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_62setAgentAccelerationLimits(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_acceleration, float __pyx_v_max_deceleration); /* proto */
-static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_64__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_66__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_64getAgentHorizontalSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_66getAgentVerticalUpSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_68getAgentVerticalDownSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_70getAgentUseDirectionalSpeedLimits(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_72setAgentHorizontalSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_horizontal_speed); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_74setAgentVerticalUpSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_vertical_up_speed); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_76setAgentVerticalDownSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_vertical_down_speed); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_78setAgentDirectionalSpeeds(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_horizontal_speed, float __pyx_v_max_vertical_up_speed, float __pyx_v_max_vertical_down_speed); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_80setAgentUseDirectionalSpeedLimits(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, bool __pyx_v_use); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_82enableDirectionalSpeedLimits(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_horizontal_speed, float __pyx_v_vertical_up_speed, float __pyx_v_vertical_down_speed); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_84__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_86__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_6rvo23d_PyRVOSimulator(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
@@ -2412,7 +2449,9 @@ typedef struct {
   PyObject *__pyx_n_s_PyRVOSimulator___setstate_cython;
   PyObject *__pyx_n_s_PyRVOSimulator_addAgent;
   PyObject *__pyx_n_s_PyRVOSimulator_doStep;
+  PyObject *__pyx_n_s_PyRVOSimulator_enableDirectional;
   PyObject *__pyx_n_s_PyRVOSimulator_getAgentAgentNeig;
+  PyObject *__pyx_n_s_PyRVOSimulator_getAgentHorizonta;
   PyObject *__pyx_n_s_PyRVOSimulator_getAgentMaxAccele;
   PyObject *__pyx_n_s_PyRVOSimulator_getAgentMaxDecele;
   PyObject *__pyx_n_s_PyRVOSimulator_getAgentMaxNeighb;
@@ -2423,12 +2462,17 @@ typedef struct {
   PyObject *__pyx_n_s_PyRVOSimulator_getAgentPrefVeloc;
   PyObject *__pyx_n_s_PyRVOSimulator_getAgentRadius;
   PyObject *__pyx_n_s_PyRVOSimulator_getAgentTimeHoriz;
+  PyObject *__pyx_n_s_PyRVOSimulator_getAgentUseDirect;
   PyObject *__pyx_n_s_PyRVOSimulator_getAgentVelocity;
+  PyObject *__pyx_n_s_PyRVOSimulator_getAgentVerticalD;
+  PyObject *__pyx_n_s_PyRVOSimulator_getAgentVerticalU;
   PyObject *__pyx_n_s_PyRVOSimulator_getGlobalTime;
   PyObject *__pyx_n_s_PyRVOSimulator_getNumAgents;
   PyObject *__pyx_n_s_PyRVOSimulator_getTimeStep;
   PyObject *__pyx_n_s_PyRVOSimulator_setAgentAccelerat;
   PyObject *__pyx_n_s_PyRVOSimulator_setAgentDefaults;
+  PyObject *__pyx_n_s_PyRVOSimulator_setAgentDirection;
+  PyObject *__pyx_n_s_PyRVOSimulator_setAgentHorizonta;
   PyObject *__pyx_n_s_PyRVOSimulator_setAgentMaxAccele;
   PyObject *__pyx_n_s_PyRVOSimulator_setAgentMaxDecele;
   PyObject *__pyx_n_s_PyRVOSimulator_setAgentMaxNeighb;
@@ -2438,12 +2482,15 @@ typedef struct {
   PyObject *__pyx_n_s_PyRVOSimulator_setAgentPrefVeloc;
   PyObject *__pyx_n_s_PyRVOSimulator_setAgentRadius;
   PyObject *__pyx_n_s_PyRVOSimulator_setAgentTimeHoriz;
+  PyObject *__pyx_n_s_PyRVOSimulator_setAgentUseDirect;
   PyObject *__pyx_n_s_PyRVOSimulator_setAgentVelocity;
+  PyObject *__pyx_n_s_PyRVOSimulator_setAgentVerticalD;
+  PyObject *__pyx_n_s_PyRVOSimulator_setAgentVerticalU;
   PyObject *__pyx_n_s_PyRVOSimulator_setTimeStep;
   PyObject *__pyx_n_s_RuntimeError;
   PyObject *__pyx_n_s_TypeError;
   PyObject *__pyx_n_s_ValueError;
-  PyObject *__pyx_n_s__59;
+  PyObject *__pyx_n_s__76;
   PyObject *__pyx_n_s_addAgent;
   PyObject *__pyx_n_s_agent_no;
   PyObject *__pyx_n_s_agent_nr;
@@ -2454,8 +2501,10 @@ typedef struct {
   PyObject *__pyx_kp_u_disable;
   PyObject *__pyx_n_s_doStep;
   PyObject *__pyx_kp_u_enable;
+  PyObject *__pyx_n_s_enableDirectionalSpeedLimits;
   PyObject *__pyx_kp_u_gc;
   PyObject *__pyx_n_s_getAgentAgentNeighbor;
+  PyObject *__pyx_n_s_getAgentHorizontalSpeed;
   PyObject *__pyx_n_s_getAgentMaxAcceleration;
   PyObject *__pyx_n_s_getAgentMaxDeceleration;
   PyObject *__pyx_n_s_getAgentMaxNeighbors;
@@ -2466,11 +2515,15 @@ typedef struct {
   PyObject *__pyx_n_s_getAgentPrefVelocity;
   PyObject *__pyx_n_s_getAgentRadius;
   PyObject *__pyx_n_s_getAgentTimeHorizon;
+  PyObject *__pyx_n_s_getAgentUseDirectionalSpeedLimit;
   PyObject *__pyx_n_s_getAgentVelocity;
+  PyObject *__pyx_n_s_getAgentVerticalDownSpeed;
+  PyObject *__pyx_n_s_getAgentVerticalUpSpeed;
   PyObject *__pyx_n_s_getGlobalTime;
   PyObject *__pyx_n_s_getNumAgents;
   PyObject *__pyx_n_s_getTimeStep;
   PyObject *__pyx_n_s_getstate;
+  PyObject *__pyx_n_s_horizontal_speed;
   PyObject *__pyx_n_s_is_coroutine;
   PyObject *__pyx_kp_u_isenabled;
   PyObject *__pyx_n_s_main;
@@ -2478,8 +2531,11 @@ typedef struct {
   PyObject *__pyx_n_s_maxSpeed;
   PyObject *__pyx_n_s_max_acceleration;
   PyObject *__pyx_n_s_max_deceleration;
+  PyObject *__pyx_n_s_max_horizontal_speed;
   PyObject *__pyx_n_s_max_neighbors;
   PyObject *__pyx_n_s_max_speed;
+  PyObject *__pyx_n_s_max_vertical_down_speed;
+  PyObject *__pyx_n_s_max_vertical_up_speed;
   PyObject *__pyx_n_s_name;
   PyObject *__pyx_n_s_neighborDist;
   PyObject *__pyx_n_s_neighbor_dist;
@@ -2496,6 +2552,8 @@ typedef struct {
   PyObject *__pyx_n_s_self;
   PyObject *__pyx_n_s_setAgentAccelerationLimits;
   PyObject *__pyx_n_s_setAgentDefaults;
+  PyObject *__pyx_n_s_setAgentDirectionalSpeeds;
+  PyObject *__pyx_n_s_setAgentHorizontalSpeed;
   PyObject *__pyx_n_s_setAgentMaxAcceleration;
   PyObject *__pyx_n_s_setAgentMaxDeceleration;
   PyObject *__pyx_n_s_setAgentMaxNeighbors;
@@ -2505,7 +2563,10 @@ typedef struct {
   PyObject *__pyx_n_s_setAgentPrefVelocity;
   PyObject *__pyx_n_s_setAgentRadius;
   PyObject *__pyx_n_s_setAgentTimeHorizon;
+  PyObject *__pyx_n_s_setAgentUseDirectionalSpeedLimit;
   PyObject *__pyx_n_s_setAgentVelocity;
+  PyObject *__pyx_n_s_setAgentVerticalDownSpeed;
+  PyObject *__pyx_n_s_setAgentVerticalUpSpeed;
   PyObject *__pyx_n_s_setTimeStep;
   PyObject *__pyx_n_s_setstate;
   PyObject *__pyx_n_s_setstate_cython;
@@ -2516,7 +2577,13 @@ typedef struct {
   PyObject *__pyx_n_s_timeStep;
   PyObject *__pyx_n_s_time_horizon;
   PyObject *__pyx_n_s_time_step;
+  PyObject *__pyx_n_s_use;
   PyObject *__pyx_n_s_velocity;
+  PyObject *__pyx_n_s_vertical_down_speed;
+  PyObject *__pyx_n_s_vertical_up_speed;
+  PyObject *__pyx_float_2_4;
+  PyObject *__pyx_float_3_2;
+  PyObject *__pyx_float_4_0;
   PyObject *__pyx_int_0;
   PyObject *__pyx_tuple_;
   PyObject *__pyx_tuple__2;
@@ -2542,7 +2609,14 @@ typedef struct {
   PyObject *__pyx_tuple__50;
   PyObject *__pyx_tuple__52;
   PyObject *__pyx_tuple__54;
-  PyObject *__pyx_tuple__57;
+  PyObject *__pyx_tuple__60;
+  PyObject *__pyx_tuple__62;
+  PyObject *__pyx_tuple__64;
+  PyObject *__pyx_tuple__66;
+  PyObject *__pyx_tuple__68;
+  PyObject *__pyx_tuple__70;
+  PyObject *__pyx_tuple__72;
+  PyObject *__pyx_tuple__74;
   PyObject *__pyx_codeobj__6;
   PyObject *__pyx_codeobj__9;
   PyObject *__pyx_codeobj__11;
@@ -2575,7 +2649,17 @@ typedef struct {
   PyObject *__pyx_codeobj__53;
   PyObject *__pyx_codeobj__55;
   PyObject *__pyx_codeobj__56;
+  PyObject *__pyx_codeobj__57;
   PyObject *__pyx_codeobj__58;
+  PyObject *__pyx_codeobj__59;
+  PyObject *__pyx_codeobj__61;
+  PyObject *__pyx_codeobj__63;
+  PyObject *__pyx_codeobj__65;
+  PyObject *__pyx_codeobj__67;
+  PyObject *__pyx_codeobj__69;
+  PyObject *__pyx_codeobj__71;
+  PyObject *__pyx_codeobj__73;
+  PyObject *__pyx_codeobj__75;
 } __pyx_mstate;
 
 #if CYTHON_USE_MODULE_STATE
@@ -2627,7 +2711,9 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator___setstate_cython);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_addAgent);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_doStep);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_enableDirectional);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentAgentNeig);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentHorizonta);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentMaxAccele);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentMaxDecele);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentMaxNeighb);
@@ -2638,12 +2724,17 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentPrefVeloc);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentRadius);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentTimeHoriz);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentUseDirect);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentVelocity);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentVerticalD);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getAgentVerticalU);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getGlobalTime);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getNumAgents);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_getTimeStep);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentAccelerat);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentDefaults);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentDirection);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentHorizonta);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentMaxAccele);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentMaxDecele);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentMaxNeighb);
@@ -2653,12 +2744,15 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentPrefVeloc);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentRadius);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentTimeHoriz);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentUseDirect);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentVelocity);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentVerticalD);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setAgentVerticalU);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyRVOSimulator_setTimeStep);
   Py_CLEAR(clear_module_state->__pyx_n_s_RuntimeError);
   Py_CLEAR(clear_module_state->__pyx_n_s_TypeError);
   Py_CLEAR(clear_module_state->__pyx_n_s_ValueError);
-  Py_CLEAR(clear_module_state->__pyx_n_s__59);
+  Py_CLEAR(clear_module_state->__pyx_n_s__76);
   Py_CLEAR(clear_module_state->__pyx_n_s_addAgent);
   Py_CLEAR(clear_module_state->__pyx_n_s_agent_no);
   Py_CLEAR(clear_module_state->__pyx_n_s_agent_nr);
@@ -2669,8 +2763,10 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_disable);
   Py_CLEAR(clear_module_state->__pyx_n_s_doStep);
   Py_CLEAR(clear_module_state->__pyx_kp_u_enable);
+  Py_CLEAR(clear_module_state->__pyx_n_s_enableDirectionalSpeedLimits);
   Py_CLEAR(clear_module_state->__pyx_kp_u_gc);
   Py_CLEAR(clear_module_state->__pyx_n_s_getAgentAgentNeighbor);
+  Py_CLEAR(clear_module_state->__pyx_n_s_getAgentHorizontalSpeed);
   Py_CLEAR(clear_module_state->__pyx_n_s_getAgentMaxAcceleration);
   Py_CLEAR(clear_module_state->__pyx_n_s_getAgentMaxDeceleration);
   Py_CLEAR(clear_module_state->__pyx_n_s_getAgentMaxNeighbors);
@@ -2681,11 +2777,15 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_getAgentPrefVelocity);
   Py_CLEAR(clear_module_state->__pyx_n_s_getAgentRadius);
   Py_CLEAR(clear_module_state->__pyx_n_s_getAgentTimeHorizon);
+  Py_CLEAR(clear_module_state->__pyx_n_s_getAgentUseDirectionalSpeedLimit);
   Py_CLEAR(clear_module_state->__pyx_n_s_getAgentVelocity);
+  Py_CLEAR(clear_module_state->__pyx_n_s_getAgentVerticalDownSpeed);
+  Py_CLEAR(clear_module_state->__pyx_n_s_getAgentVerticalUpSpeed);
   Py_CLEAR(clear_module_state->__pyx_n_s_getGlobalTime);
   Py_CLEAR(clear_module_state->__pyx_n_s_getNumAgents);
   Py_CLEAR(clear_module_state->__pyx_n_s_getTimeStep);
   Py_CLEAR(clear_module_state->__pyx_n_s_getstate);
+  Py_CLEAR(clear_module_state->__pyx_n_s_horizontal_speed);
   Py_CLEAR(clear_module_state->__pyx_n_s_is_coroutine);
   Py_CLEAR(clear_module_state->__pyx_kp_u_isenabled);
   Py_CLEAR(clear_module_state->__pyx_n_s_main);
@@ -2693,8 +2793,11 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_maxSpeed);
   Py_CLEAR(clear_module_state->__pyx_n_s_max_acceleration);
   Py_CLEAR(clear_module_state->__pyx_n_s_max_deceleration);
+  Py_CLEAR(clear_module_state->__pyx_n_s_max_horizontal_speed);
   Py_CLEAR(clear_module_state->__pyx_n_s_max_neighbors);
   Py_CLEAR(clear_module_state->__pyx_n_s_max_speed);
+  Py_CLEAR(clear_module_state->__pyx_n_s_max_vertical_down_speed);
+  Py_CLEAR(clear_module_state->__pyx_n_s_max_vertical_up_speed);
   Py_CLEAR(clear_module_state->__pyx_n_s_name);
   Py_CLEAR(clear_module_state->__pyx_n_s_neighborDist);
   Py_CLEAR(clear_module_state->__pyx_n_s_neighbor_dist);
@@ -2711,6 +2814,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_self);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentAccelerationLimits);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentDefaults);
+  Py_CLEAR(clear_module_state->__pyx_n_s_setAgentDirectionalSpeeds);
+  Py_CLEAR(clear_module_state->__pyx_n_s_setAgentHorizontalSpeed);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentMaxAcceleration);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentMaxDeceleration);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentMaxNeighbors);
@@ -2720,7 +2825,10 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentPrefVelocity);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentRadius);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentTimeHorizon);
+  Py_CLEAR(clear_module_state->__pyx_n_s_setAgentUseDirectionalSpeedLimit);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentVelocity);
+  Py_CLEAR(clear_module_state->__pyx_n_s_setAgentVerticalDownSpeed);
+  Py_CLEAR(clear_module_state->__pyx_n_s_setAgentVerticalUpSpeed);
   Py_CLEAR(clear_module_state->__pyx_n_s_setTimeStep);
   Py_CLEAR(clear_module_state->__pyx_n_s_setstate);
   Py_CLEAR(clear_module_state->__pyx_n_s_setstate_cython);
@@ -2731,7 +2839,13 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_timeStep);
   Py_CLEAR(clear_module_state->__pyx_n_s_time_horizon);
   Py_CLEAR(clear_module_state->__pyx_n_s_time_step);
+  Py_CLEAR(clear_module_state->__pyx_n_s_use);
   Py_CLEAR(clear_module_state->__pyx_n_s_velocity);
+  Py_CLEAR(clear_module_state->__pyx_n_s_vertical_down_speed);
+  Py_CLEAR(clear_module_state->__pyx_n_s_vertical_up_speed);
+  Py_CLEAR(clear_module_state->__pyx_float_2_4);
+  Py_CLEAR(clear_module_state->__pyx_float_3_2);
+  Py_CLEAR(clear_module_state->__pyx_float_4_0);
   Py_CLEAR(clear_module_state->__pyx_int_0);
   Py_CLEAR(clear_module_state->__pyx_tuple_);
   Py_CLEAR(clear_module_state->__pyx_tuple__2);
@@ -2757,7 +2871,14 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_tuple__50);
   Py_CLEAR(clear_module_state->__pyx_tuple__52);
   Py_CLEAR(clear_module_state->__pyx_tuple__54);
-  Py_CLEAR(clear_module_state->__pyx_tuple__57);
+  Py_CLEAR(clear_module_state->__pyx_tuple__60);
+  Py_CLEAR(clear_module_state->__pyx_tuple__62);
+  Py_CLEAR(clear_module_state->__pyx_tuple__64);
+  Py_CLEAR(clear_module_state->__pyx_tuple__66);
+  Py_CLEAR(clear_module_state->__pyx_tuple__68);
+  Py_CLEAR(clear_module_state->__pyx_tuple__70);
+  Py_CLEAR(clear_module_state->__pyx_tuple__72);
+  Py_CLEAR(clear_module_state->__pyx_tuple__74);
   Py_CLEAR(clear_module_state->__pyx_codeobj__6);
   Py_CLEAR(clear_module_state->__pyx_codeobj__9);
   Py_CLEAR(clear_module_state->__pyx_codeobj__11);
@@ -2790,7 +2911,17 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_codeobj__53);
   Py_CLEAR(clear_module_state->__pyx_codeobj__55);
   Py_CLEAR(clear_module_state->__pyx_codeobj__56);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__57);
   Py_CLEAR(clear_module_state->__pyx_codeobj__58);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__59);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__61);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__63);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__65);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__67);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__69);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__71);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__73);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__75);
   return 0;
 }
 #endif
@@ -2820,7 +2951,9 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator___setstate_cython);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_addAgent);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_doStep);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_enableDirectional);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentAgentNeig);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentHorizonta);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentMaxAccele);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentMaxDecele);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentMaxNeighb);
@@ -2831,12 +2964,17 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentPrefVeloc);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentRadius);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentTimeHoriz);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentUseDirect);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentVelocity);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentVerticalD);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getAgentVerticalU);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getGlobalTime);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getNumAgents);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_getTimeStep);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentAccelerat);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentDefaults);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentDirection);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentHorizonta);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentMaxAccele);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentMaxDecele);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentMaxNeighb);
@@ -2846,12 +2984,15 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentPrefVeloc);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentRadius);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentTimeHoriz);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentUseDirect);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentVelocity);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentVerticalD);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setAgentVerticalU);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyRVOSimulator_setTimeStep);
   Py_VISIT(traverse_module_state->__pyx_n_s_RuntimeError);
   Py_VISIT(traverse_module_state->__pyx_n_s_TypeError);
   Py_VISIT(traverse_module_state->__pyx_n_s_ValueError);
-  Py_VISIT(traverse_module_state->__pyx_n_s__59);
+  Py_VISIT(traverse_module_state->__pyx_n_s__76);
   Py_VISIT(traverse_module_state->__pyx_n_s_addAgent);
   Py_VISIT(traverse_module_state->__pyx_n_s_agent_no);
   Py_VISIT(traverse_module_state->__pyx_n_s_agent_nr);
@@ -2862,8 +3003,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_disable);
   Py_VISIT(traverse_module_state->__pyx_n_s_doStep);
   Py_VISIT(traverse_module_state->__pyx_kp_u_enable);
+  Py_VISIT(traverse_module_state->__pyx_n_s_enableDirectionalSpeedLimits);
   Py_VISIT(traverse_module_state->__pyx_kp_u_gc);
   Py_VISIT(traverse_module_state->__pyx_n_s_getAgentAgentNeighbor);
+  Py_VISIT(traverse_module_state->__pyx_n_s_getAgentHorizontalSpeed);
   Py_VISIT(traverse_module_state->__pyx_n_s_getAgentMaxAcceleration);
   Py_VISIT(traverse_module_state->__pyx_n_s_getAgentMaxDeceleration);
   Py_VISIT(traverse_module_state->__pyx_n_s_getAgentMaxNeighbors);
@@ -2874,11 +3017,15 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_getAgentPrefVelocity);
   Py_VISIT(traverse_module_state->__pyx_n_s_getAgentRadius);
   Py_VISIT(traverse_module_state->__pyx_n_s_getAgentTimeHorizon);
+  Py_VISIT(traverse_module_state->__pyx_n_s_getAgentUseDirectionalSpeedLimit);
   Py_VISIT(traverse_module_state->__pyx_n_s_getAgentVelocity);
+  Py_VISIT(traverse_module_state->__pyx_n_s_getAgentVerticalDownSpeed);
+  Py_VISIT(traverse_module_state->__pyx_n_s_getAgentVerticalUpSpeed);
   Py_VISIT(traverse_module_state->__pyx_n_s_getGlobalTime);
   Py_VISIT(traverse_module_state->__pyx_n_s_getNumAgents);
   Py_VISIT(traverse_module_state->__pyx_n_s_getTimeStep);
   Py_VISIT(traverse_module_state->__pyx_n_s_getstate);
+  Py_VISIT(traverse_module_state->__pyx_n_s_horizontal_speed);
   Py_VISIT(traverse_module_state->__pyx_n_s_is_coroutine);
   Py_VISIT(traverse_module_state->__pyx_kp_u_isenabled);
   Py_VISIT(traverse_module_state->__pyx_n_s_main);
@@ -2886,8 +3033,11 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_maxSpeed);
   Py_VISIT(traverse_module_state->__pyx_n_s_max_acceleration);
   Py_VISIT(traverse_module_state->__pyx_n_s_max_deceleration);
+  Py_VISIT(traverse_module_state->__pyx_n_s_max_horizontal_speed);
   Py_VISIT(traverse_module_state->__pyx_n_s_max_neighbors);
   Py_VISIT(traverse_module_state->__pyx_n_s_max_speed);
+  Py_VISIT(traverse_module_state->__pyx_n_s_max_vertical_down_speed);
+  Py_VISIT(traverse_module_state->__pyx_n_s_max_vertical_up_speed);
   Py_VISIT(traverse_module_state->__pyx_n_s_name);
   Py_VISIT(traverse_module_state->__pyx_n_s_neighborDist);
   Py_VISIT(traverse_module_state->__pyx_n_s_neighbor_dist);
@@ -2904,6 +3054,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_self);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentAccelerationLimits);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentDefaults);
+  Py_VISIT(traverse_module_state->__pyx_n_s_setAgentDirectionalSpeeds);
+  Py_VISIT(traverse_module_state->__pyx_n_s_setAgentHorizontalSpeed);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentMaxAcceleration);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentMaxDeceleration);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentMaxNeighbors);
@@ -2913,7 +3065,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentPrefVelocity);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentRadius);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentTimeHorizon);
+  Py_VISIT(traverse_module_state->__pyx_n_s_setAgentUseDirectionalSpeedLimit);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentVelocity);
+  Py_VISIT(traverse_module_state->__pyx_n_s_setAgentVerticalDownSpeed);
+  Py_VISIT(traverse_module_state->__pyx_n_s_setAgentVerticalUpSpeed);
   Py_VISIT(traverse_module_state->__pyx_n_s_setTimeStep);
   Py_VISIT(traverse_module_state->__pyx_n_s_setstate);
   Py_VISIT(traverse_module_state->__pyx_n_s_setstate_cython);
@@ -2924,7 +3079,13 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_timeStep);
   Py_VISIT(traverse_module_state->__pyx_n_s_time_horizon);
   Py_VISIT(traverse_module_state->__pyx_n_s_time_step);
+  Py_VISIT(traverse_module_state->__pyx_n_s_use);
   Py_VISIT(traverse_module_state->__pyx_n_s_velocity);
+  Py_VISIT(traverse_module_state->__pyx_n_s_vertical_down_speed);
+  Py_VISIT(traverse_module_state->__pyx_n_s_vertical_up_speed);
+  Py_VISIT(traverse_module_state->__pyx_float_2_4);
+  Py_VISIT(traverse_module_state->__pyx_float_3_2);
+  Py_VISIT(traverse_module_state->__pyx_float_4_0);
   Py_VISIT(traverse_module_state->__pyx_int_0);
   Py_VISIT(traverse_module_state->__pyx_tuple_);
   Py_VISIT(traverse_module_state->__pyx_tuple__2);
@@ -2950,7 +3111,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_tuple__50);
   Py_VISIT(traverse_module_state->__pyx_tuple__52);
   Py_VISIT(traverse_module_state->__pyx_tuple__54);
-  Py_VISIT(traverse_module_state->__pyx_tuple__57);
+  Py_VISIT(traverse_module_state->__pyx_tuple__60);
+  Py_VISIT(traverse_module_state->__pyx_tuple__62);
+  Py_VISIT(traverse_module_state->__pyx_tuple__64);
+  Py_VISIT(traverse_module_state->__pyx_tuple__66);
+  Py_VISIT(traverse_module_state->__pyx_tuple__68);
+  Py_VISIT(traverse_module_state->__pyx_tuple__70);
+  Py_VISIT(traverse_module_state->__pyx_tuple__72);
+  Py_VISIT(traverse_module_state->__pyx_tuple__74);
   Py_VISIT(traverse_module_state->__pyx_codeobj__6);
   Py_VISIT(traverse_module_state->__pyx_codeobj__9);
   Py_VISIT(traverse_module_state->__pyx_codeobj__11);
@@ -2983,7 +3151,17 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_codeobj__53);
   Py_VISIT(traverse_module_state->__pyx_codeobj__55);
   Py_VISIT(traverse_module_state->__pyx_codeobj__56);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__57);
   Py_VISIT(traverse_module_state->__pyx_codeobj__58);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__59);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__61);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__63);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__65);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__67);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__69);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__71);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__73);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__75);
   return 0;
 }
 #endif
@@ -3027,7 +3205,9 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_PyRVOSimulator___setstate_cython __pyx_mstate_global->__pyx_n_s_PyRVOSimulator___setstate_cython
 #define __pyx_n_s_PyRVOSimulator_addAgent __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_addAgent
 #define __pyx_n_s_PyRVOSimulator_doStep __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_doStep
+#define __pyx_n_s_PyRVOSimulator_enableDirectional __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_enableDirectional
 #define __pyx_n_s_PyRVOSimulator_getAgentAgentNeig __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentAgentNeig
+#define __pyx_n_s_PyRVOSimulator_getAgentHorizonta __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentHorizonta
 #define __pyx_n_s_PyRVOSimulator_getAgentMaxAccele __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentMaxAccele
 #define __pyx_n_s_PyRVOSimulator_getAgentMaxDecele __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentMaxDecele
 #define __pyx_n_s_PyRVOSimulator_getAgentMaxNeighb __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentMaxNeighb
@@ -3038,12 +3218,17 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_PyRVOSimulator_getAgentPrefVeloc __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentPrefVeloc
 #define __pyx_n_s_PyRVOSimulator_getAgentRadius __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentRadius
 #define __pyx_n_s_PyRVOSimulator_getAgentTimeHoriz __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentTimeHoriz
+#define __pyx_n_s_PyRVOSimulator_getAgentUseDirect __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentUseDirect
 #define __pyx_n_s_PyRVOSimulator_getAgentVelocity __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentVelocity
+#define __pyx_n_s_PyRVOSimulator_getAgentVerticalD __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentVerticalD
+#define __pyx_n_s_PyRVOSimulator_getAgentVerticalU __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getAgentVerticalU
 #define __pyx_n_s_PyRVOSimulator_getGlobalTime __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getGlobalTime
 #define __pyx_n_s_PyRVOSimulator_getNumAgents __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getNumAgents
 #define __pyx_n_s_PyRVOSimulator_getTimeStep __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_getTimeStep
 #define __pyx_n_s_PyRVOSimulator_setAgentAccelerat __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentAccelerat
 #define __pyx_n_s_PyRVOSimulator_setAgentDefaults __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentDefaults
+#define __pyx_n_s_PyRVOSimulator_setAgentDirection __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentDirection
+#define __pyx_n_s_PyRVOSimulator_setAgentHorizonta __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentHorizonta
 #define __pyx_n_s_PyRVOSimulator_setAgentMaxAccele __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentMaxAccele
 #define __pyx_n_s_PyRVOSimulator_setAgentMaxDecele __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentMaxDecele
 #define __pyx_n_s_PyRVOSimulator_setAgentMaxNeighb __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentMaxNeighb
@@ -3053,12 +3238,15 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_PyRVOSimulator_setAgentPrefVeloc __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentPrefVeloc
 #define __pyx_n_s_PyRVOSimulator_setAgentRadius __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentRadius
 #define __pyx_n_s_PyRVOSimulator_setAgentTimeHoriz __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentTimeHoriz
+#define __pyx_n_s_PyRVOSimulator_setAgentUseDirect __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentUseDirect
 #define __pyx_n_s_PyRVOSimulator_setAgentVelocity __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentVelocity
+#define __pyx_n_s_PyRVOSimulator_setAgentVerticalD __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentVerticalD
+#define __pyx_n_s_PyRVOSimulator_setAgentVerticalU __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setAgentVerticalU
 #define __pyx_n_s_PyRVOSimulator_setTimeStep __pyx_mstate_global->__pyx_n_s_PyRVOSimulator_setTimeStep
 #define __pyx_n_s_RuntimeError __pyx_mstate_global->__pyx_n_s_RuntimeError
 #define __pyx_n_s_TypeError __pyx_mstate_global->__pyx_n_s_TypeError
 #define __pyx_n_s_ValueError __pyx_mstate_global->__pyx_n_s_ValueError
-#define __pyx_n_s__59 __pyx_mstate_global->__pyx_n_s__59
+#define __pyx_n_s__76 __pyx_mstate_global->__pyx_n_s__76
 #define __pyx_n_s_addAgent __pyx_mstate_global->__pyx_n_s_addAgent
 #define __pyx_n_s_agent_no __pyx_mstate_global->__pyx_n_s_agent_no
 #define __pyx_n_s_agent_nr __pyx_mstate_global->__pyx_n_s_agent_nr
@@ -3069,8 +3257,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_disable __pyx_mstate_global->__pyx_kp_u_disable
 #define __pyx_n_s_doStep __pyx_mstate_global->__pyx_n_s_doStep
 #define __pyx_kp_u_enable __pyx_mstate_global->__pyx_kp_u_enable
+#define __pyx_n_s_enableDirectionalSpeedLimits __pyx_mstate_global->__pyx_n_s_enableDirectionalSpeedLimits
 #define __pyx_kp_u_gc __pyx_mstate_global->__pyx_kp_u_gc
 #define __pyx_n_s_getAgentAgentNeighbor __pyx_mstate_global->__pyx_n_s_getAgentAgentNeighbor
+#define __pyx_n_s_getAgentHorizontalSpeed __pyx_mstate_global->__pyx_n_s_getAgentHorizontalSpeed
 #define __pyx_n_s_getAgentMaxAcceleration __pyx_mstate_global->__pyx_n_s_getAgentMaxAcceleration
 #define __pyx_n_s_getAgentMaxDeceleration __pyx_mstate_global->__pyx_n_s_getAgentMaxDeceleration
 #define __pyx_n_s_getAgentMaxNeighbors __pyx_mstate_global->__pyx_n_s_getAgentMaxNeighbors
@@ -3081,11 +3271,15 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_getAgentPrefVelocity __pyx_mstate_global->__pyx_n_s_getAgentPrefVelocity
 #define __pyx_n_s_getAgentRadius __pyx_mstate_global->__pyx_n_s_getAgentRadius
 #define __pyx_n_s_getAgentTimeHorizon __pyx_mstate_global->__pyx_n_s_getAgentTimeHorizon
+#define __pyx_n_s_getAgentUseDirectionalSpeedLimit __pyx_mstate_global->__pyx_n_s_getAgentUseDirectionalSpeedLimit
 #define __pyx_n_s_getAgentVelocity __pyx_mstate_global->__pyx_n_s_getAgentVelocity
+#define __pyx_n_s_getAgentVerticalDownSpeed __pyx_mstate_global->__pyx_n_s_getAgentVerticalDownSpeed
+#define __pyx_n_s_getAgentVerticalUpSpeed __pyx_mstate_global->__pyx_n_s_getAgentVerticalUpSpeed
 #define __pyx_n_s_getGlobalTime __pyx_mstate_global->__pyx_n_s_getGlobalTime
 #define __pyx_n_s_getNumAgents __pyx_mstate_global->__pyx_n_s_getNumAgents
 #define __pyx_n_s_getTimeStep __pyx_mstate_global->__pyx_n_s_getTimeStep
 #define __pyx_n_s_getstate __pyx_mstate_global->__pyx_n_s_getstate
+#define __pyx_n_s_horizontal_speed __pyx_mstate_global->__pyx_n_s_horizontal_speed
 #define __pyx_n_s_is_coroutine __pyx_mstate_global->__pyx_n_s_is_coroutine
 #define __pyx_kp_u_isenabled __pyx_mstate_global->__pyx_kp_u_isenabled
 #define __pyx_n_s_main __pyx_mstate_global->__pyx_n_s_main
@@ -3093,8 +3287,11 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_maxSpeed __pyx_mstate_global->__pyx_n_s_maxSpeed
 #define __pyx_n_s_max_acceleration __pyx_mstate_global->__pyx_n_s_max_acceleration
 #define __pyx_n_s_max_deceleration __pyx_mstate_global->__pyx_n_s_max_deceleration
+#define __pyx_n_s_max_horizontal_speed __pyx_mstate_global->__pyx_n_s_max_horizontal_speed
 #define __pyx_n_s_max_neighbors __pyx_mstate_global->__pyx_n_s_max_neighbors
 #define __pyx_n_s_max_speed __pyx_mstate_global->__pyx_n_s_max_speed
+#define __pyx_n_s_max_vertical_down_speed __pyx_mstate_global->__pyx_n_s_max_vertical_down_speed
+#define __pyx_n_s_max_vertical_up_speed __pyx_mstate_global->__pyx_n_s_max_vertical_up_speed
 #define __pyx_n_s_name __pyx_mstate_global->__pyx_n_s_name
 #define __pyx_n_s_neighborDist __pyx_mstate_global->__pyx_n_s_neighborDist
 #define __pyx_n_s_neighbor_dist __pyx_mstate_global->__pyx_n_s_neighbor_dist
@@ -3111,6 +3308,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_self __pyx_mstate_global->__pyx_n_s_self
 #define __pyx_n_s_setAgentAccelerationLimits __pyx_mstate_global->__pyx_n_s_setAgentAccelerationLimits
 #define __pyx_n_s_setAgentDefaults __pyx_mstate_global->__pyx_n_s_setAgentDefaults
+#define __pyx_n_s_setAgentDirectionalSpeeds __pyx_mstate_global->__pyx_n_s_setAgentDirectionalSpeeds
+#define __pyx_n_s_setAgentHorizontalSpeed __pyx_mstate_global->__pyx_n_s_setAgentHorizontalSpeed
 #define __pyx_n_s_setAgentMaxAcceleration __pyx_mstate_global->__pyx_n_s_setAgentMaxAcceleration
 #define __pyx_n_s_setAgentMaxDeceleration __pyx_mstate_global->__pyx_n_s_setAgentMaxDeceleration
 #define __pyx_n_s_setAgentMaxNeighbors __pyx_mstate_global->__pyx_n_s_setAgentMaxNeighbors
@@ -3120,7 +3319,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_setAgentPrefVelocity __pyx_mstate_global->__pyx_n_s_setAgentPrefVelocity
 #define __pyx_n_s_setAgentRadius __pyx_mstate_global->__pyx_n_s_setAgentRadius
 #define __pyx_n_s_setAgentTimeHorizon __pyx_mstate_global->__pyx_n_s_setAgentTimeHorizon
+#define __pyx_n_s_setAgentUseDirectionalSpeedLimit __pyx_mstate_global->__pyx_n_s_setAgentUseDirectionalSpeedLimit
 #define __pyx_n_s_setAgentVelocity __pyx_mstate_global->__pyx_n_s_setAgentVelocity
+#define __pyx_n_s_setAgentVerticalDownSpeed __pyx_mstate_global->__pyx_n_s_setAgentVerticalDownSpeed
+#define __pyx_n_s_setAgentVerticalUpSpeed __pyx_mstate_global->__pyx_n_s_setAgentVerticalUpSpeed
 #define __pyx_n_s_setTimeStep __pyx_mstate_global->__pyx_n_s_setTimeStep
 #define __pyx_n_s_setstate __pyx_mstate_global->__pyx_n_s_setstate
 #define __pyx_n_s_setstate_cython __pyx_mstate_global->__pyx_n_s_setstate_cython
@@ -3131,7 +3333,13 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_timeStep __pyx_mstate_global->__pyx_n_s_timeStep
 #define __pyx_n_s_time_horizon __pyx_mstate_global->__pyx_n_s_time_horizon
 #define __pyx_n_s_time_step __pyx_mstate_global->__pyx_n_s_time_step
+#define __pyx_n_s_use __pyx_mstate_global->__pyx_n_s_use
 #define __pyx_n_s_velocity __pyx_mstate_global->__pyx_n_s_velocity
+#define __pyx_n_s_vertical_down_speed __pyx_mstate_global->__pyx_n_s_vertical_down_speed
+#define __pyx_n_s_vertical_up_speed __pyx_mstate_global->__pyx_n_s_vertical_up_speed
+#define __pyx_float_2_4 __pyx_mstate_global->__pyx_float_2_4
+#define __pyx_float_3_2 __pyx_mstate_global->__pyx_float_3_2
+#define __pyx_float_4_0 __pyx_mstate_global->__pyx_float_4_0
 #define __pyx_int_0 __pyx_mstate_global->__pyx_int_0
 #define __pyx_tuple_ __pyx_mstate_global->__pyx_tuple_
 #define __pyx_tuple__2 __pyx_mstate_global->__pyx_tuple__2
@@ -3157,7 +3365,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_tuple__50 __pyx_mstate_global->__pyx_tuple__50
 #define __pyx_tuple__52 __pyx_mstate_global->__pyx_tuple__52
 #define __pyx_tuple__54 __pyx_mstate_global->__pyx_tuple__54
-#define __pyx_tuple__57 __pyx_mstate_global->__pyx_tuple__57
+#define __pyx_tuple__60 __pyx_mstate_global->__pyx_tuple__60
+#define __pyx_tuple__62 __pyx_mstate_global->__pyx_tuple__62
+#define __pyx_tuple__64 __pyx_mstate_global->__pyx_tuple__64
+#define __pyx_tuple__66 __pyx_mstate_global->__pyx_tuple__66
+#define __pyx_tuple__68 __pyx_mstate_global->__pyx_tuple__68
+#define __pyx_tuple__70 __pyx_mstate_global->__pyx_tuple__70
+#define __pyx_tuple__72 __pyx_mstate_global->__pyx_tuple__72
+#define __pyx_tuple__74 __pyx_mstate_global->__pyx_tuple__74
 #define __pyx_codeobj__6 __pyx_mstate_global->__pyx_codeobj__6
 #define __pyx_codeobj__9 __pyx_mstate_global->__pyx_codeobj__9
 #define __pyx_codeobj__11 __pyx_mstate_global->__pyx_codeobj__11
@@ -3190,10 +3405,20 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_codeobj__53 __pyx_mstate_global->__pyx_codeobj__53
 #define __pyx_codeobj__55 __pyx_mstate_global->__pyx_codeobj__55
 #define __pyx_codeobj__56 __pyx_mstate_global->__pyx_codeobj__56
+#define __pyx_codeobj__57 __pyx_mstate_global->__pyx_codeobj__57
 #define __pyx_codeobj__58 __pyx_mstate_global->__pyx_codeobj__58
+#define __pyx_codeobj__59 __pyx_mstate_global->__pyx_codeobj__59
+#define __pyx_codeobj__61 __pyx_mstate_global->__pyx_codeobj__61
+#define __pyx_codeobj__63 __pyx_mstate_global->__pyx_codeobj__63
+#define __pyx_codeobj__65 __pyx_mstate_global->__pyx_codeobj__65
+#define __pyx_codeobj__67 __pyx_mstate_global->__pyx_codeobj__67
+#define __pyx_codeobj__69 __pyx_mstate_global->__pyx_codeobj__69
+#define __pyx_codeobj__71 __pyx_mstate_global->__pyx_codeobj__71
+#define __pyx_codeobj__73 __pyx_mstate_global->__pyx_codeobj__73
+#define __pyx_codeobj__75 __pyx_mstate_global->__pyx_codeobj__75
 /* #### Code section: module_code ### */
 
-/* "rvo23d.pyx":78
+/* "rvo23d.pyx":89
  *     cdef RVOSimulator *thisptr
  * 
  *     def __cinit__(self, float timeStep, float neighborDist, size_t maxNeighbors,             # <<<<<<<<<<<<<<
@@ -3229,7 +3454,7 @@ static int __pyx_pw_6rvo23d_14PyRVOSimulator_1__cinit__(PyObject *__pyx_v_self, 
   {
     PyObject **__pyx_pyargnames[] = {&__pyx_n_s_timeStep,&__pyx_n_s_neighborDist,&__pyx_n_s_maxNeighbors,&__pyx_n_s_timeHorizon,&__pyx_n_s_radius,&__pyx_n_s_maxSpeed,&__pyx_n_s_velocity,0};
 
-    /* "rvo23d.pyx":80
+    /* "rvo23d.pyx":91
  *     def __cinit__(self, float timeStep, float neighborDist, size_t maxNeighbors,
  *                   float timeHorizon, float radius,
  *                   float maxSpeed, tuple velocity=(0, 0, 0)):             # <<<<<<<<<<<<<<
@@ -3264,7 +3489,7 @@ static int __pyx_pw_6rvo23d_14PyRVOSimulator_1__cinit__(PyObject *__pyx_v_self, 
           (void)__Pyx_Arg_NewRef_VARARGS(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -3272,9 +3497,9 @@ static int __pyx_pw_6rvo23d_14PyRVOSimulator_1__cinit__(PyObject *__pyx_v_self, 
           (void)__Pyx_Arg_NewRef_VARARGS(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 1); __PYX_ERR(0, 78, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 1); __PYX_ERR(0, 89, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -3282,9 +3507,9 @@ static int __pyx_pw_6rvo23d_14PyRVOSimulator_1__cinit__(PyObject *__pyx_v_self, 
           (void)__Pyx_Arg_NewRef_VARARGS(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 2); __PYX_ERR(0, 78, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 2); __PYX_ERR(0, 89, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -3292,9 +3517,9 @@ static int __pyx_pw_6rvo23d_14PyRVOSimulator_1__cinit__(PyObject *__pyx_v_self, 
           (void)__Pyx_Arg_NewRef_VARARGS(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 3); __PYX_ERR(0, 78, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 3); __PYX_ERR(0, 89, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -3302,9 +3527,9 @@ static int __pyx_pw_6rvo23d_14PyRVOSimulator_1__cinit__(PyObject *__pyx_v_self, 
           (void)__Pyx_Arg_NewRef_VARARGS(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 4); __PYX_ERR(0, 78, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 4); __PYX_ERR(0, 89, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -3312,21 +3537,21 @@ static int __pyx_pw_6rvo23d_14PyRVOSimulator_1__cinit__(PyObject *__pyx_v_self, 
           (void)__Pyx_Arg_NewRef_VARARGS(values[5]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 5); __PYX_ERR(0, 78, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, 5); __PYX_ERR(0, 89, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_VARARGS(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_velocity);
           if (value) { values[6] = __Pyx_Arg_NewRef_VARARGS(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__cinit__") < 0)) __PYX_ERR(0, 78, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__cinit__") < 0)) __PYX_ERR(0, 89, __pyx_L3_error)
       }
     } else {
       switch (__pyx_nargs) {
@@ -3342,17 +3567,17 @@ static int __pyx_pw_6rvo23d_14PyRVOSimulator_1__cinit__(PyObject *__pyx_v_self, 
         default: goto __pyx_L5_argtuple_error;
       }
     }
-    __pyx_v_timeStep = __pyx_PyFloat_AsFloat(values[0]); if (unlikely((__pyx_v_timeStep == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
-    __pyx_v_neighborDist = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_neighborDist == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
-    __pyx_v_maxNeighbors = __Pyx_PyInt_As_size_t(values[2]); if (unlikely((__pyx_v_maxNeighbors == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
-    __pyx_v_timeHorizon = __pyx_PyFloat_AsFloat(values[3]); if (unlikely((__pyx_v_timeHorizon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 79, __pyx_L3_error)
-    __pyx_v_radius = __pyx_PyFloat_AsFloat(values[4]); if (unlikely((__pyx_v_radius == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 79, __pyx_L3_error)
-    __pyx_v_maxSpeed = __pyx_PyFloat_AsFloat(values[5]); if (unlikely((__pyx_v_maxSpeed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 80, __pyx_L3_error)
+    __pyx_v_timeStep = __pyx_PyFloat_AsFloat(values[0]); if (unlikely((__pyx_v_timeStep == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
+    __pyx_v_neighborDist = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_neighborDist == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
+    __pyx_v_maxNeighbors = __Pyx_PyInt_As_size_t(values[2]); if (unlikely((__pyx_v_maxNeighbors == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L3_error)
+    __pyx_v_timeHorizon = __pyx_PyFloat_AsFloat(values[3]); if (unlikely((__pyx_v_timeHorizon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 90, __pyx_L3_error)
+    __pyx_v_radius = __pyx_PyFloat_AsFloat(values[4]); if (unlikely((__pyx_v_radius == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 90, __pyx_L3_error)
+    __pyx_v_maxSpeed = __pyx_PyFloat_AsFloat(values[5]); if (unlikely((__pyx_v_maxSpeed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L3_error)
     __pyx_v_velocity = ((PyObject*)values[6]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, __pyx_nargs); __PYX_ERR(0, 78, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 6, 7, __pyx_nargs); __PYX_ERR(0, 89, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -3366,10 +3591,10 @@ static int __pyx_pw_6rvo23d_14PyRVOSimulator_1__cinit__(PyObject *__pyx_v_self, 
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_velocity), (&PyTuple_Type), 1, "velocity", 1))) __PYX_ERR(0, 80, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_velocity), (&PyTuple_Type), 1, "velocity", 1))) __PYX_ERR(0, 91, __pyx_L1_error)
   __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator___cinit__(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_timeStep, __pyx_v_neighborDist, __pyx_v_maxNeighbors, __pyx_v_timeHorizon, __pyx_v_radius, __pyx_v_maxSpeed, __pyx_v_velocity);
 
-  /* "rvo23d.pyx":78
+  /* "rvo23d.pyx":89
  *     cdef RVOSimulator *thisptr
  * 
  *     def __cinit__(self, float timeStep, float neighborDist, size_t maxNeighbors,             # <<<<<<<<<<<<<<
@@ -3406,7 +3631,7 @@ static int __pyx_pf_6rvo23d_14PyRVOSimulator___cinit__(struct __pyx_obj_6rvo23d_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__cinit__", 1);
 
-  /* "rvo23d.pyx":81
+  /* "rvo23d.pyx":92
  *                   float timeHorizon, float radius,
  *                   float maxSpeed, tuple velocity=(0, 0, 0)):
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])             # <<<<<<<<<<<<<<
@@ -3415,37 +3640,37 @@ static int __pyx_pf_6rvo23d_14PyRVOSimulator___cinit__(struct __pyx_obj_6rvo23d_
  */
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 81, __pyx_L1_error)
+    __PYX_ERR(0, 92, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 81, __pyx_L1_error)
+    __PYX_ERR(0, 92, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 81, __pyx_L1_error)
+    __PYX_ERR(0, 92, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   try {
     __pyx_t_5 = RVO::Vector3(__pyx_t_2, __pyx_t_3, __pyx_t_4);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 81, __pyx_L1_error)
+    __PYX_ERR(0, 92, __pyx_L1_error)
   }
   __pyx_v_c_velocity = __PYX_STD_MOVE_IF_SUPPORTED(__pyx_t_5);
 
-  /* "rvo23d.pyx":83
+  /* "rvo23d.pyx":94
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  * 
  *         self.thisptr = new RVOSimulator(timeStep, neighborDist, maxNeighbors,             # <<<<<<<<<<<<<<
@@ -3454,7 +3679,7 @@ static int __pyx_pf_6rvo23d_14PyRVOSimulator___cinit__(struct __pyx_obj_6rvo23d_
  */
   __pyx_v_self->thisptr = new RVO::RVOSimulator(__pyx_v_timeStep, __pyx_v_neighborDist, __pyx_v_maxNeighbors, __pyx_v_timeHorizon, __pyx_v_radius, __pyx_v_maxSpeed, __pyx_v_c_velocity);
 
-  /* "rvo23d.pyx":78
+  /* "rvo23d.pyx":89
  *     cdef RVOSimulator *thisptr
  * 
  *     def __cinit__(self, float timeStep, float neighborDist, size_t maxNeighbors,             # <<<<<<<<<<<<<<
@@ -3474,7 +3699,7 @@ static int __pyx_pf_6rvo23d_14PyRVOSimulator___cinit__(struct __pyx_obj_6rvo23d_
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":87
+/* "rvo23d.pyx":98
  *                                         maxSpeed, c_velocity)
  * 
  *     def addAgent(self, tuple pos, neighborDist=None,             # <<<<<<<<<<<<<<
@@ -3528,7 +3753,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pos,&__pyx_n_s_neighborDist,&__pyx_n_s_maxNeighbors,&__pyx_n_s_timeHorizon,&__pyx_n_s_radius,&__pyx_n_s_maxSpeed,&__pyx_n_s_velocity,0};
     values[1] = __Pyx_Arg_NewRef_FASTCALL(((PyObject *)Py_None));
 
-    /* "rvo23d.pyx":88
+    /* "rvo23d.pyx":99
  * 
  *     def addAgent(self, tuple pos, neighborDist=None,
  *                  maxNeighbors=None, timeHorizon=None,             # <<<<<<<<<<<<<<
@@ -3538,7 +3763,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     values[2] = __Pyx_Arg_NewRef_FASTCALL(((PyObject *)Py_None));
     values[3] = __Pyx_Arg_NewRef_FASTCALL(((PyObject *)Py_None));
 
-    /* "rvo23d.pyx":89
+    /* "rvo23d.pyx":100
  *     def addAgent(self, tuple pos, neighborDist=None,
  *                  maxNeighbors=None, timeHorizon=None,
  *                  radius=None, maxSpeed=None,             # <<<<<<<<<<<<<<
@@ -3548,7 +3773,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     values[4] = __Pyx_Arg_NewRef_FASTCALL(((PyObject *)Py_None));
     values[5] = __Pyx_Arg_NewRef_FASTCALL(((PyObject *)Py_None));
 
-    /* "rvo23d.pyx":90
+    /* "rvo23d.pyx":101
  *                  maxNeighbors=None, timeHorizon=None,
  *                  radius=None, maxSpeed=None,
  *                  velocity=None):             # <<<<<<<<<<<<<<
@@ -3583,54 +3808,54 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_neighborDist);
           if (value) { values[1] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_maxNeighbors);
           if (value) { values[2] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_timeHorizon);
           if (value) { values[3] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_radius);
           if (value) { values[4] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_maxSpeed);
           if (value) { values[5] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_velocity);
           if (value) { values[6] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "addAgent") < 0)) __PYX_ERR(0, 87, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "addAgent") < 0)) __PYX_ERR(0, 98, __pyx_L3_error)
       }
     } else {
       switch (__pyx_nargs) {
@@ -3661,7 +3886,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("addAgent", 0, 1, 7, __pyx_nargs); __PYX_ERR(0, 87, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("addAgent", 0, 1, 7, __pyx_nargs); __PYX_ERR(0, 98, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -3675,10 +3900,10 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pos), (&PyTuple_Type), 1, "pos", 1))) __PYX_ERR(0, 87, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pos), (&PyTuple_Type), 1, "pos", 1))) __PYX_ERR(0, 98, __pyx_L1_error)
   __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_pos, __pyx_v_neighborDist, __pyx_v_maxNeighbors, __pyx_v_timeHorizon, __pyx_v_radius, __pyx_v_maxSpeed, __pyx_v_velocity);
 
-  /* "rvo23d.pyx":87
+  /* "rvo23d.pyx":98
  *                                         maxSpeed, c_velocity)
  * 
  *     def addAgent(self, tuple pos, neighborDist=None,             # <<<<<<<<<<<<<<
@@ -3721,7 +3946,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("addAgent", 1);
 
-  /* "rvo23d.pyx":91
+  /* "rvo23d.pyx":102
  *                  radius=None, maxSpeed=None,
  *                  velocity=None):
  *         cdef Vector3 c_pos = Vector3(pos[0], pos[1], pos[2])             # <<<<<<<<<<<<<<
@@ -3730,37 +3955,37 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
  */
   if (unlikely(__pyx_v_pos == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 91, __pyx_L1_error)
+    __PYX_ERR(0, 102, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_pos, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_pos, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_pos == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 91, __pyx_L1_error)
+    __PYX_ERR(0, 102, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_pos, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_pos, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_pos == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 91, __pyx_L1_error)
+    __PYX_ERR(0, 102, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_pos, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_pos, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   try {
     __pyx_t_5 = RVO::Vector3(__pyx_t_2, __pyx_t_3, __pyx_t_4);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 91, __pyx_L1_error)
+    __PYX_ERR(0, 102, __pyx_L1_error)
   }
   __pyx_v_c_pos = __PYX_STD_MOVE_IF_SUPPORTED(__pyx_t_5);
 
-  /* "rvo23d.pyx":94
+  /* "rvo23d.pyx":105
  *         cdef Vector3 c_velocity
  * 
  *         if neighborDist is not None and velocity is None:             # <<<<<<<<<<<<<<
@@ -3778,20 +4003,20 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
   __pyx_L4_bool_binop_done:;
   if (unlikely(__pyx_t_6)) {
 
-    /* "rvo23d.pyx":95
+    /* "rvo23d.pyx":106
  * 
  *         if neighborDist is not None and velocity is None:
  *             raise ValueError("Either pass only 'pos', or pass all parameters.")             # <<<<<<<<<<<<<<
  * 
  *         if neighborDist is None:
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 95, __pyx_L1_error)
+    __PYX_ERR(0, 106, __pyx_L1_error)
 
-    /* "rvo23d.pyx":94
+    /* "rvo23d.pyx":105
  *         cdef Vector3 c_velocity
  * 
  *         if neighborDist is not None and velocity is None:             # <<<<<<<<<<<<<<
@@ -3800,7 +4025,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
  */
   }
 
-  /* "rvo23d.pyx":97
+  /* "rvo23d.pyx":108
  *             raise ValueError("Either pass only 'pos', or pass all parameters.")
  * 
  *         if neighborDist is None:             # <<<<<<<<<<<<<<
@@ -3810,7 +4035,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
   __pyx_t_6 = (__pyx_v_neighborDist == Py_None);
   if (__pyx_t_6) {
 
-    /* "rvo23d.pyx":98
+    /* "rvo23d.pyx":109
  * 
  *         if neighborDist is None:
  *             agent_nr = self.thisptr.addAgent(c_pos)             # <<<<<<<<<<<<<<
@@ -3819,7 +4044,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
  */
     __pyx_v_agent_nr = __pyx_v_self->thisptr->addAgent(__pyx_v_c_pos);
 
-    /* "rvo23d.pyx":97
+    /* "rvo23d.pyx":108
  *             raise ValueError("Either pass only 'pos', or pass all parameters.")
  * 
  *         if neighborDist is None:             # <<<<<<<<<<<<<<
@@ -3829,7 +4054,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
     goto __pyx_L6;
   }
 
-  /* "rvo23d.pyx":100
+  /* "rvo23d.pyx":111
  *             agent_nr = self.thisptr.addAgent(c_pos)
  *         else:
  *             c_velocity = Vector3(velocity[0], velocity[1], velocity[2])             # <<<<<<<<<<<<<<
@@ -3837,56 +4062,56 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
  *                                              maxNeighbors, timeHorizon,
  */
   /*else*/ {
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 100, __pyx_L1_error)
+    __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 100, __pyx_L1_error)
+    __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 100, __pyx_L1_error)
+    __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     try {
       __pyx_t_5 = RVO::Vector3(__pyx_t_4, __pyx_t_3, __pyx_t_2);
     } catch(...) {
       __Pyx_CppExn2PyErr();
-      __PYX_ERR(0, 100, __pyx_L1_error)
+      __PYX_ERR(0, 111, __pyx_L1_error)
     }
     __pyx_v_c_velocity = __PYX_STD_MOVE_IF_SUPPORTED(__pyx_t_5);
 
-    /* "rvo23d.pyx":101
+    /* "rvo23d.pyx":112
  *         else:
  *             c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *             agent_nr = self.thisptr.addAgent(c_pos, neighborDist,             # <<<<<<<<<<<<<<
  *                                              maxNeighbors, timeHorizon,
  *                                              radius, maxSpeed,
  */
-    __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_v_neighborDist); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 101, __pyx_L1_error)
+    __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_v_neighborDist); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L1_error)
 
-    /* "rvo23d.pyx":102
+    /* "rvo23d.pyx":113
  *             c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *             agent_nr = self.thisptr.addAgent(c_pos, neighborDist,
  *                                              maxNeighbors, timeHorizon,             # <<<<<<<<<<<<<<
  *                                              radius, maxSpeed,
  *                                              c_velocity)
  */
-    __pyx_t_8 = __Pyx_PyInt_As_size_t(__pyx_v_maxNeighbors); if (unlikely((__pyx_t_8 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 102, __pyx_L1_error)
-    __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_v_timeHorizon); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyInt_As_size_t(__pyx_v_maxNeighbors); if (unlikely((__pyx_t_8 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
+    __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_v_timeHorizon); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
 
-    /* "rvo23d.pyx":103
+    /* "rvo23d.pyx":114
  *             agent_nr = self.thisptr.addAgent(c_pos, neighborDist,
  *                                              maxNeighbors, timeHorizon,
  *                                              radius, maxSpeed,             # <<<<<<<<<<<<<<
  *                                              c_velocity)
  * 
  */
-    __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_v_radius); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 103, __pyx_L1_error)
-    __pyx_t_9 = __pyx_PyFloat_AsFloat(__pyx_v_maxSpeed); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_v_radius); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_9 = __pyx_PyFloat_AsFloat(__pyx_v_maxSpeed); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 114, __pyx_L1_error)
 
-    /* "rvo23d.pyx":101
+    /* "rvo23d.pyx":112
  *         else:
  *             c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *             agent_nr = self.thisptr.addAgent(c_pos, neighborDist,             # <<<<<<<<<<<<<<
@@ -3897,7 +4122,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
   }
   __pyx_L6:;
 
-  /* "rvo23d.pyx":106
+  /* "rvo23d.pyx":117
  *                                              c_velocity)
  * 
  *         if agent_nr == RVO_ERROR:             # <<<<<<<<<<<<<<
@@ -3907,20 +4132,20 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
   __pyx_t_6 = (__pyx_v_agent_nr == RVO::RVO_ERROR);
   if (unlikely(__pyx_t_6)) {
 
-    /* "rvo23d.pyx":107
+    /* "rvo23d.pyx":118
  * 
  *         if agent_nr == RVO_ERROR:
  *             raise RuntimeError('Error adding agent to RVO simulation')             # <<<<<<<<<<<<<<
  * 
  *         return agent_nr
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 107, __pyx_L1_error)
+    __PYX_ERR(0, 118, __pyx_L1_error)
 
-    /* "rvo23d.pyx":106
+    /* "rvo23d.pyx":117
  *                                              c_velocity)
  * 
  *         if agent_nr == RVO_ERROR:             # <<<<<<<<<<<<<<
@@ -3929,7 +4154,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
  */
   }
 
-  /* "rvo23d.pyx":109
+  /* "rvo23d.pyx":120
  *             raise RuntimeError('Error adding agent to RVO simulation')
  * 
  *         return agent_nr             # <<<<<<<<<<<<<<
@@ -3937,13 +4162,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
  *     def doStep(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_agent_nr); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_agent_nr); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":87
+  /* "rvo23d.pyx":98
  *                                         maxSpeed, c_velocity)
  * 
  *     def addAgent(self, tuple pos, neighborDist=None,             # <<<<<<<<<<<<<<
@@ -3962,7 +4187,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_2addAgent(struct __pyx_obj_6r
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":111
+/* "rvo23d.pyx":122
  *         return agent_nr
  * 
  *     def doStep(self):             # <<<<<<<<<<<<<<
@@ -4016,7 +4241,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_4doStep(struct __pyx_obj_6rvo
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("doStep", 1);
 
-  /* "rvo23d.pyx":112
+  /* "rvo23d.pyx":123
  * 
  *     def doStep(self):
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -4032,7 +4257,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_4doStep(struct __pyx_obj_6rvo
       #endif
       /*try:*/ {
 
-        /* "rvo23d.pyx":113
+        /* "rvo23d.pyx":124
  *     def doStep(self):
  *         with nogil:
  *             self.thisptr.doStep()             # <<<<<<<<<<<<<<
@@ -4042,7 +4267,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_4doStep(struct __pyx_obj_6rvo
         __pyx_v_self->thisptr->doStep();
       }
 
-      /* "rvo23d.pyx":112
+      /* "rvo23d.pyx":123
  * 
  *     def doStep(self):
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -4061,7 +4286,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_4doStep(struct __pyx_obj_6rvo
       }
   }
 
-  /* "rvo23d.pyx":111
+  /* "rvo23d.pyx":122
  *         return agent_nr
  * 
  *     def doStep(self):             # <<<<<<<<<<<<<<
@@ -4076,7 +4301,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_4doStep(struct __pyx_obj_6rvo
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":115
+/* "rvo23d.pyx":126
  *             self.thisptr.doStep()
  * 
  *     def getAgentAgentNeighbor(self, size_t agent_no, size_t neighbor_no):             # <<<<<<<<<<<<<<
@@ -4140,7 +4365,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 115, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 126, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -4148,14 +4373,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 115, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 126, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("getAgentAgentNeighbor", 1, 2, 2, 1); __PYX_ERR(0, 115, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("getAgentAgentNeighbor", 1, 2, 2, 1); __PYX_ERR(0, 126, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentAgentNeighbor") < 0)) __PYX_ERR(0, 115, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentAgentNeighbor") < 0)) __PYX_ERR(0, 126, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -4163,12 +4388,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 115, __pyx_L3_error)
-    __pyx_v_neighbor_no = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_neighbor_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 115, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 126, __pyx_L3_error)
+    __pyx_v_neighbor_no = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_neighbor_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 126, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentAgentNeighbor", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 115, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentAgentNeighbor", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 126, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4204,7 +4429,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_6getAgentAgentNeighbor(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentAgentNeighbor", 1);
 
-  /* "rvo23d.pyx":116
+  /* "rvo23d.pyx":127
  * 
  *     def getAgentAgentNeighbor(self, size_t agent_no, size_t neighbor_no):
  *         return self.thisptr.getAgentAgentNeighbor(agent_no, neighbor_no)             # <<<<<<<<<<<<<<
@@ -4212,13 +4437,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_6getAgentAgentNeighbor(struct
  *         return self.thisptr.getAgentMaxNeighbors(agent_no)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->thisptr->getAgentAgentNeighbor(__pyx_v_agent_no, __pyx_v_neighbor_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->thisptr->getAgentAgentNeighbor(__pyx_v_agent_no, __pyx_v_neighbor_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":115
+  /* "rvo23d.pyx":126
  *             self.thisptr.doStep()
  * 
  *     def getAgentAgentNeighbor(self, size_t agent_no, size_t neighbor_no):             # <<<<<<<<<<<<<<
@@ -4237,7 +4462,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_6getAgentAgentNeighbor(struct
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":117
+/* "rvo23d.pyx":128
  *     def getAgentAgentNeighbor(self, size_t agent_no, size_t neighbor_no):
  *         return self.thisptr.getAgentAgentNeighbor(agent_no, neighbor_no)
  *     def getAgentMaxNeighbors(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4298,23 +4523,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 117, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentMaxNeighbors") < 0)) __PYX_ERR(0, 117, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentMaxNeighbors") < 0)) __PYX_ERR(0, 128, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 117, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentMaxNeighbors", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 117, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentMaxNeighbors", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 128, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4350,7 +4575,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_8getAgentMaxNeighbors(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentMaxNeighbors", 1);
 
-  /* "rvo23d.pyx":118
+  /* "rvo23d.pyx":129
  *         return self.thisptr.getAgentAgentNeighbor(agent_no, neighbor_no)
  *     def getAgentMaxNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxNeighbors(agent_no)             # <<<<<<<<<<<<<<
@@ -4358,13 +4583,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_8getAgentMaxNeighbors(struct 
  *         return self.thisptr.getAgentMaxSpeed(agent_no)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->thisptr->getAgentMaxNeighbors(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->thisptr->getAgentMaxNeighbors(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":117
+  /* "rvo23d.pyx":128
  *     def getAgentAgentNeighbor(self, size_t agent_no, size_t neighbor_no):
  *         return self.thisptr.getAgentAgentNeighbor(agent_no, neighbor_no)
  *     def getAgentMaxNeighbors(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4383,7 +4608,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_8getAgentMaxNeighbors(struct 
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":119
+/* "rvo23d.pyx":130
  *     def getAgentMaxNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxNeighbors(agent_no)
  *     def getAgentMaxSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4444,23 +4669,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 119, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 130, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentMaxSpeed") < 0)) __PYX_ERR(0, 119, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentMaxSpeed") < 0)) __PYX_ERR(0, 130, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 119, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 130, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentMaxSpeed", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 119, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentMaxSpeed", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 130, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4496,7 +4721,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_10getAgentMaxSpeed(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentMaxSpeed", 1);
 
-  /* "rvo23d.pyx":120
+  /* "rvo23d.pyx":131
  *         return self.thisptr.getAgentMaxNeighbors(agent_no)
  *     def getAgentMaxSpeed(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxSpeed(agent_no)             # <<<<<<<<<<<<<<
@@ -4504,13 +4729,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_10getAgentMaxSpeed(struct __p
  *         return self.thisptr.getAgentNeighborDist(agent_no)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentMaxSpeed(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentMaxSpeed(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":119
+  /* "rvo23d.pyx":130
  *     def getAgentMaxNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxNeighbors(agent_no)
  *     def getAgentMaxSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4529,7 +4754,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_10getAgentMaxSpeed(struct __p
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":121
+/* "rvo23d.pyx":132
  *     def getAgentMaxSpeed(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxSpeed(agent_no)
  *     def getAgentNeighborDist(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4590,23 +4815,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 121, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentNeighborDist") < 0)) __PYX_ERR(0, 121, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentNeighborDist") < 0)) __PYX_ERR(0, 132, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 121, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentNeighborDist", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 121, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentNeighborDist", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 132, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4642,7 +4867,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_12getAgentNeighborDist(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentNeighborDist", 1);
 
-  /* "rvo23d.pyx":122
+  /* "rvo23d.pyx":133
  *         return self.thisptr.getAgentMaxSpeed(agent_no)
  *     def getAgentNeighborDist(self, size_t agent_no):
  *         return self.thisptr.getAgentNeighborDist(agent_no)             # <<<<<<<<<<<<<<
@@ -4650,13 +4875,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_12getAgentNeighborDist(struct
  *         return self.thisptr.getAgentNumAgentNeighbors(agent_no)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentNeighborDist(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentNeighborDist(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":121
+  /* "rvo23d.pyx":132
  *     def getAgentMaxSpeed(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxSpeed(agent_no)
  *     def getAgentNeighborDist(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4675,7 +4900,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_12getAgentNeighborDist(struct
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":123
+/* "rvo23d.pyx":134
  *     def getAgentNeighborDist(self, size_t agent_no):
  *         return self.thisptr.getAgentNeighborDist(agent_no)
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4736,23 +4961,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 123, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 134, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentNumAgentNeighbors") < 0)) __PYX_ERR(0, 123, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentNumAgentNeighbors") < 0)) __PYX_ERR(0, 134, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 123, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 134, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentNumAgentNeighbors", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 123, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentNumAgentNeighbors", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 134, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4788,7 +5013,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_14getAgentNumAgentNeighbors(s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentNumAgentNeighbors", 1);
 
-  /* "rvo23d.pyx":124
+  /* "rvo23d.pyx":135
  *         return self.thisptr.getAgentNeighborDist(agent_no)
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentNumAgentNeighbors(agent_no)             # <<<<<<<<<<<<<<
@@ -4796,13 +5021,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_14getAgentNumAgentNeighbors(s
  *         cdef Vector3 pos = self.thisptr.getAgentPosition(agent_no)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->thisptr->getAgentNumAgentNeighbors(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->thisptr->getAgentNumAgentNeighbors(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":123
+  /* "rvo23d.pyx":134
  *     def getAgentNeighborDist(self, size_t agent_no):
  *         return self.thisptr.getAgentNeighborDist(agent_no)
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4821,7 +5046,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_14getAgentNumAgentNeighbors(s
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":125
+/* "rvo23d.pyx":136
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentNumAgentNeighbors(agent_no)
  *     def getAgentPosition(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4882,23 +5107,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 125, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 136, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentPosition") < 0)) __PYX_ERR(0, 125, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentPosition") < 0)) __PYX_ERR(0, 136, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 125, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 136, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentPosition", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 125, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentPosition", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 136, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4938,7 +5163,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_16getAgentPosition(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentPosition", 1);
 
-  /* "rvo23d.pyx":126
+  /* "rvo23d.pyx":137
  *         return self.thisptr.getAgentNumAgentNeighbors(agent_no)
  *     def getAgentPosition(self, size_t agent_no):
  *         cdef Vector3 pos = self.thisptr.getAgentPosition(agent_no)             # <<<<<<<<<<<<<<
@@ -4947,7 +5172,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_16getAgentPosition(struct __p
  */
   __pyx_v_pos = __pyx_v_self->thisptr->getAgentPosition(__pyx_v_agent_no);
 
-  /* "rvo23d.pyx":127
+  /* "rvo23d.pyx":138
  *     def getAgentPosition(self, size_t agent_no):
  *         cdef Vector3 pos = self.thisptr.getAgentPosition(agent_no)
  *         return pos.x(), pos.y(), pos.z()             # <<<<<<<<<<<<<<
@@ -4955,20 +5180,20 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_16getAgentPosition(struct __p
  *         cdef Vector3 velocity = self.thisptr.getAgentPrefVelocity(agent_no)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_pos.x()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_pos.x()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_pos.y()); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_pos.y()); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_pos.z()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_pos.z()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 127, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
@@ -4976,7 +5201,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_16getAgentPosition(struct __p
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":125
+  /* "rvo23d.pyx":136
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentNumAgentNeighbors(agent_no)
  *     def getAgentPosition(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -4998,7 +5223,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_16getAgentPosition(struct __p
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":128
+/* "rvo23d.pyx":139
  *         cdef Vector3 pos = self.thisptr.getAgentPosition(agent_no)
  *         return pos.x(), pos.y(), pos.z()
  *     def getAgentPrefVelocity(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -5059,23 +5284,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentPrefVelocity") < 0)) __PYX_ERR(0, 128, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentPrefVelocity") < 0)) __PYX_ERR(0, 139, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentPrefVelocity", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 128, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentPrefVelocity", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 139, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5115,7 +5340,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_18getAgentPrefVelocity(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentPrefVelocity", 1);
 
-  /* "rvo23d.pyx":129
+  /* "rvo23d.pyx":140
  *         return pos.x(), pos.y(), pos.z()
  *     def getAgentPrefVelocity(self, size_t agent_no):
  *         cdef Vector3 velocity = self.thisptr.getAgentPrefVelocity(agent_no)             # <<<<<<<<<<<<<<
@@ -5124,7 +5349,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_18getAgentPrefVelocity(struct
  */
   __pyx_v_velocity = __pyx_v_self->thisptr->getAgentPrefVelocity(__pyx_v_agent_no);
 
-  /* "rvo23d.pyx":130
+  /* "rvo23d.pyx":141
  *     def getAgentPrefVelocity(self, size_t agent_no):
  *         cdef Vector3 velocity = self.thisptr.getAgentPrefVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()             # <<<<<<<<<<<<<<
@@ -5132,20 +5357,20 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_18getAgentPrefVelocity(struct
  *         return self.thisptr.getAgentRadius(agent_no)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_velocity.x()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_velocity.x()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_velocity.y()); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_velocity.y()); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_velocity.z()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_velocity.z()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 130, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 130, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3)) __PYX_ERR(0, 130, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
@@ -5153,7 +5378,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_18getAgentPrefVelocity(struct
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":128
+  /* "rvo23d.pyx":139
  *         cdef Vector3 pos = self.thisptr.getAgentPosition(agent_no)
  *         return pos.x(), pos.y(), pos.z()
  *     def getAgentPrefVelocity(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -5175,7 +5400,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_18getAgentPrefVelocity(struct
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":131
+/* "rvo23d.pyx":142
  *         cdef Vector3 velocity = self.thisptr.getAgentPrefVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getAgentRadius(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -5236,23 +5461,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 131, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 142, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentRadius") < 0)) __PYX_ERR(0, 131, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentRadius") < 0)) __PYX_ERR(0, 142, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 131, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 142, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentRadius", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 131, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentRadius", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 142, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5288,7 +5513,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_20getAgentRadius(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentRadius", 1);
 
-  /* "rvo23d.pyx":132
+  /* "rvo23d.pyx":143
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getAgentRadius(self, size_t agent_no):
  *         return self.thisptr.getAgentRadius(agent_no)             # <<<<<<<<<<<<<<
@@ -5296,13 +5521,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_20getAgentRadius(struct __pyx
  *         return self.thisptr.getAgentTimeHorizon(agent_no)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentRadius(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentRadius(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":131
+  /* "rvo23d.pyx":142
  *         cdef Vector3 velocity = self.thisptr.getAgentPrefVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getAgentRadius(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -5321,7 +5546,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_20getAgentRadius(struct __pyx
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":133
+/* "rvo23d.pyx":144
  *     def getAgentRadius(self, size_t agent_no):
  *         return self.thisptr.getAgentRadius(agent_no)
  *     def getAgentTimeHorizon(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -5382,23 +5607,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 144, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentTimeHorizon") < 0)) __PYX_ERR(0, 133, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentTimeHorizon") < 0)) __PYX_ERR(0, 144, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 144, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentTimeHorizon", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 133, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentTimeHorizon", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 144, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5434,7 +5659,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_22getAgentTimeHorizon(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentTimeHorizon", 1);
 
-  /* "rvo23d.pyx":134
+  /* "rvo23d.pyx":145
  *         return self.thisptr.getAgentRadius(agent_no)
  *     def getAgentTimeHorizon(self, size_t agent_no):
  *         return self.thisptr.getAgentTimeHorizon(agent_no)             # <<<<<<<<<<<<<<
@@ -5442,13 +5667,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_22getAgentTimeHorizon(struct 
  *         cdef Vector3 velocity = self.thisptr.getAgentVelocity(agent_no)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentTimeHorizon(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentTimeHorizon(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":133
+  /* "rvo23d.pyx":144
  *     def getAgentRadius(self, size_t agent_no):
  *         return self.thisptr.getAgentRadius(agent_no)
  *     def getAgentTimeHorizon(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -5467,7 +5692,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_22getAgentTimeHorizon(struct 
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":135
+/* "rvo23d.pyx":146
  *     def getAgentTimeHorizon(self, size_t agent_no):
  *         return self.thisptr.getAgentTimeHorizon(agent_no)
  *     def getAgentVelocity(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -5528,23 +5753,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 135, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 146, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentVelocity") < 0)) __PYX_ERR(0, 135, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentVelocity") < 0)) __PYX_ERR(0, 146, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 135, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 146, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentVelocity", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 135, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentVelocity", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 146, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5584,7 +5809,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_24getAgentVelocity(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentVelocity", 1);
 
-  /* "rvo23d.pyx":136
+  /* "rvo23d.pyx":147
  *         return self.thisptr.getAgentTimeHorizon(agent_no)
  *     def getAgentVelocity(self, size_t agent_no):
  *         cdef Vector3 velocity = self.thisptr.getAgentVelocity(agent_no)             # <<<<<<<<<<<<<<
@@ -5593,7 +5818,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_24getAgentVelocity(struct __p
  */
   __pyx_v_velocity = __pyx_v_self->thisptr->getAgentVelocity(__pyx_v_agent_no);
 
-  /* "rvo23d.pyx":137
+  /* "rvo23d.pyx":148
  *     def getAgentVelocity(self, size_t agent_no):
  *         cdef Vector3 velocity = self.thisptr.getAgentVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()             # <<<<<<<<<<<<<<
@@ -5601,20 +5826,20 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_24getAgentVelocity(struct __p
  *         return self.thisptr.getGlobalTime()
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_velocity.x()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_velocity.x()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_velocity.y()); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_velocity.y()); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_velocity.z()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_velocity.z()); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3)) __PYX_ERR(0, 137, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
@@ -5622,7 +5847,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_24getAgentVelocity(struct __p
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":135
+  /* "rvo23d.pyx":146
  *     def getAgentTimeHorizon(self, size_t agent_no):
  *         return self.thisptr.getAgentTimeHorizon(agent_no)
  *     def getAgentVelocity(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -5644,7 +5869,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_24getAgentVelocity(struct __p
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":138
+/* "rvo23d.pyx":149
  *         cdef Vector3 velocity = self.thisptr.getAgentVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getGlobalTime(self):             # <<<<<<<<<<<<<<
@@ -5702,7 +5927,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_26getGlobalTime(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getGlobalTime", 1);
 
-  /* "rvo23d.pyx":139
+  /* "rvo23d.pyx":150
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getGlobalTime(self):
  *         return self.thisptr.getGlobalTime()             # <<<<<<<<<<<<<<
@@ -5710,13 +5935,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_26getGlobalTime(struct __pyx_
  *         return self.thisptr.getNumAgents()
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getGlobalTime()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getGlobalTime()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":138
+  /* "rvo23d.pyx":149
  *         cdef Vector3 velocity = self.thisptr.getAgentVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getGlobalTime(self):             # <<<<<<<<<<<<<<
@@ -5735,7 +5960,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_26getGlobalTime(struct __pyx_
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":140
+/* "rvo23d.pyx":151
  *     def getGlobalTime(self):
  *         return self.thisptr.getGlobalTime()
  *     def getNumAgents(self):             # <<<<<<<<<<<<<<
@@ -5793,7 +6018,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_28getNumAgents(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getNumAgents", 1);
 
-  /* "rvo23d.pyx":141
+  /* "rvo23d.pyx":152
  *         return self.thisptr.getGlobalTime()
  *     def getNumAgents(self):
  *         return self.thisptr.getNumAgents()             # <<<<<<<<<<<<<<
@@ -5801,13 +6026,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_28getNumAgents(struct __pyx_o
  *         return self.thisptr.getTimeStep()
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->thisptr->getNumAgents()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->thisptr->getNumAgents()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":140
+  /* "rvo23d.pyx":151
  *     def getGlobalTime(self):
  *         return self.thisptr.getGlobalTime()
  *     def getNumAgents(self):             # <<<<<<<<<<<<<<
@@ -5826,7 +6051,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_28getNumAgents(struct __pyx_o
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":142
+/* "rvo23d.pyx":153
  *     def getNumAgents(self):
  *         return self.thisptr.getNumAgents()
  *     def getTimeStep(self):             # <<<<<<<<<<<<<<
@@ -5884,7 +6109,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_30getTimeStep(struct __pyx_ob
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getTimeStep", 1);
 
-  /* "rvo23d.pyx":143
+  /* "rvo23d.pyx":154
  *         return self.thisptr.getNumAgents()
  *     def getTimeStep(self):
  *         return self.thisptr.getTimeStep()             # <<<<<<<<<<<<<<
@@ -5892,13 +6117,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_30getTimeStep(struct __pyx_ob
  *     def setAgentDefaults(self, float neighbor_dist, size_t max_neighbors, float time_horizon,
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getTimeStep()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getTimeStep()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":142
+  /* "rvo23d.pyx":153
  *     def getNumAgents(self):
  *         return self.thisptr.getNumAgents()
  *     def getTimeStep(self):             # <<<<<<<<<<<<<<
@@ -5917,7 +6142,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_30getTimeStep(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":145
+/* "rvo23d.pyx":156
  *         return self.thisptr.getTimeStep()
  * 
  *     def setAgentDefaults(self, float neighbor_dist, size_t max_neighbors, float time_horizon,             # <<<<<<<<<<<<<<
@@ -5969,7 +6194,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject **__pyx_pyargnames[] = {&__pyx_n_s_neighbor_dist,&__pyx_n_s_max_neighbors,&__pyx_n_s_time_horizon,&__pyx_n_s_radius,&__pyx_n_s_max_speed,&__pyx_n_s_velocity,0};
 
-    /* "rvo23d.pyx":147
+    /* "rvo23d.pyx":158
  *     def setAgentDefaults(self, float neighbor_dist, size_t max_neighbors, float time_horizon,
  *                          float radius, float max_speed,
  *                          tuple velocity=(0, 0)):             # <<<<<<<<<<<<<<
@@ -6002,7 +6227,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -6010,9 +6235,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, 1); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, 1); __PYX_ERR(0, 156, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -6020,9 +6245,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, 2); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, 2); __PYX_ERR(0, 156, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -6030,9 +6255,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, 3); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, 3); __PYX_ERR(0, 156, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -6040,21 +6265,21 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, 4); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, 4); __PYX_ERR(0, 156, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_velocity);
           if (value) { values[5] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentDefaults") < 0)) __PYX_ERR(0, 145, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentDefaults") < 0)) __PYX_ERR(0, 156, __pyx_L3_error)
       }
     } else {
       switch (__pyx_nargs) {
@@ -6069,16 +6294,16 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         default: goto __pyx_L5_argtuple_error;
       }
     }
-    __pyx_v_neighbor_dist = __pyx_PyFloat_AsFloat(values[0]); if (unlikely((__pyx_v_neighbor_dist == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_max_neighbors = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_max_neighbors == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_time_horizon = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_time_horizon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_radius = __pyx_PyFloat_AsFloat(values[3]); if (unlikely((__pyx_v_radius == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 146, __pyx_L3_error)
-    __pyx_v_max_speed = __pyx_PyFloat_AsFloat(values[4]); if (unlikely((__pyx_v_max_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 146, __pyx_L3_error)
+    __pyx_v_neighbor_dist = __pyx_PyFloat_AsFloat(values[0]); if (unlikely((__pyx_v_neighbor_dist == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
+    __pyx_v_max_neighbors = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_max_neighbors == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
+    __pyx_v_time_horizon = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_time_horizon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
+    __pyx_v_radius = __pyx_PyFloat_AsFloat(values[3]); if (unlikely((__pyx_v_radius == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 157, __pyx_L3_error)
+    __pyx_v_max_speed = __pyx_PyFloat_AsFloat(values[4]); if (unlikely((__pyx_v_max_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 157, __pyx_L3_error)
     __pyx_v_velocity = ((PyObject*)values[5]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, __pyx_nargs); __PYX_ERR(0, 145, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentDefaults", 0, 5, 6, __pyx_nargs); __PYX_ERR(0, 156, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6092,10 +6317,10 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_velocity), (&PyTuple_Type), 1, "velocity", 1))) __PYX_ERR(0, 147, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_velocity), (&PyTuple_Type), 1, "velocity", 1))) __PYX_ERR(0, 158, __pyx_L1_error)
   __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_32setAgentDefaults(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_neighbor_dist, __pyx_v_max_neighbors, __pyx_v_time_horizon, __pyx_v_radius, __pyx_v_max_speed, __pyx_v_velocity);
 
-  /* "rvo23d.pyx":145
+  /* "rvo23d.pyx":156
  *         return self.thisptr.getTimeStep()
  * 
  *     def setAgentDefaults(self, float neighbor_dist, size_t max_neighbors, float time_horizon,             # <<<<<<<<<<<<<<
@@ -6132,7 +6357,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_32setAgentDefaults(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("setAgentDefaults", 1);
 
-  /* "rvo23d.pyx":148
+  /* "rvo23d.pyx":159
  *                          float radius, float max_speed,
  *                          tuple velocity=(0, 0)):
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])             # <<<<<<<<<<<<<<
@@ -6141,37 +6366,37 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_32setAgentDefaults(struct __p
  */
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 148, __pyx_L1_error)
+    __PYX_ERR(0, 159, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 148, __pyx_L1_error)
+    __PYX_ERR(0, 159, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 148, __pyx_L1_error)
+    __PYX_ERR(0, 159, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   try {
     __pyx_t_5 = RVO::Vector3(__pyx_t_2, __pyx_t_3, __pyx_t_4);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 148, __pyx_L1_error)
+    __PYX_ERR(0, 159, __pyx_L1_error)
   }
   __pyx_v_c_velocity = __PYX_STD_MOVE_IF_SUPPORTED(__pyx_t_5);
 
-  /* "rvo23d.pyx":149
+  /* "rvo23d.pyx":160
  *                          tuple velocity=(0, 0)):
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentDefaults(neighbor_dist, max_neighbors, time_horizon,             # <<<<<<<<<<<<<<
@@ -6180,7 +6405,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_32setAgentDefaults(struct __p
  */
   __pyx_v_self->thisptr->setAgentDefaults(__pyx_v_neighbor_dist, __pyx_v_max_neighbors, __pyx_v_time_horizon, __pyx_v_radius, __pyx_v_max_speed, __pyx_v_c_velocity);
 
-  /* "rvo23d.pyx":145
+  /* "rvo23d.pyx":156
  *         return self.thisptr.getTimeStep()
  * 
  *     def setAgentDefaults(self, float neighbor_dist, size_t max_neighbors, float time_horizon,             # <<<<<<<<<<<<<<
@@ -6201,7 +6426,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_32setAgentDefaults(struct __p
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":152
+/* "rvo23d.pyx":163
  *                                       radius, max_speed, c_velocity)
  * 
  *     def setAgentMaxNeighbors(self, size_t agent_no, size_t max_neighbors):             # <<<<<<<<<<<<<<
@@ -6265,7 +6490,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 152, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 163, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -6273,14 +6498,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 152, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 163, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentMaxNeighbors", 1, 2, 2, 1); __PYX_ERR(0, 152, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentMaxNeighbors", 1, 2, 2, 1); __PYX_ERR(0, 163, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentMaxNeighbors") < 0)) __PYX_ERR(0, 152, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentMaxNeighbors") < 0)) __PYX_ERR(0, 163, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -6288,12 +6513,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 152, __pyx_L3_error)
-    __pyx_v_max_neighbors = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_max_neighbors == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 152, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 163, __pyx_L3_error)
+    __pyx_v_max_neighbors = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_max_neighbors == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 163, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentMaxNeighbors", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 152, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentMaxNeighbors", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 163, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6325,7 +6550,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_34setAgentMaxNeighbors(struct
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setAgentMaxNeighbors", 1);
 
-  /* "rvo23d.pyx":153
+  /* "rvo23d.pyx":164
  * 
  *     def setAgentMaxNeighbors(self, size_t agent_no, size_t max_neighbors):
  *         self.thisptr.setAgentMaxNeighbors(agent_no, max_neighbors)             # <<<<<<<<<<<<<<
@@ -6334,7 +6559,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_34setAgentMaxNeighbors(struct
  */
   __pyx_v_self->thisptr->setAgentMaxNeighbors(__pyx_v_agent_no, __pyx_v_max_neighbors);
 
-  /* "rvo23d.pyx":152
+  /* "rvo23d.pyx":163
  *                                       radius, max_speed, c_velocity)
  * 
  *     def setAgentMaxNeighbors(self, size_t agent_no, size_t max_neighbors):             # <<<<<<<<<<<<<<
@@ -6349,7 +6574,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_34setAgentMaxNeighbors(struct
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":154
+/* "rvo23d.pyx":165
  *     def setAgentMaxNeighbors(self, size_t agent_no, size_t max_neighbors):
  *         self.thisptr.setAgentMaxNeighbors(agent_no, max_neighbors)
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):             # <<<<<<<<<<<<<<
@@ -6413,7 +6638,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 154, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 165, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -6421,14 +6646,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 154, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 165, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentMaxSpeed", 1, 2, 2, 1); __PYX_ERR(0, 154, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentMaxSpeed", 1, 2, 2, 1); __PYX_ERR(0, 165, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentMaxSpeed") < 0)) __PYX_ERR(0, 154, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentMaxSpeed") < 0)) __PYX_ERR(0, 165, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -6436,12 +6661,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 154, __pyx_L3_error)
-    __pyx_v_max_speed = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 154, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 165, __pyx_L3_error)
+    __pyx_v_max_speed = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 165, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentMaxSpeed", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 154, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentMaxSpeed", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 165, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6473,7 +6698,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_36setAgentMaxSpeed(struct __p
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setAgentMaxSpeed", 1);
 
-  /* "rvo23d.pyx":155
+  /* "rvo23d.pyx":166
  *         self.thisptr.setAgentMaxNeighbors(agent_no, max_neighbors)
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):
  *         self.thisptr.setAgentMaxSpeed(agent_no, max_speed)             # <<<<<<<<<<<<<<
@@ -6482,7 +6707,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_36setAgentMaxSpeed(struct __p
  */
   __pyx_v_self->thisptr->setAgentMaxSpeed(__pyx_v_agent_no, __pyx_v_max_speed);
 
-  /* "rvo23d.pyx":154
+  /* "rvo23d.pyx":165
  *     def setAgentMaxNeighbors(self, size_t agent_no, size_t max_neighbors):
  *         self.thisptr.setAgentMaxNeighbors(agent_no, max_neighbors)
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):             # <<<<<<<<<<<<<<
@@ -6497,7 +6722,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_36setAgentMaxSpeed(struct __p
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":156
+/* "rvo23d.pyx":167
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):
  *         self.thisptr.setAgentMaxSpeed(agent_no, max_speed)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):             # <<<<<<<<<<<<<<
@@ -6561,7 +6786,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -6569,14 +6794,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentNeighborDist", 1, 2, 2, 1); __PYX_ERR(0, 156, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentNeighborDist", 1, 2, 2, 1); __PYX_ERR(0, 167, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentNeighborDist") < 0)) __PYX_ERR(0, 156, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentNeighborDist") < 0)) __PYX_ERR(0, 167, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -6584,12 +6809,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
-    __pyx_v_neighbor_dist = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_neighbor_dist == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L3_error)
+    __pyx_v_neighbor_dist = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_neighbor_dist == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentNeighborDist", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 156, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentNeighborDist", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 167, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6621,7 +6846,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_38setAgentNeighborDist(struct
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setAgentNeighborDist", 1);
 
-  /* "rvo23d.pyx":157
+  /* "rvo23d.pyx":168
  *         self.thisptr.setAgentMaxSpeed(agent_no, max_speed)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)             # <<<<<<<<<<<<<<
@@ -6630,7 +6855,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_38setAgentNeighborDist(struct
  */
   __pyx_v_self->thisptr->setAgentNeighborDist(__pyx_v_agent_no, __pyx_v_neighbor_dist);
 
-  /* "rvo23d.pyx":156
+  /* "rvo23d.pyx":167
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):
  *         self.thisptr.setAgentMaxSpeed(agent_no, max_speed)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):             # <<<<<<<<<<<<<<
@@ -6645,7 +6870,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_38setAgentNeighborDist(struct
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":158
+/* "rvo23d.pyx":169
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):             # <<<<<<<<<<<<<<
@@ -6709,7 +6934,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 169, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -6717,14 +6942,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 169, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentNeighborDist", 1, 2, 2, 1); __PYX_ERR(0, 158, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentNeighborDist", 1, 2, 2, 1); __PYX_ERR(0, 169, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentNeighborDist") < 0)) __PYX_ERR(0, 158, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentNeighborDist") < 0)) __PYX_ERR(0, 169, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -6732,12 +6957,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L3_error)
-    __pyx_v_neighbor_dist = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_neighbor_dist == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 169, __pyx_L3_error)
+    __pyx_v_neighbor_dist = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_neighbor_dist == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 169, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentNeighborDist", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 158, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentNeighborDist", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 169, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6769,7 +6994,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_40setAgentNeighborDist(struct
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setAgentNeighborDist", 1);
 
-  /* "rvo23d.pyx":159
+  /* "rvo23d.pyx":170
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)             # <<<<<<<<<<<<<<
@@ -6778,7 +7003,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_40setAgentNeighborDist(struct
  */
   __pyx_v_self->thisptr->setAgentNeighborDist(__pyx_v_agent_no, __pyx_v_neighbor_dist);
 
-  /* "rvo23d.pyx":158
+  /* "rvo23d.pyx":169
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):             # <<<<<<<<<<<<<<
@@ -6793,7 +7018,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_40setAgentNeighborDist(struct
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":160
+/* "rvo23d.pyx":171
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentPosition(self, size_t agent_no, tuple position):             # <<<<<<<<<<<<<<
@@ -6857,7 +7082,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 160, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -6865,14 +7090,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 160, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentPosition", 1, 2, 2, 1); __PYX_ERR(0, 160, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentPosition", 1, 2, 2, 1); __PYX_ERR(0, 171, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentPosition") < 0)) __PYX_ERR(0, 160, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentPosition") < 0)) __PYX_ERR(0, 171, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -6880,12 +7105,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 160, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L3_error)
     __pyx_v_position = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentPosition", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 160, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentPosition", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 171, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6899,7 +7124,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_position), (&PyTuple_Type), 1, "position", 1))) __PYX_ERR(0, 160, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_position), (&PyTuple_Type), 1, "position", 1))) __PYX_ERR(0, 171, __pyx_L1_error)
   __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_42setAgentPosition(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no, __pyx_v_position);
 
   /* function exit code */
@@ -6931,7 +7156,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_42setAgentPosition(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("setAgentPosition", 1);
 
-  /* "rvo23d.pyx":161
+  /* "rvo23d.pyx":172
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentPosition(self, size_t agent_no, tuple position):
  *         cdef Vector3 c_pos = Vector3(position[0], position[1], position[2])             # <<<<<<<<<<<<<<
@@ -6940,37 +7165,37 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_42setAgentPosition(struct __p
  */
   if (unlikely(__pyx_v_position == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 161, __pyx_L1_error)
+    __PYX_ERR(0, 172, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_position, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_position, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_position == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 161, __pyx_L1_error)
+    __PYX_ERR(0, 172, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_position, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_position, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_position == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 161, __pyx_L1_error)
+    __PYX_ERR(0, 172, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_position, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_position, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   try {
     __pyx_t_5 = RVO::Vector3(__pyx_t_2, __pyx_t_3, __pyx_t_4);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 161, __pyx_L1_error)
+    __PYX_ERR(0, 172, __pyx_L1_error)
   }
   __pyx_v_c_pos = __PYX_STD_MOVE_IF_SUPPORTED(__pyx_t_5);
 
-  /* "rvo23d.pyx":162
+  /* "rvo23d.pyx":173
  *     def setAgentPosition(self, size_t agent_no, tuple position):
  *         cdef Vector3 c_pos = Vector3(position[0], position[1], position[2])
  *         self.thisptr.setAgentPosition(agent_no, c_pos)             # <<<<<<<<<<<<<<
@@ -6979,7 +7204,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_42setAgentPosition(struct __p
  */
   __pyx_v_self->thisptr->setAgentPosition(__pyx_v_agent_no, __pyx_v_c_pos);
 
-  /* "rvo23d.pyx":160
+  /* "rvo23d.pyx":171
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentPosition(self, size_t agent_no, tuple position):             # <<<<<<<<<<<<<<
@@ -7000,7 +7225,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_42setAgentPosition(struct __p
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":163
+/* "rvo23d.pyx":174
  *         cdef Vector3 c_pos = Vector3(position[0], position[1], position[2])
  *         self.thisptr.setAgentPosition(agent_no, c_pos)
  *     def setAgentPrefVelocity(self, size_t agent_no, tuple velocity):             # <<<<<<<<<<<<<<
@@ -7064,7 +7289,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 163, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 174, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -7072,14 +7297,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 163, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 174, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentPrefVelocity", 1, 2, 2, 1); __PYX_ERR(0, 163, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentPrefVelocity", 1, 2, 2, 1); __PYX_ERR(0, 174, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentPrefVelocity") < 0)) __PYX_ERR(0, 163, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentPrefVelocity") < 0)) __PYX_ERR(0, 174, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -7087,12 +7312,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 163, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 174, __pyx_L3_error)
     __pyx_v_velocity = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentPrefVelocity", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 163, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentPrefVelocity", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 174, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7106,7 +7331,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_velocity), (&PyTuple_Type), 1, "velocity", 1))) __PYX_ERR(0, 163, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_velocity), (&PyTuple_Type), 1, "velocity", 1))) __PYX_ERR(0, 174, __pyx_L1_error)
   __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_44setAgentPrefVelocity(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no, __pyx_v_velocity);
 
   /* function exit code */
@@ -7138,7 +7363,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_44setAgentPrefVelocity(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("setAgentPrefVelocity", 1);
 
-  /* "rvo23d.pyx":164
+  /* "rvo23d.pyx":175
  *         self.thisptr.setAgentPosition(agent_no, c_pos)
  *     def setAgentPrefVelocity(self, size_t agent_no, tuple velocity):
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])             # <<<<<<<<<<<<<<
@@ -7147,37 +7372,37 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_44setAgentPrefVelocity(struct
  */
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __PYX_ERR(0, 175, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __PYX_ERR(0, 175, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __PYX_ERR(0, 175, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   try {
     __pyx_t_5 = RVO::Vector3(__pyx_t_2, __pyx_t_3, __pyx_t_4);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __PYX_ERR(0, 175, __pyx_L1_error)
   }
   __pyx_v_c_velocity = __PYX_STD_MOVE_IF_SUPPORTED(__pyx_t_5);
 
-  /* "rvo23d.pyx":165
+  /* "rvo23d.pyx":176
  *     def setAgentPrefVelocity(self, size_t agent_no, tuple velocity):
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentPrefVelocity(agent_no, c_velocity)             # <<<<<<<<<<<<<<
@@ -7186,7 +7411,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_44setAgentPrefVelocity(struct
  */
   __pyx_v_self->thisptr->setAgentPrefVelocity(__pyx_v_agent_no, __pyx_v_c_velocity);
 
-  /* "rvo23d.pyx":163
+  /* "rvo23d.pyx":174
  *         cdef Vector3 c_pos = Vector3(position[0], position[1], position[2])
  *         self.thisptr.setAgentPosition(agent_no, c_pos)
  *     def setAgentPrefVelocity(self, size_t agent_no, tuple velocity):             # <<<<<<<<<<<<<<
@@ -7207,7 +7432,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_44setAgentPrefVelocity(struct
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":166
+/* "rvo23d.pyx":177
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentPrefVelocity(agent_no, c_velocity)
  *     def setAgentRadius(self, size_t agent_no, float radius):             # <<<<<<<<<<<<<<
@@ -7271,7 +7496,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 166, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -7279,14 +7504,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 166, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentRadius", 1, 2, 2, 1); __PYX_ERR(0, 166, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentRadius", 1, 2, 2, 1); __PYX_ERR(0, 177, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentRadius") < 0)) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentRadius") < 0)) __PYX_ERR(0, 177, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -7294,12 +7519,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 166, __pyx_L3_error)
-    __pyx_v_radius = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_radius == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 166, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
+    __pyx_v_radius = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_radius == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentRadius", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 166, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentRadius", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 177, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7331,7 +7556,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_46setAgentRadius(struct __pyx
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setAgentRadius", 1);
 
-  /* "rvo23d.pyx":167
+  /* "rvo23d.pyx":178
  *         self.thisptr.setAgentPrefVelocity(agent_no, c_velocity)
  *     def setAgentRadius(self, size_t agent_no, float radius):
  *         self.thisptr.setAgentRadius(agent_no, radius)             # <<<<<<<<<<<<<<
@@ -7340,7 +7565,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_46setAgentRadius(struct __pyx
  */
   __pyx_v_self->thisptr->setAgentRadius(__pyx_v_agent_no, __pyx_v_radius);
 
-  /* "rvo23d.pyx":166
+  /* "rvo23d.pyx":177
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentPrefVelocity(agent_no, c_velocity)
  *     def setAgentRadius(self, size_t agent_no, float radius):             # <<<<<<<<<<<<<<
@@ -7355,7 +7580,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_46setAgentRadius(struct __pyx
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":168
+/* "rvo23d.pyx":179
  *     def setAgentRadius(self, size_t agent_no, float radius):
  *         self.thisptr.setAgentRadius(agent_no, radius)
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):             # <<<<<<<<<<<<<<
@@ -7419,7 +7644,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 168, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 179, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -7427,14 +7652,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 168, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 179, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentTimeHorizon", 1, 2, 2, 1); __PYX_ERR(0, 168, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentTimeHorizon", 1, 2, 2, 1); __PYX_ERR(0, 179, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentTimeHorizon") < 0)) __PYX_ERR(0, 168, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentTimeHorizon") < 0)) __PYX_ERR(0, 179, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -7442,12 +7667,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 168, __pyx_L3_error)
-    __pyx_v_time_horizon = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_time_horizon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 168, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 179, __pyx_L3_error)
+    __pyx_v_time_horizon = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_time_horizon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 179, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentTimeHorizon", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 168, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentTimeHorizon", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 179, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7479,7 +7704,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_48setAgentTimeHorizon(struct 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setAgentTimeHorizon", 1);
 
-  /* "rvo23d.pyx":169
+  /* "rvo23d.pyx":180
  *         self.thisptr.setAgentRadius(agent_no, radius)
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):
  *         self.thisptr.setAgentTimeHorizon(agent_no, time_horizon)             # <<<<<<<<<<<<<<
@@ -7488,7 +7713,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_48setAgentTimeHorizon(struct 
  */
   __pyx_v_self->thisptr->setAgentTimeHorizon(__pyx_v_agent_no, __pyx_v_time_horizon);
 
-  /* "rvo23d.pyx":168
+  /* "rvo23d.pyx":179
  *     def setAgentRadius(self, size_t agent_no, float radius):
  *         self.thisptr.setAgentRadius(agent_no, radius)
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):             # <<<<<<<<<<<<<<
@@ -7503,7 +7728,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_48setAgentTimeHorizon(struct 
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":170
+/* "rvo23d.pyx":181
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):
  *         self.thisptr.setAgentTimeHorizon(agent_no, time_horizon)
  *     def setAgentVelocity(self, size_t agent_no, tuple velocity):             # <<<<<<<<<<<<<<
@@ -7567,7 +7792,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 170, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -7575,14 +7800,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 170, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentVelocity", 1, 2, 2, 1); __PYX_ERR(0, 170, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentVelocity", 1, 2, 2, 1); __PYX_ERR(0, 181, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentVelocity") < 0)) __PYX_ERR(0, 170, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentVelocity") < 0)) __PYX_ERR(0, 181, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -7590,12 +7815,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 170, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L3_error)
     __pyx_v_velocity = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentVelocity", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 170, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentVelocity", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 181, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7609,7 +7834,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_velocity), (&PyTuple_Type), 1, "velocity", 1))) __PYX_ERR(0, 170, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_velocity), (&PyTuple_Type), 1, "velocity", 1))) __PYX_ERR(0, 181, __pyx_L1_error)
   __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_50setAgentVelocity(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no, __pyx_v_velocity);
 
   /* function exit code */
@@ -7641,7 +7866,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_50setAgentVelocity(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("setAgentVelocity", 1);
 
-  /* "rvo23d.pyx":171
+  /* "rvo23d.pyx":182
  *         self.thisptr.setAgentTimeHorizon(agent_no, time_horizon)
  *     def setAgentVelocity(self, size_t agent_no, tuple velocity):
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])             # <<<<<<<<<<<<<<
@@ -7650,37 +7875,37 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_50setAgentVelocity(struct __p
  */
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 171, __pyx_L1_error)
+    __PYX_ERR(0, 182, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 171, __pyx_L1_error)
+    __PYX_ERR(0, 182, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_3 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_velocity == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 171, __pyx_L1_error)
+    __PYX_ERR(0, 182, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_velocity, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_4 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_4 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   try {
     __pyx_t_5 = RVO::Vector3(__pyx_t_2, __pyx_t_3, __pyx_t_4);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 171, __pyx_L1_error)
+    __PYX_ERR(0, 182, __pyx_L1_error)
   }
   __pyx_v_c_velocity = __PYX_STD_MOVE_IF_SUPPORTED(__pyx_t_5);
 
-  /* "rvo23d.pyx":172
+  /* "rvo23d.pyx":183
  *     def setAgentVelocity(self, size_t agent_no, tuple velocity):
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentVelocity(agent_no, c_velocity)             # <<<<<<<<<<<<<<
@@ -7689,7 +7914,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_50setAgentVelocity(struct __p
  */
   __pyx_v_self->thisptr->setAgentVelocity(__pyx_v_agent_no, __pyx_v_c_velocity);
 
-  /* "rvo23d.pyx":170
+  /* "rvo23d.pyx":181
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):
  *         self.thisptr.setAgentTimeHorizon(agent_no, time_horizon)
  *     def setAgentVelocity(self, size_t agent_no, tuple velocity):             # <<<<<<<<<<<<<<
@@ -7710,7 +7935,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_50setAgentVelocity(struct __p
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":173
+/* "rvo23d.pyx":184
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentVelocity(agent_no, c_velocity)
  *     def setTimeStep(self, float time_step):             # <<<<<<<<<<<<<<
@@ -7771,23 +7996,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 173, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 184, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setTimeStep") < 0)) __PYX_ERR(0, 173, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setTimeStep") < 0)) __PYX_ERR(0, 184, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_time_step = __pyx_PyFloat_AsFloat(values[0]); if (unlikely((__pyx_v_time_step == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 173, __pyx_L3_error)
+    __pyx_v_time_step = __pyx_PyFloat_AsFloat(values[0]); if (unlikely((__pyx_v_time_step == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 184, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setTimeStep", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 173, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setTimeStep", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 184, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7819,7 +8044,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_52setTimeStep(struct __pyx_ob
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setTimeStep", 1);
 
-  /* "rvo23d.pyx":174
+  /* "rvo23d.pyx":185
  *         self.thisptr.setAgentVelocity(agent_no, c_velocity)
  *     def setTimeStep(self, float time_step):
  *         self.thisptr.setTimeStep(time_step)             # <<<<<<<<<<<<<<
@@ -7828,7 +8053,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_52setTimeStep(struct __pyx_ob
  */
   __pyx_v_self->thisptr->setTimeStep(__pyx_v_time_step);
 
-  /* "rvo23d.pyx":173
+  /* "rvo23d.pyx":184
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentVelocity(agent_no, c_velocity)
  *     def setTimeStep(self, float time_step):             # <<<<<<<<<<<<<<
@@ -7843,7 +8068,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_52setTimeStep(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":177
+/* "rvo23d.pyx":188
  * 
  *     #
  *     def getAgentMaxAcceleration(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -7905,23 +8130,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 188, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentMaxAcceleration") < 0)) __PYX_ERR(0, 177, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentMaxAcceleration") < 0)) __PYX_ERR(0, 188, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 188, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentMaxAcceleration", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 177, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentMaxAcceleration", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 188, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7957,7 +8182,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_54getAgentMaxAcceleration(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentMaxAcceleration", 1);
 
-  /* "rvo23d.pyx":179
+  /* "rvo23d.pyx":190
  *     def getAgentMaxAcceleration(self, size_t agent_no):
  *         """"""
  *         return self.thisptr.getAgentMaxAcceleration(agent_no)             # <<<<<<<<<<<<<<
@@ -7965,13 +8190,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_54getAgentMaxAcceleration(str
  *     def getAgentMaxDeceleration(self, size_t agent_no):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentMaxAcceleration(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentMaxAcceleration(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":177
+  /* "rvo23d.pyx":188
  * 
  *     #
  *     def getAgentMaxAcceleration(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -7990,7 +8215,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_54getAgentMaxAcceleration(str
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":181
+/* "rvo23d.pyx":192
  *         return self.thisptr.getAgentMaxAcceleration(agent_no)
  * 
  *     def getAgentMaxDeceleration(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -8052,23 +8277,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 192, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentMaxDeceleration") < 0)) __PYX_ERR(0, 181, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentMaxDeceleration") < 0)) __PYX_ERR(0, 192, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 192, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getAgentMaxDeceleration", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 181, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getAgentMaxDeceleration", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 192, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8104,7 +8329,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_56getAgentMaxDeceleration(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getAgentMaxDeceleration", 1);
 
-  /* "rvo23d.pyx":183
+  /* "rvo23d.pyx":194
  *     def getAgentMaxDeceleration(self, size_t agent_no):
  *         """"""
  *         return self.thisptr.getAgentMaxDeceleration(agent_no)             # <<<<<<<<<<<<<<
@@ -8112,13 +8337,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_56getAgentMaxDeceleration(str
  *     def setAgentMaxAcceleration(self, size_t agent_no, float max_acceleration):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentMaxDeceleration(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 183, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentMaxDeceleration(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rvo23d.pyx":181
+  /* "rvo23d.pyx":192
  *         return self.thisptr.getAgentMaxAcceleration(agent_no)
  * 
  *     def getAgentMaxDeceleration(self, size_t agent_no):             # <<<<<<<<<<<<<<
@@ -8137,7 +8362,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_56getAgentMaxDeceleration(str
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":185
+/* "rvo23d.pyx":196
  *         return self.thisptr.getAgentMaxDeceleration(agent_no)
  * 
  *     def setAgentMaxAcceleration(self, size_t agent_no, float max_acceleration):             # <<<<<<<<<<<<<<
@@ -8202,7 +8427,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -8210,14 +8435,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentMaxAcceleration", 1, 2, 2, 1); __PYX_ERR(0, 185, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentMaxAcceleration", 1, 2, 2, 1); __PYX_ERR(0, 196, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentMaxAcceleration") < 0)) __PYX_ERR(0, 185, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentMaxAcceleration") < 0)) __PYX_ERR(0, 196, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -8225,12 +8450,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
-    __pyx_v_max_acceleration = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_acceleration == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L3_error)
+    __pyx_v_max_acceleration = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_acceleration == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentMaxAcceleration", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 185, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentMaxAcceleration", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 196, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8262,7 +8487,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_58setAgentMaxAcceleration(str
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setAgentMaxAcceleration", 1);
 
-  /* "rvo23d.pyx":187
+  /* "rvo23d.pyx":198
  *     def setAgentMaxAcceleration(self, size_t agent_no, float max_acceleration):
  *         """"""
  *         self.thisptr.setAgentMaxAcceleration(agent_no, max_acceleration)             # <<<<<<<<<<<<<<
@@ -8271,7 +8496,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_58setAgentMaxAcceleration(str
  */
   __pyx_v_self->thisptr->setAgentMaxAcceleration(__pyx_v_agent_no, __pyx_v_max_acceleration);
 
-  /* "rvo23d.pyx":185
+  /* "rvo23d.pyx":196
  *         return self.thisptr.getAgentMaxDeceleration(agent_no)
  * 
  *     def setAgentMaxAcceleration(self, size_t agent_no, float max_acceleration):             # <<<<<<<<<<<<<<
@@ -8286,7 +8511,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_58setAgentMaxAcceleration(str
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":189
+/* "rvo23d.pyx":200
  *         self.thisptr.setAgentMaxAcceleration(agent_no, max_acceleration)
  * 
  *     def setAgentMaxDeceleration(self, size_t agent_no, float max_deceleration):             # <<<<<<<<<<<<<<
@@ -8351,7 +8576,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 189, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -8359,14 +8584,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 189, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentMaxDeceleration", 1, 2, 2, 1); __PYX_ERR(0, 189, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentMaxDeceleration", 1, 2, 2, 1); __PYX_ERR(0, 200, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentMaxDeceleration") < 0)) __PYX_ERR(0, 189, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentMaxDeceleration") < 0)) __PYX_ERR(0, 200, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -8374,12 +8599,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 189, __pyx_L3_error)
-    __pyx_v_max_deceleration = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_deceleration == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 189, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_max_deceleration = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_deceleration == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentMaxDeceleration", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 189, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentMaxDeceleration", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 200, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8411,7 +8636,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_60setAgentMaxDeceleration(str
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setAgentMaxDeceleration", 1);
 
-  /* "rvo23d.pyx":191
+  /* "rvo23d.pyx":202
  *     def setAgentMaxDeceleration(self, size_t agent_no, float max_deceleration):
  *         """"""
  *         self.thisptr.setAgentMaxDeceleration(agent_no, max_deceleration)             # <<<<<<<<<<<<<<
@@ -8420,7 +8645,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_60setAgentMaxDeceleration(str
  */
   __pyx_v_self->thisptr->setAgentMaxDeceleration(__pyx_v_agent_no, __pyx_v_max_deceleration);
 
-  /* "rvo23d.pyx":189
+  /* "rvo23d.pyx":200
  *         self.thisptr.setAgentMaxAcceleration(agent_no, max_acceleration)
  * 
  *     def setAgentMaxDeceleration(self, size_t agent_no, float max_deceleration):             # <<<<<<<<<<<<<<
@@ -8435,7 +8660,7 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_60setAgentMaxDeceleration(str
   return __pyx_r;
 }
 
-/* "rvo23d.pyx":193
+/* "rvo23d.pyx":204
  *         self.thisptr.setAgentMaxDeceleration(agent_no, max_deceleration)
  * 
  *     def setAgentAccelerationLimits(self, size_t agent_no, float max_acceleration, float max_deceleration):             # <<<<<<<<<<<<<<
@@ -8503,7 +8728,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -8511,9 +8736,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentAccelerationLimits", 1, 3, 3, 1); __PYX_ERR(0, 193, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentAccelerationLimits", 1, 3, 3, 1); __PYX_ERR(0, 204, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -8521,14 +8746,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("setAgentAccelerationLimits", 1, 3, 3, 2); __PYX_ERR(0, 193, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setAgentAccelerationLimits", 1, 3, 3, 2); __PYX_ERR(0, 204, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentAccelerationLimits") < 0)) __PYX_ERR(0, 193, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentAccelerationLimits") < 0)) __PYX_ERR(0, 204, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 3)) {
       goto __pyx_L5_argtuple_error;
@@ -8537,13 +8762,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
       values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
     }
-    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L3_error)
-    __pyx_v_max_acceleration = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_acceleration == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L3_error)
-    __pyx_v_max_deceleration = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_max_deceleration == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L3_error)
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_max_acceleration = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_acceleration == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_max_deceleration = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_max_deceleration == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setAgentAccelerationLimits", 1, 3, 3, __pyx_nargs); __PYX_ERR(0, 193, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setAgentAccelerationLimits", 1, 3, 3, __pyx_nargs); __PYX_ERR(0, 204, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8584,17 +8809,18 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_62setAgentAccelerationLimits(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("setAgentAccelerationLimits", 1);
 
-  /* "rvo23d.pyx":195
+  /* "rvo23d.pyx":206
  *     def setAgentAccelerationLimits(self, size_t agent_no, float max_acceleration, float max_deceleration):
  *         """"""
  *         self.setAgentMaxAcceleration(agent_no, max_acceleration)             # <<<<<<<<<<<<<<
  *         self.setAgentMaxDeceleration(agent_no, max_deceleration)
+ * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setAgentMaxAcceleration); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setAgentMaxAcceleration); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_FromSize_t(__pyx_v_agent_no); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_FromSize_t(__pyx_v_agent_no); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_max_acceleration); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_max_acceleration); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -8616,22 +8842,24 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_62setAgentAccelerationLimits(
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 195, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "rvo23d.pyx":196
+  /* "rvo23d.pyx":207
  *         """"""
  *         self.setAgentMaxAcceleration(agent_no, max_acceleration)
  *         self.setAgentMaxDeceleration(agent_no, max_deceleration)             # <<<<<<<<<<<<<<
+ * 
+ *     #
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setAgentMaxDeceleration); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setAgentMaxDeceleration); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyInt_FromSize_t(__pyx_v_agent_no); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_FromSize_t(__pyx_v_agent_no); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_max_deceleration); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_max_deceleration); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -8653,13 +8881,13 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_62setAgentAccelerationLimits(
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "rvo23d.pyx":193
+  /* "rvo23d.pyx":204
  *         self.thisptr.setAgentMaxDeceleration(agent_no, max_deceleration)
  * 
  *     def setAgentAccelerationLimits(self, size_t agent_no, float max_acceleration, float max_deceleration):             # <<<<<<<<<<<<<<
@@ -8684,6 +8912,1648 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_62setAgentAccelerationLimits(
   return __pyx_r;
 }
 
+/* "rvo23d.pyx":210
+ * 
+ *     #
+ *     def getAgentHorizontalSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentHorizontalSpeed(agent_no)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_65getAgentHorizontalSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_64getAgentHorizontalSpeed, "\343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\343\201\256\346\260\264\345\271\263\346\226\271\345\220\221\346\234\200\345\244\247\351\200\237\345\272\246\343\202\222\345\217\226\345\276\227");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_65getAgentHorizontalSpeed = {"getAgentHorizontalSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_65getAgentHorizontalSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_64getAgentHorizontalSpeed};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_65getAgentHorizontalSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[1] = {0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("getAgentHorizontalSpeed (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 210, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentHorizontalSpeed") < 0)) __PYX_ERR(0, 210, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 1)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 210, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("getAgentHorizontalSpeed", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 210, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.getAgentHorizontalSpeed", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_64getAgentHorizontalSpeed(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_64getAgentHorizontalSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("getAgentHorizontalSpeed", 1);
+
+  /* "rvo23d.pyx":212
+ *     def getAgentHorizontalSpeed(self, size_t agent_no):
+ *         """"""
+ *         return self.thisptr.getAgentHorizontalSpeed(agent_no)             # <<<<<<<<<<<<<<
+ * 
+ *     def getAgentVerticalUpSpeed(self, size_t agent_no):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentHorizontalSpeed(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "rvo23d.pyx":210
+ * 
+ *     #
+ *     def getAgentHorizontalSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentHorizontalSpeed(agent_no)
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.getAgentHorizontalSpeed", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rvo23d.pyx":214
+ *         return self.thisptr.getAgentHorizontalSpeed(agent_no)
+ * 
+ *     def getAgentVerticalUpSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentVerticalUpSpeed(agent_no)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_67getAgentVerticalUpSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_66getAgentVerticalUpSpeed, "\343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\343\201\256\344\270\212\346\230\207\346\226\271\345\220\221\346\234\200\345\244\247\351\200\237\345\272\246\343\202\222\345\217\226\345\276\227");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_67getAgentVerticalUpSpeed = {"getAgentVerticalUpSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_67getAgentVerticalUpSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_66getAgentVerticalUpSpeed};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_67getAgentVerticalUpSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[1] = {0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("getAgentVerticalUpSpeed (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 214, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentVerticalUpSpeed") < 0)) __PYX_ERR(0, 214, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 1)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 214, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("getAgentVerticalUpSpeed", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 214, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.getAgentVerticalUpSpeed", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_66getAgentVerticalUpSpeed(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_66getAgentVerticalUpSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("getAgentVerticalUpSpeed", 1);
+
+  /* "rvo23d.pyx":216
+ *     def getAgentVerticalUpSpeed(self, size_t agent_no):
+ *         """"""
+ *         return self.thisptr.getAgentVerticalUpSpeed(agent_no)             # <<<<<<<<<<<<<<
+ * 
+ *     def getAgentVerticalDownSpeed(self, size_t agent_no):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentVerticalUpSpeed(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 216, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "rvo23d.pyx":214
+ *         return self.thisptr.getAgentHorizontalSpeed(agent_no)
+ * 
+ *     def getAgentVerticalUpSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentVerticalUpSpeed(agent_no)
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.getAgentVerticalUpSpeed", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rvo23d.pyx":218
+ *         return self.thisptr.getAgentVerticalUpSpeed(agent_no)
+ * 
+ *     def getAgentVerticalDownSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentVerticalDownSpeed(agent_no)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_69getAgentVerticalDownSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_68getAgentVerticalDownSpeed, "\343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\343\201\256\344\270\213\351\231\215\346\226\271\345\220\221\346\234\200\345\244\247\351\200\237\345\272\246\343\202\222\345\217\226\345\276\227");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_69getAgentVerticalDownSpeed = {"getAgentVerticalDownSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_69getAgentVerticalDownSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_68getAgentVerticalDownSpeed};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_69getAgentVerticalDownSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[1] = {0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("getAgentVerticalDownSpeed (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 218, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentVerticalDownSpeed") < 0)) __PYX_ERR(0, 218, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 1)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 218, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("getAgentVerticalDownSpeed", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 218, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.getAgentVerticalDownSpeed", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_68getAgentVerticalDownSpeed(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_68getAgentVerticalDownSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("getAgentVerticalDownSpeed", 1);
+
+  /* "rvo23d.pyx":220
+ *     def getAgentVerticalDownSpeed(self, size_t agent_no):
+ *         """"""
+ *         return self.thisptr.getAgentVerticalDownSpeed(agent_no)             # <<<<<<<<<<<<<<
+ * 
+ *     def getAgentUseDirectionalSpeedLimits(self, size_t agent_no):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->thisptr->getAgentVerticalDownSpeed(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 220, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "rvo23d.pyx":218
+ *         return self.thisptr.getAgentVerticalUpSpeed(agent_no)
+ * 
+ *     def getAgentVerticalDownSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentVerticalDownSpeed(agent_no)
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.getAgentVerticalDownSpeed", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rvo23d.pyx":222
+ *         return self.thisptr.getAgentVerticalDownSpeed(agent_no)
+ * 
+ *     def getAgentUseDirectionalSpeedLimits(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_71getAgentUseDirectionalSpeedLimits(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_70getAgentUseDirectionalSpeedLimits, "\343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\343\201\214\346\226\271\345\220\221\345\210\245\351\200\237\345\272\246\345\210\266\351\231\220\343\202\222\344\275\277\347\224\250\343\201\227\343\201\246\343\201\204\343\202\213\343\201\213\343\202\222\345\217\226\345\276\227");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_71getAgentUseDirectionalSpeedLimits = {"getAgentUseDirectionalSpeedLimits", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_71getAgentUseDirectionalSpeedLimits, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_70getAgentUseDirectionalSpeedLimits};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_71getAgentUseDirectionalSpeedLimits(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[1] = {0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("getAgentUseDirectionalSpeedLimits (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getAgentUseDirectionalSpeedLimits") < 0)) __PYX_ERR(0, 222, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 1)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("getAgentUseDirectionalSpeedLimits", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 222, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.getAgentUseDirectionalSpeedLimits", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_70getAgentUseDirectionalSpeedLimits(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_70getAgentUseDirectionalSpeedLimits(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("getAgentUseDirectionalSpeedLimits", 1);
+
+  /* "rvo23d.pyx":224
+ *     def getAgentUseDirectionalSpeedLimits(self, size_t agent_no):
+ *         """"""
+ *         return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)             # <<<<<<<<<<<<<<
+ * 
+ *     def setAgentHorizontalSpeed(self, size_t agent_no, float max_horizontal_speed):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->thisptr->getAgentUseDirectionalSpeedLimits(__pyx_v_agent_no)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 224, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "rvo23d.pyx":222
+ *         return self.thisptr.getAgentVerticalDownSpeed(agent_no)
+ * 
+ *     def getAgentUseDirectionalSpeedLimits(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.getAgentUseDirectionalSpeedLimits", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rvo23d.pyx":226
+ *         return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)
+ * 
+ *     def setAgentHorizontalSpeed(self, size_t agent_no, float max_horizontal_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_73setAgentHorizontalSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_72setAgentHorizontalSpeed, "\343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\343\201\256\346\260\264\345\271\263\346\226\271\345\220\221\346\234\200\345\244\247\351\200\237\345\272\246\343\202\222\350\250\255\345\256\232");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_73setAgentHorizontalSpeed = {"setAgentHorizontalSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_73setAgentHorizontalSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_72setAgentHorizontalSpeed};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_73setAgentHorizontalSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  float __pyx_v_max_horizontal_speed;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[2] = {0,0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentHorizontalSpeed (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,&__pyx_n_s_max_horizontal_speed,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_max_horizontal_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("setAgentHorizontalSpeed", 1, 2, 2, 1); __PYX_ERR(0, 226, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentHorizontalSpeed") < 0)) __PYX_ERR(0, 226, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 2)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+      values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L3_error)
+    __pyx_v_max_horizontal_speed = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_horizontal_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("setAgentHorizontalSpeed", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 226, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.setAgentHorizontalSpeed", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_72setAgentHorizontalSpeed(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no, __pyx_v_max_horizontal_speed);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_72setAgentHorizontalSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_horizontal_speed) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentHorizontalSpeed", 1);
+
+  /* "rvo23d.pyx":228
+ *     def setAgentHorizontalSpeed(self, size_t agent_no, float max_horizontal_speed):
+ *         """"""
+ *         self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)             # <<<<<<<<<<<<<<
+ * 
+ *     def setAgentVerticalUpSpeed(self, size_t agent_no, float max_vertical_up_speed):
+ */
+  __pyx_v_self->thisptr->setAgentHorizontalSpeed(__pyx_v_agent_no, __pyx_v_max_horizontal_speed);
+
+  /* "rvo23d.pyx":226
+ *         return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)
+ * 
+ *     def setAgentHorizontalSpeed(self, size_t agent_no, float max_horizontal_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rvo23d.pyx":230
+ *         self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)
+ * 
+ *     def setAgentVerticalUpSpeed(self, size_t agent_no, float max_vertical_up_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_75setAgentVerticalUpSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_74setAgentVerticalUpSpeed, "\343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\343\201\256\344\270\212\346\230\207\346\226\271\345\220\221\346\234\200\345\244\247\351\200\237\345\272\246\343\202\222\350\250\255\345\256\232");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_75setAgentVerticalUpSpeed = {"setAgentVerticalUpSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_75setAgentVerticalUpSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_74setAgentVerticalUpSpeed};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_75setAgentVerticalUpSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  float __pyx_v_max_vertical_up_speed;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[2] = {0,0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentVerticalUpSpeed (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,&__pyx_n_s_max_vertical_up_speed,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 230, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_max_vertical_up_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 230, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("setAgentVerticalUpSpeed", 1, 2, 2, 1); __PYX_ERR(0, 230, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentVerticalUpSpeed") < 0)) __PYX_ERR(0, 230, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 2)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+      values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 230, __pyx_L3_error)
+    __pyx_v_max_vertical_up_speed = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_vertical_up_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 230, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("setAgentVerticalUpSpeed", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 230, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.setAgentVerticalUpSpeed", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_74setAgentVerticalUpSpeed(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no, __pyx_v_max_vertical_up_speed);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_74setAgentVerticalUpSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_vertical_up_speed) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentVerticalUpSpeed", 1);
+
+  /* "rvo23d.pyx":232
+ *     def setAgentVerticalUpSpeed(self, size_t agent_no, float max_vertical_up_speed):
+ *         """"""
+ *         self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)             # <<<<<<<<<<<<<<
+ * 
+ *     def setAgentVerticalDownSpeed(self, size_t agent_no, float max_vertical_down_speed):
+ */
+  __pyx_v_self->thisptr->setAgentVerticalUpSpeed(__pyx_v_agent_no, __pyx_v_max_vertical_up_speed);
+
+  /* "rvo23d.pyx":230
+ *         self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)
+ * 
+ *     def setAgentVerticalUpSpeed(self, size_t agent_no, float max_vertical_up_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rvo23d.pyx":234
+ *         self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)
+ * 
+ *     def setAgentVerticalDownSpeed(self, size_t agent_no, float max_vertical_down_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_77setAgentVerticalDownSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_76setAgentVerticalDownSpeed, "\343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\343\201\256\344\270\213\351\231\215\346\226\271\345\220\221\346\234\200\345\244\247\351\200\237\345\272\246\343\202\222\350\250\255\345\256\232");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_77setAgentVerticalDownSpeed = {"setAgentVerticalDownSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_77setAgentVerticalDownSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_76setAgentVerticalDownSpeed};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_77setAgentVerticalDownSpeed(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  float __pyx_v_max_vertical_down_speed;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[2] = {0,0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentVerticalDownSpeed (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,&__pyx_n_s_max_vertical_down_speed,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 234, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_max_vertical_down_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 234, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("setAgentVerticalDownSpeed", 1, 2, 2, 1); __PYX_ERR(0, 234, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentVerticalDownSpeed") < 0)) __PYX_ERR(0, 234, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 2)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+      values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 234, __pyx_L3_error)
+    __pyx_v_max_vertical_down_speed = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_vertical_down_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 234, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("setAgentVerticalDownSpeed", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 234, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.setAgentVerticalDownSpeed", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_76setAgentVerticalDownSpeed(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no, __pyx_v_max_vertical_down_speed);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_76setAgentVerticalDownSpeed(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_vertical_down_speed) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentVerticalDownSpeed", 1);
+
+  /* "rvo23d.pyx":236
+ *     def setAgentVerticalDownSpeed(self, size_t agent_no, float max_vertical_down_speed):
+ *         """"""
+ *         self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)             # <<<<<<<<<<<<<<
+ * 
+ *     def setAgentDirectionalSpeeds(self, size_t agent_no, float max_horizontal_speed, float max_vertical_up_speed, float max_vertical_down_speed):
+ */
+  __pyx_v_self->thisptr->setAgentVerticalDownSpeed(__pyx_v_agent_no, __pyx_v_max_vertical_down_speed);
+
+  /* "rvo23d.pyx":234
+ *         self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)
+ * 
+ *     def setAgentVerticalDownSpeed(self, size_t agent_no, float max_vertical_down_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rvo23d.pyx":238
+ *         self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)
+ * 
+ *     def setAgentDirectionalSpeeds(self, size_t agent_no, float max_horizontal_speed, float max_vertical_up_speed, float max_vertical_down_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_79setAgentDirectionalSpeeds(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_78setAgentDirectionalSpeeds, "\343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\343\201\256\346\226\271\345\220\221\345\210\245\346\234\200\345\244\247\351\200\237\345\272\246\343\202\222\344\270\200\346\213\254\350\250\255\345\256\232\357\274\210\344\276\277\345\210\251\343\203\241\343\202\275\343\203\203\343\203\211\357\274\211");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_79setAgentDirectionalSpeeds = {"setAgentDirectionalSpeeds", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_79setAgentDirectionalSpeeds, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_78setAgentDirectionalSpeeds};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_79setAgentDirectionalSpeeds(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  float __pyx_v_max_horizontal_speed;
+  float __pyx_v_max_vertical_up_speed;
+  float __pyx_v_max_vertical_down_speed;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[4] = {0,0,0,0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentDirectionalSpeeds (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,&__pyx_n_s_max_horizontal_speed,&__pyx_n_s_max_vertical_up_speed,&__pyx_n_s_max_vertical_down_speed,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  4: values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
+        case  3: values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 238, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_max_horizontal_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 238, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("setAgentDirectionalSpeeds", 1, 4, 4, 1); __PYX_ERR(0, 238, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  2:
+        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_max_vertical_up_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 238, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("setAgentDirectionalSpeeds", 1, 4, 4, 2); __PYX_ERR(0, 238, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  3:
+        if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_max_vertical_down_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 238, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("setAgentDirectionalSpeeds", 1, 4, 4, 3); __PYX_ERR(0, 238, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentDirectionalSpeeds") < 0)) __PYX_ERR(0, 238, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 4)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+      values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+      values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
+      values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 238, __pyx_L3_error)
+    __pyx_v_max_horizontal_speed = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_max_horizontal_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 238, __pyx_L3_error)
+    __pyx_v_max_vertical_up_speed = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_max_vertical_up_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 238, __pyx_L3_error)
+    __pyx_v_max_vertical_down_speed = __pyx_PyFloat_AsFloat(values[3]); if (unlikely((__pyx_v_max_vertical_down_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 238, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("setAgentDirectionalSpeeds", 1, 4, 4, __pyx_nargs); __PYX_ERR(0, 238, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.setAgentDirectionalSpeeds", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_78setAgentDirectionalSpeeds(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no, __pyx_v_max_horizontal_speed, __pyx_v_max_vertical_up_speed, __pyx_v_max_vertical_down_speed);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_78setAgentDirectionalSpeeds(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_max_horizontal_speed, float __pyx_v_max_vertical_up_speed, float __pyx_v_max_vertical_down_speed) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentDirectionalSpeeds", 1);
+
+  /* "rvo23d.pyx":240
+ *     def setAgentDirectionalSpeeds(self, size_t agent_no, float max_horizontal_speed, float max_vertical_up_speed, float max_vertical_down_speed):
+ *         """"""
+ *         self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)             # <<<<<<<<<<<<<<
+ * 
+ *     def setAgentUseDirectionalSpeedLimits(self, size_t agent_no, bool use):
+ */
+  __pyx_v_self->thisptr->setAgentDirectionalSpeeds(__pyx_v_agent_no, __pyx_v_max_horizontal_speed, __pyx_v_max_vertical_up_speed, __pyx_v_max_vertical_down_speed);
+
+  /* "rvo23d.pyx":238
+ *         self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)
+ * 
+ *     def setAgentDirectionalSpeeds(self, size_t agent_no, float max_horizontal_speed, float max_vertical_up_speed, float max_vertical_down_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rvo23d.pyx":242
+ *         self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)
+ * 
+ *     def setAgentUseDirectionalSpeedLimits(self, size_t agent_no, bool use):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_81setAgentUseDirectionalSpeedLimits(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_80setAgentUseDirectionalSpeedLimits, "\343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\343\201\256\346\226\271\345\220\221\345\210\245\351\200\237\345\272\246\345\210\266\351\231\220\344\275\277\347\224\250\343\203\225\343\203\251\343\202\260\343\202\222\350\250\255\345\256\232");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_81setAgentUseDirectionalSpeedLimits = {"setAgentUseDirectionalSpeedLimits", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_81setAgentUseDirectionalSpeedLimits, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_80setAgentUseDirectionalSpeedLimits};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_81setAgentUseDirectionalSpeedLimits(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  bool __pyx_v_use;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[2] = {0,0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentUseDirectionalSpeedLimits (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,&__pyx_n_s_use,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_use)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("setAgentUseDirectionalSpeedLimits", 1, 2, 2, 1); __PYX_ERR(0, 242, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "setAgentUseDirectionalSpeedLimits") < 0)) __PYX_ERR(0, 242, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 2)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+      values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+    __pyx_v_use = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_use == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("setAgentUseDirectionalSpeedLimits", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 242, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.setAgentUseDirectionalSpeedLimits", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_80setAgentUseDirectionalSpeedLimits(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no, __pyx_v_use);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_80setAgentUseDirectionalSpeedLimits(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, bool __pyx_v_use) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setAgentUseDirectionalSpeedLimits", 1);
+
+  /* "rvo23d.pyx":244
+ *     def setAgentUseDirectionalSpeedLimits(self, size_t agent_no, bool use):
+ *         """"""
+ *         self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)             # <<<<<<<<<<<<<<
+ * 
+ *     def enableDirectionalSpeedLimits(self, size_t agent_no, float horizontal_speed=4.0, float vertical_up_speed=3.2, float vertical_down_speed=2.4):
+ */
+  __pyx_v_self->thisptr->setAgentUseDirectionalSpeedLimits(__pyx_v_agent_no, __pyx_v_use);
+
+  /* "rvo23d.pyx":242
+ *         self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)
+ * 
+ *     def setAgentUseDirectionalSpeedLimits(self, size_t agent_no, bool use):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rvo23d.pyx":246
+ *         self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)
+ * 
+ *     def enableDirectionalSpeedLimits(self, size_t agent_no, float horizontal_speed=4.0, float vertical_up_speed=3.2, float vertical_down_speed=2.4):             # <<<<<<<<<<<<<<
+ *         """
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_83enableDirectionalSpeedLimits(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_6rvo23d_14PyRVOSimulator_82enableDirectionalSpeedLimits, "\346\226\271\345\220\221\345\210\245\351\200\237\345\272\246\345\210\266\351\231\220\343\202\222\346\234\211\345\212\271\343\201\253\343\201\227\343\200\201\346\214\207\345\256\232\343\201\227\343\201\237\351\200\237\345\272\246\343\202\222\350\250\255\345\256\232\357\274\210\344\276\277\345\210\251\343\203\241\343\202\275\343\203\203\343\203\211\357\274\211\n        \n        Args:\n            agent_no: \343\202\250\343\203\274\343\202\270\343\202\247\343\203\263\343\203\210\347\225\252\345\217\267\n            horizontal_speed: \346\260\264\345\271\263\346\226\271\345\220\221\346\234\200\345\244\247\351\200\237\345\272\246 (\343\203\207\343\203\225\343\202\251\343\203\253\343\203\210: 4.0 m/s)\n            vertical_up_speed: \344\270\212\346\230\207\346\226\271\345\220\221\346\234\200\345\244\247\351\200\237\345\272\246 (\343\203\207\343\203\225\343\202\251\343\203\253\343\203\210: 3.2 m/s)\n            vertical_down_speed: \344\270\213\351\231\215\346\226\271\345\220\221\346\234\200\345\244\247\351\200\237\345\272\246 (\343\203\207\343\203\225\343\202\251\343\203\253\343\203\210: 2.4 m/s)\n        ");
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_83enableDirectionalSpeedLimits = {"enableDirectionalSpeedLimits", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_83enableDirectionalSpeedLimits, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_82enableDirectionalSpeedLimits};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_83enableDirectionalSpeedLimits(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  size_t __pyx_v_agent_no;
+  float __pyx_v_horizontal_speed;
+  float __pyx_v_vertical_up_speed;
+  float __pyx_v_vertical_down_speed;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[4] = {0,0,0,0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("enableDirectionalSpeedLimits (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,&__pyx_n_s_horizontal_speed,&__pyx_n_s_vertical_up_speed,&__pyx_n_s_vertical_down_speed,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  4: values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
+        case  3: values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (kw_args > 0) {
+          PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_horizontal_speed);
+          if (value) { values[1] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  2:
+        if (kw_args > 0) {
+          PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_vertical_up_speed);
+          if (value) { values[2] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  3:
+        if (kw_args > 0) {
+          PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_vertical_down_speed);
+          if (value) { values[3] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "enableDirectionalSpeedLimits") < 0)) __PYX_ERR(0, 246, __pyx_L3_error)
+      }
+    } else {
+      switch (__pyx_nargs) {
+        case  4: values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
+        case  3: values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
+    if (values[1]) {
+      __pyx_v_horizontal_speed = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_horizontal_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
+    } else {
+      __pyx_v_horizontal_speed = ((float)4.0);
+    }
+    if (values[2]) {
+      __pyx_v_vertical_up_speed = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_vertical_up_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
+    } else {
+      __pyx_v_vertical_up_speed = ((float)3.2);
+    }
+    if (values[3]) {
+      __pyx_v_vertical_down_speed = __pyx_PyFloat_AsFloat(values[3]); if (unlikely((__pyx_v_vertical_down_speed == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
+    } else {
+      __pyx_v_vertical_down_speed = ((float)2.4);
+    }
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("enableDirectionalSpeedLimits", 0, 1, 4, __pyx_nargs); __PYX_ERR(0, 246, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.enableDirectionalSpeedLimits", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_82enableDirectionalSpeedLimits(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v_agent_no, __pyx_v_horizontal_speed, __pyx_v_vertical_up_speed, __pyx_v_vertical_down_speed);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_82enableDirectionalSpeedLimits(struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, size_t __pyx_v_agent_no, float __pyx_v_horizontal_speed, float __pyx_v_vertical_up_speed, float __pyx_v_vertical_down_speed) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
+  PyObject *__pyx_t_7 = NULL;
+  unsigned int __pyx_t_8;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("enableDirectionalSpeedLimits", 1);
+
+  /* "rvo23d.pyx":255
+ *             vertical_down_speed:  (: 2.4 m/s)
+ *         """
+ *         self.setAgentDirectionalSpeeds(agent_no, horizontal_speed, vertical_up_speed, vertical_down_speed)             # <<<<<<<<<<<<<<
+ *         self.setAgentUseDirectionalSpeedLimits(agent_no, True)
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setAgentDirectionalSpeeds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = __Pyx_PyInt_FromSize_t(__pyx_v_agent_no); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_horizontal_speed); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_vertical_up_speed); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_vertical_down_speed); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_7 = NULL;
+  __pyx_t_8 = 0;
+  #if CYTHON_UNPACK_METHODS
+  if (likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_7)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_7);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+      __pyx_t_8 = 1;
+    }
+  }
+  #endif
+  {
+    PyObject *__pyx_callargs[5] = {__pyx_t_7, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6};
+    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_8, 4+__pyx_t_8);
+    __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 255, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "rvo23d.pyx":256
+ *         """
+ *         self.setAgentDirectionalSpeeds(agent_no, horizontal_speed, vertical_up_speed, vertical_down_speed)
+ *         self.setAgentUseDirectionalSpeedLimits(agent_no, True)             # <<<<<<<<<<<<<<
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setAgentUseDirectionalSpeedLimit); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 256, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_6 = __Pyx_PyInt_FromSize_t(__pyx_v_agent_no); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 256, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_5 = NULL;
+  __pyx_t_8 = 0;
+  #if CYTHON_UNPACK_METHODS
+  if (likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+      __pyx_t_8 = 1;
+    }
+  }
+  #endif
+  {
+    PyObject *__pyx_callargs[3] = {__pyx_t_5, __pyx_t_6, Py_True};
+    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_8, 2+__pyx_t_8);
+    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 256, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "rvo23d.pyx":246
+ *         self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)
+ * 
+ *     def enableDirectionalSpeedLimits(self, size_t agent_no, float horizontal_speed=4.0, float vertical_up_speed=3.2, float vertical_down_speed=2.4):             # <<<<<<<<<<<<<<
+ *         """
+ * 
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_AddTraceback("rvo23d.PyRVOSimulator.enableDirectionalSpeedLimits", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
@@ -8691,15 +10561,15 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_62setAgentAccelerationLimits(
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_65__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_85__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_65__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_65__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_65__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_85__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_85__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_85__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -8724,14 +10594,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_64__reduce_cython__(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_84__reduce_cython__(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_64__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self) {
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_84__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -8771,15 +10641,15 @@ static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_64__reduce_cython__(CYTHON_UN
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_67__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_87__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_67__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_67__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_67__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_6rvo23d_14PyRVOSimulator_87__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_87__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6rvo23d_14PyRVOSimulator_87__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -8853,7 +10723,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_66__setstate_cython__(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_6rvo23d_14PyRVOSimulator_86__setstate_cython__(((struct __pyx_obj_6rvo23d_PyRVOSimulator *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -8866,7 +10736,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_66__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_6rvo23d_14PyRVOSimulator_86__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_6rvo23d_PyRVOSimulator *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -8968,8 +10838,18 @@ static PyMethodDef __pyx_methods_6rvo23d_PyRVOSimulator[] = {
   {"setAgentMaxAcceleration", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_59setAgentMaxAcceleration, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_58setAgentMaxAcceleration},
   {"setAgentMaxDeceleration", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_61setAgentMaxDeceleration, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_60setAgentMaxDeceleration},
   {"setAgentAccelerationLimits", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_63setAgentAccelerationLimits, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_62setAgentAccelerationLimits},
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_65__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_67__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"getAgentHorizontalSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_65getAgentHorizontalSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_64getAgentHorizontalSpeed},
+  {"getAgentVerticalUpSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_67getAgentVerticalUpSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_66getAgentVerticalUpSpeed},
+  {"getAgentVerticalDownSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_69getAgentVerticalDownSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_68getAgentVerticalDownSpeed},
+  {"getAgentUseDirectionalSpeedLimits", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_71getAgentUseDirectionalSpeedLimits, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_70getAgentUseDirectionalSpeedLimits},
+  {"setAgentHorizontalSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_73setAgentHorizontalSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_72setAgentHorizontalSpeed},
+  {"setAgentVerticalUpSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_75setAgentVerticalUpSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_74setAgentVerticalUpSpeed},
+  {"setAgentVerticalDownSpeed", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_77setAgentVerticalDownSpeed, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_76setAgentVerticalDownSpeed},
+  {"setAgentDirectionalSpeeds", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_79setAgentDirectionalSpeeds, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_78setAgentDirectionalSpeeds},
+  {"setAgentUseDirectionalSpeedLimits", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_81setAgentUseDirectionalSpeedLimits, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_80setAgentUseDirectionalSpeedLimits},
+  {"enableDirectionalSpeedLimits", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_83enableDirectionalSpeedLimits, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6rvo23d_14PyRVOSimulator_82enableDirectionalSpeedLimits},
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_85__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6rvo23d_14PyRVOSimulator_87__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
@@ -9096,7 +10976,9 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_PyRVOSimulator___setstate_cython, __pyx_k_PyRVOSimulator___setstate_cython, sizeof(__pyx_k_PyRVOSimulator___setstate_cython), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_addAgent, __pyx_k_PyRVOSimulator_addAgent, sizeof(__pyx_k_PyRVOSimulator_addAgent), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_doStep, __pyx_k_PyRVOSimulator_doStep, sizeof(__pyx_k_PyRVOSimulator_doStep), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_enableDirectional, __pyx_k_PyRVOSimulator_enableDirectional, sizeof(__pyx_k_PyRVOSimulator_enableDirectional), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getAgentAgentNeig, __pyx_k_PyRVOSimulator_getAgentAgentNeig, sizeof(__pyx_k_PyRVOSimulator_getAgentAgentNeig), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_getAgentHorizonta, __pyx_k_PyRVOSimulator_getAgentHorizonta, sizeof(__pyx_k_PyRVOSimulator_getAgentHorizonta), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getAgentMaxAccele, __pyx_k_PyRVOSimulator_getAgentMaxAccele, sizeof(__pyx_k_PyRVOSimulator_getAgentMaxAccele), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getAgentMaxDecele, __pyx_k_PyRVOSimulator_getAgentMaxDecele, sizeof(__pyx_k_PyRVOSimulator_getAgentMaxDecele), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getAgentMaxNeighb, __pyx_k_PyRVOSimulator_getAgentMaxNeighb, sizeof(__pyx_k_PyRVOSimulator_getAgentMaxNeighb), 0, 0, 1, 1},
@@ -9107,12 +10989,17 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_PyRVOSimulator_getAgentPrefVeloc, __pyx_k_PyRVOSimulator_getAgentPrefVeloc, sizeof(__pyx_k_PyRVOSimulator_getAgentPrefVeloc), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getAgentRadius, __pyx_k_PyRVOSimulator_getAgentRadius, sizeof(__pyx_k_PyRVOSimulator_getAgentRadius), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getAgentTimeHoriz, __pyx_k_PyRVOSimulator_getAgentTimeHoriz, sizeof(__pyx_k_PyRVOSimulator_getAgentTimeHoriz), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_getAgentUseDirect, __pyx_k_PyRVOSimulator_getAgentUseDirect, sizeof(__pyx_k_PyRVOSimulator_getAgentUseDirect), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getAgentVelocity, __pyx_k_PyRVOSimulator_getAgentVelocity, sizeof(__pyx_k_PyRVOSimulator_getAgentVelocity), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_getAgentVerticalD, __pyx_k_PyRVOSimulator_getAgentVerticalD, sizeof(__pyx_k_PyRVOSimulator_getAgentVerticalD), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_getAgentVerticalU, __pyx_k_PyRVOSimulator_getAgentVerticalU, sizeof(__pyx_k_PyRVOSimulator_getAgentVerticalU), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getGlobalTime, __pyx_k_PyRVOSimulator_getGlobalTime, sizeof(__pyx_k_PyRVOSimulator_getGlobalTime), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getNumAgents, __pyx_k_PyRVOSimulator_getNumAgents, sizeof(__pyx_k_PyRVOSimulator_getNumAgents), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_getTimeStep, __pyx_k_PyRVOSimulator_getTimeStep, sizeof(__pyx_k_PyRVOSimulator_getTimeStep), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_setAgentAccelerat, __pyx_k_PyRVOSimulator_setAgentAccelerat, sizeof(__pyx_k_PyRVOSimulator_setAgentAccelerat), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_setAgentDefaults, __pyx_k_PyRVOSimulator_setAgentDefaults, sizeof(__pyx_k_PyRVOSimulator_setAgentDefaults), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_setAgentDirection, __pyx_k_PyRVOSimulator_setAgentDirection, sizeof(__pyx_k_PyRVOSimulator_setAgentDirection), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_setAgentHorizonta, __pyx_k_PyRVOSimulator_setAgentHorizonta, sizeof(__pyx_k_PyRVOSimulator_setAgentHorizonta), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_setAgentMaxAccele, __pyx_k_PyRVOSimulator_setAgentMaxAccele, sizeof(__pyx_k_PyRVOSimulator_setAgentMaxAccele), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_setAgentMaxDecele, __pyx_k_PyRVOSimulator_setAgentMaxDecele, sizeof(__pyx_k_PyRVOSimulator_setAgentMaxDecele), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_setAgentMaxNeighb, __pyx_k_PyRVOSimulator_setAgentMaxNeighb, sizeof(__pyx_k_PyRVOSimulator_setAgentMaxNeighb), 0, 0, 1, 1},
@@ -9122,12 +11009,15 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_PyRVOSimulator_setAgentPrefVeloc, __pyx_k_PyRVOSimulator_setAgentPrefVeloc, sizeof(__pyx_k_PyRVOSimulator_setAgentPrefVeloc), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_setAgentRadius, __pyx_k_PyRVOSimulator_setAgentRadius, sizeof(__pyx_k_PyRVOSimulator_setAgentRadius), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_setAgentTimeHoriz, __pyx_k_PyRVOSimulator_setAgentTimeHoriz, sizeof(__pyx_k_PyRVOSimulator_setAgentTimeHoriz), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_setAgentUseDirect, __pyx_k_PyRVOSimulator_setAgentUseDirect, sizeof(__pyx_k_PyRVOSimulator_setAgentUseDirect), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_setAgentVelocity, __pyx_k_PyRVOSimulator_setAgentVelocity, sizeof(__pyx_k_PyRVOSimulator_setAgentVelocity), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_setAgentVerticalD, __pyx_k_PyRVOSimulator_setAgentVerticalD, sizeof(__pyx_k_PyRVOSimulator_setAgentVerticalD), 0, 0, 1, 1},
+    {&__pyx_n_s_PyRVOSimulator_setAgentVerticalU, __pyx_k_PyRVOSimulator_setAgentVerticalU, sizeof(__pyx_k_PyRVOSimulator_setAgentVerticalU), 0, 0, 1, 1},
     {&__pyx_n_s_PyRVOSimulator_setTimeStep, __pyx_k_PyRVOSimulator_setTimeStep, sizeof(__pyx_k_PyRVOSimulator_setTimeStep), 0, 0, 1, 1},
     {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
     {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
     {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
-    {&__pyx_n_s__59, __pyx_k__59, sizeof(__pyx_k__59), 0, 0, 1, 1},
+    {&__pyx_n_s__76, __pyx_k__76, sizeof(__pyx_k__76), 0, 0, 1, 1},
     {&__pyx_n_s_addAgent, __pyx_k_addAgent, sizeof(__pyx_k_addAgent), 0, 0, 1, 1},
     {&__pyx_n_s_agent_no, __pyx_k_agent_no, sizeof(__pyx_k_agent_no), 0, 0, 1, 1},
     {&__pyx_n_s_agent_nr, __pyx_k_agent_nr, sizeof(__pyx_k_agent_nr), 0, 0, 1, 1},
@@ -9138,8 +11028,10 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_disable, __pyx_k_disable, sizeof(__pyx_k_disable), 0, 1, 0, 0},
     {&__pyx_n_s_doStep, __pyx_k_doStep, sizeof(__pyx_k_doStep), 0, 0, 1, 1},
     {&__pyx_kp_u_enable, __pyx_k_enable, sizeof(__pyx_k_enable), 0, 1, 0, 0},
+    {&__pyx_n_s_enableDirectionalSpeedLimits, __pyx_k_enableDirectionalSpeedLimits, sizeof(__pyx_k_enableDirectionalSpeedLimits), 0, 0, 1, 1},
     {&__pyx_kp_u_gc, __pyx_k_gc, sizeof(__pyx_k_gc), 0, 1, 0, 0},
     {&__pyx_n_s_getAgentAgentNeighbor, __pyx_k_getAgentAgentNeighbor, sizeof(__pyx_k_getAgentAgentNeighbor), 0, 0, 1, 1},
+    {&__pyx_n_s_getAgentHorizontalSpeed, __pyx_k_getAgentHorizontalSpeed, sizeof(__pyx_k_getAgentHorizontalSpeed), 0, 0, 1, 1},
     {&__pyx_n_s_getAgentMaxAcceleration, __pyx_k_getAgentMaxAcceleration, sizeof(__pyx_k_getAgentMaxAcceleration), 0, 0, 1, 1},
     {&__pyx_n_s_getAgentMaxDeceleration, __pyx_k_getAgentMaxDeceleration, sizeof(__pyx_k_getAgentMaxDeceleration), 0, 0, 1, 1},
     {&__pyx_n_s_getAgentMaxNeighbors, __pyx_k_getAgentMaxNeighbors, sizeof(__pyx_k_getAgentMaxNeighbors), 0, 0, 1, 1},
@@ -9150,11 +11042,15 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_getAgentPrefVelocity, __pyx_k_getAgentPrefVelocity, sizeof(__pyx_k_getAgentPrefVelocity), 0, 0, 1, 1},
     {&__pyx_n_s_getAgentRadius, __pyx_k_getAgentRadius, sizeof(__pyx_k_getAgentRadius), 0, 0, 1, 1},
     {&__pyx_n_s_getAgentTimeHorizon, __pyx_k_getAgentTimeHorizon, sizeof(__pyx_k_getAgentTimeHorizon), 0, 0, 1, 1},
+    {&__pyx_n_s_getAgentUseDirectionalSpeedLimit, __pyx_k_getAgentUseDirectionalSpeedLimit, sizeof(__pyx_k_getAgentUseDirectionalSpeedLimit), 0, 0, 1, 1},
     {&__pyx_n_s_getAgentVelocity, __pyx_k_getAgentVelocity, sizeof(__pyx_k_getAgentVelocity), 0, 0, 1, 1},
+    {&__pyx_n_s_getAgentVerticalDownSpeed, __pyx_k_getAgentVerticalDownSpeed, sizeof(__pyx_k_getAgentVerticalDownSpeed), 0, 0, 1, 1},
+    {&__pyx_n_s_getAgentVerticalUpSpeed, __pyx_k_getAgentVerticalUpSpeed, sizeof(__pyx_k_getAgentVerticalUpSpeed), 0, 0, 1, 1},
     {&__pyx_n_s_getGlobalTime, __pyx_k_getGlobalTime, sizeof(__pyx_k_getGlobalTime), 0, 0, 1, 1},
     {&__pyx_n_s_getNumAgents, __pyx_k_getNumAgents, sizeof(__pyx_k_getNumAgents), 0, 0, 1, 1},
     {&__pyx_n_s_getTimeStep, __pyx_k_getTimeStep, sizeof(__pyx_k_getTimeStep), 0, 0, 1, 1},
     {&__pyx_n_s_getstate, __pyx_k_getstate, sizeof(__pyx_k_getstate), 0, 0, 1, 1},
+    {&__pyx_n_s_horizontal_speed, __pyx_k_horizontal_speed, sizeof(__pyx_k_horizontal_speed), 0, 0, 1, 1},
     {&__pyx_n_s_is_coroutine, __pyx_k_is_coroutine, sizeof(__pyx_k_is_coroutine), 0, 0, 1, 1},
     {&__pyx_kp_u_isenabled, __pyx_k_isenabled, sizeof(__pyx_k_isenabled), 0, 1, 0, 0},
     {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
@@ -9162,8 +11058,11 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_maxSpeed, __pyx_k_maxSpeed, sizeof(__pyx_k_maxSpeed), 0, 0, 1, 1},
     {&__pyx_n_s_max_acceleration, __pyx_k_max_acceleration, sizeof(__pyx_k_max_acceleration), 0, 0, 1, 1},
     {&__pyx_n_s_max_deceleration, __pyx_k_max_deceleration, sizeof(__pyx_k_max_deceleration), 0, 0, 1, 1},
+    {&__pyx_n_s_max_horizontal_speed, __pyx_k_max_horizontal_speed, sizeof(__pyx_k_max_horizontal_speed), 0, 0, 1, 1},
     {&__pyx_n_s_max_neighbors, __pyx_k_max_neighbors, sizeof(__pyx_k_max_neighbors), 0, 0, 1, 1},
     {&__pyx_n_s_max_speed, __pyx_k_max_speed, sizeof(__pyx_k_max_speed), 0, 0, 1, 1},
+    {&__pyx_n_s_max_vertical_down_speed, __pyx_k_max_vertical_down_speed, sizeof(__pyx_k_max_vertical_down_speed), 0, 0, 1, 1},
+    {&__pyx_n_s_max_vertical_up_speed, __pyx_k_max_vertical_up_speed, sizeof(__pyx_k_max_vertical_up_speed), 0, 0, 1, 1},
     {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
     {&__pyx_n_s_neighborDist, __pyx_k_neighborDist, sizeof(__pyx_k_neighborDist), 0, 0, 1, 1},
     {&__pyx_n_s_neighbor_dist, __pyx_k_neighbor_dist, sizeof(__pyx_k_neighbor_dist), 0, 0, 1, 1},
@@ -9180,6 +11079,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_self, __pyx_k_self, sizeof(__pyx_k_self), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentAccelerationLimits, __pyx_k_setAgentAccelerationLimits, sizeof(__pyx_k_setAgentAccelerationLimits), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentDefaults, __pyx_k_setAgentDefaults, sizeof(__pyx_k_setAgentDefaults), 0, 0, 1, 1},
+    {&__pyx_n_s_setAgentDirectionalSpeeds, __pyx_k_setAgentDirectionalSpeeds, sizeof(__pyx_k_setAgentDirectionalSpeeds), 0, 0, 1, 1},
+    {&__pyx_n_s_setAgentHorizontalSpeed, __pyx_k_setAgentHorizontalSpeed, sizeof(__pyx_k_setAgentHorizontalSpeed), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentMaxAcceleration, __pyx_k_setAgentMaxAcceleration, sizeof(__pyx_k_setAgentMaxAcceleration), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentMaxDeceleration, __pyx_k_setAgentMaxDeceleration, sizeof(__pyx_k_setAgentMaxDeceleration), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentMaxNeighbors, __pyx_k_setAgentMaxNeighbors, sizeof(__pyx_k_setAgentMaxNeighbors), 0, 0, 1, 1},
@@ -9189,7 +11090,10 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_setAgentPrefVelocity, __pyx_k_setAgentPrefVelocity, sizeof(__pyx_k_setAgentPrefVelocity), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentRadius, __pyx_k_setAgentRadius, sizeof(__pyx_k_setAgentRadius), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentTimeHorizon, __pyx_k_setAgentTimeHorizon, sizeof(__pyx_k_setAgentTimeHorizon), 0, 0, 1, 1},
+    {&__pyx_n_s_setAgentUseDirectionalSpeedLimit, __pyx_k_setAgentUseDirectionalSpeedLimit, sizeof(__pyx_k_setAgentUseDirectionalSpeedLimit), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentVelocity, __pyx_k_setAgentVelocity, sizeof(__pyx_k_setAgentVelocity), 0, 0, 1, 1},
+    {&__pyx_n_s_setAgentVerticalDownSpeed, __pyx_k_setAgentVerticalDownSpeed, sizeof(__pyx_k_setAgentVerticalDownSpeed), 0, 0, 1, 1},
+    {&__pyx_n_s_setAgentVerticalUpSpeed, __pyx_k_setAgentVerticalUpSpeed, sizeof(__pyx_k_setAgentVerticalUpSpeed), 0, 0, 1, 1},
     {&__pyx_n_s_setTimeStep, __pyx_k_setTimeStep, sizeof(__pyx_k_setTimeStep), 0, 0, 1, 1},
     {&__pyx_n_s_setstate, __pyx_k_setstate, sizeof(__pyx_k_setstate), 0, 0, 1, 1},
     {&__pyx_n_s_setstate_cython, __pyx_k_setstate_cython, sizeof(__pyx_k_setstate_cython), 0, 0, 1, 1},
@@ -9200,15 +11104,18 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_timeStep, __pyx_k_timeStep, sizeof(__pyx_k_timeStep), 0, 0, 1, 1},
     {&__pyx_n_s_time_horizon, __pyx_k_time_horizon, sizeof(__pyx_k_time_horizon), 0, 0, 1, 1},
     {&__pyx_n_s_time_step, __pyx_k_time_step, sizeof(__pyx_k_time_step), 0, 0, 1, 1},
+    {&__pyx_n_s_use, __pyx_k_use, sizeof(__pyx_k_use), 0, 0, 1, 1},
     {&__pyx_n_s_velocity, __pyx_k_velocity, sizeof(__pyx_k_velocity), 0, 0, 1, 1},
+    {&__pyx_n_s_vertical_down_speed, __pyx_k_vertical_down_speed, sizeof(__pyx_k_vertical_down_speed), 0, 0, 1, 1},
+    {&__pyx_n_s_vertical_up_speed, __pyx_k_vertical_up_speed, sizeof(__pyx_k_vertical_up_speed), 0, 0, 1, 1},
     {0, 0, 0, 0, 0, 0, 0}
   };
   return __Pyx_InitStrings(__pyx_string_tab);
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 95, __pyx_L1_error)
-  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(0, 107, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(0, 118, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -9220,395 +11127,506 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "rvo23d.pyx":80
+  /* "rvo23d.pyx":91
  *     def __cinit__(self, float timeStep, float neighborDist, size_t maxNeighbors,
  *                   float timeHorizon, float radius,
  *                   float maxSpeed, tuple velocity=(0, 0, 0)):             # <<<<<<<<<<<<<<
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  * 
  */
-  __pyx_tuple_ = PyTuple_Pack(3, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(3, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "rvo23d.pyx":95
+  /* "rvo23d.pyx":106
  * 
  *         if neighborDist is not None and velocity is None:
  *             raise ValueError("Either pass only 'pos', or pass all parameters.")             # <<<<<<<<<<<<<<
  * 
  *         if neighborDist is None:
  */
-  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_Either_pass_only_pos_or_pass_all); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_Either_pass_only_pos_or_pass_all); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "rvo23d.pyx":107
+  /* "rvo23d.pyx":118
  * 
  *         if agent_nr == RVO_ERROR:
  *             raise RuntimeError('Error adding agent to RVO simulation')             # <<<<<<<<<<<<<<
  * 
  *         return agent_nr
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_Error_adding_agent_to_RVO_simula); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 107, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_Error_adding_agent_to_RVO_simula); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 118, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "rvo23d.pyx":147
+  /* "rvo23d.pyx":158
  *     def setAgentDefaults(self, float neighbor_dist, size_t max_neighbors, float time_horizon,
  *                          float radius, float max_speed,
  *                          tuple velocity=(0, 0)):             # <<<<<<<<<<<<<<
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentDefaults(neighbor_dist, max_neighbors, time_horizon,
  */
-  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 147, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "rvo23d.pyx":87
+  /* "rvo23d.pyx":98
  *                                         maxSpeed, c_velocity)
  * 
  *     def addAgent(self, tuple pos, neighborDist=None,             # <<<<<<<<<<<<<<
  *                  maxNeighbors=None, timeHorizon=None,
  *                  radius=None, maxSpeed=None,
  */
-  __pyx_tuple__5 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_pos, __pyx_n_s_neighborDist, __pyx_n_s_maxNeighbors, __pyx_n_s_timeHorizon, __pyx_n_s_radius, __pyx_n_s_maxSpeed, __pyx_n_s_velocity, __pyx_n_s_c_pos, __pyx_n_s_c_velocity, __pyx_n_s_agent_nr); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_pos, __pyx_n_s_neighborDist, __pyx_n_s_maxNeighbors, __pyx_n_s_timeHorizon, __pyx_n_s_radius, __pyx_n_s_maxSpeed, __pyx_n_s_velocity, __pyx_n_s_c_pos, __pyx_n_s_c_velocity, __pyx_n_s_agent_nr); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(8, 0, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_addAgent, 87, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 87, __pyx_L1_error)
-  __pyx_tuple__7 = PyTuple_Pack(6, Py_None, Py_None, Py_None, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(8, 0, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_addAgent, 98, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(6, Py_None, Py_None, Py_None, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "rvo23d.pyx":111
+  /* "rvo23d.pyx":122
  *         return agent_nr
  * 
  *     def doStep(self):             # <<<<<<<<<<<<<<
  *         with nogil:
  *             self.thisptr.doStep()
  */
-  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_doStep, 111, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_doStep, 122, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 122, __pyx_L1_error)
 
-  /* "rvo23d.pyx":115
+  /* "rvo23d.pyx":126
  *             self.thisptr.doStep()
  * 
  *     def getAgentAgentNeighbor(self, size_t agent_no, size_t neighbor_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentAgentNeighbor(agent_no, neighbor_no)
  *     def getAgentMaxNeighbors(self, size_t agent_no):
  */
-  __pyx_tuple__10 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_neighbor_no); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_tuple__10 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_neighbor_no); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentAgentNeighbor, 115, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentAgentNeighbor, 126, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 126, __pyx_L1_error)
 
-  /* "rvo23d.pyx":117
+  /* "rvo23d.pyx":128
  *     def getAgentAgentNeighbor(self, size_t agent_no, size_t neighbor_no):
  *         return self.thisptr.getAgentAgentNeighbor(agent_no, neighbor_no)
  *     def getAgentMaxNeighbors(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentMaxNeighbors(agent_no)
  *     def getAgentMaxSpeed(self, size_t agent_no):
  */
-  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_agent_no); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_agent_no); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentMaxNeighbors, 117, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentMaxNeighbors, 128, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 128, __pyx_L1_error)
 
-  /* "rvo23d.pyx":119
+  /* "rvo23d.pyx":130
  *     def getAgentMaxNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxNeighbors(agent_no)
  *     def getAgentMaxSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentMaxSpeed(agent_no)
  *     def getAgentNeighborDist(self, size_t agent_no):
  */
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentMaxSpeed, 119, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 119, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentMaxSpeed, 130, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 130, __pyx_L1_error)
 
-  /* "rvo23d.pyx":121
+  /* "rvo23d.pyx":132
  *     def getAgentMaxSpeed(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxSpeed(agent_no)
  *     def getAgentNeighborDist(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentNeighborDist(agent_no)
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):
  */
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentNeighborDist, 121, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentNeighborDist, 132, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 132, __pyx_L1_error)
 
-  /* "rvo23d.pyx":123
+  /* "rvo23d.pyx":134
  *     def getAgentNeighborDist(self, size_t agent_no):
  *         return self.thisptr.getAgentNeighborDist(agent_no)
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentNumAgentNeighbors(agent_no)
  *     def getAgentPosition(self, size_t agent_no):
  */
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentNumAgentNeighbors, 123, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentNumAgentNeighbors, 134, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 134, __pyx_L1_error)
 
-  /* "rvo23d.pyx":125
+  /* "rvo23d.pyx":136
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentNumAgentNeighbors(agent_no)
  *     def getAgentPosition(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         cdef Vector3 pos = self.thisptr.getAgentPosition(agent_no)
  *         return pos.x(), pos.y(), pos.z()
  */
-  __pyx_tuple__17 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_pos); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_pos); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentPosition, 125, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentPosition, 136, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 136, __pyx_L1_error)
 
-  /* "rvo23d.pyx":128
+  /* "rvo23d.pyx":139
  *         cdef Vector3 pos = self.thisptr.getAgentPosition(agent_no)
  *         return pos.x(), pos.y(), pos.z()
  *     def getAgentPrefVelocity(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         cdef Vector3 velocity = self.thisptr.getAgentPrefVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  */
-  __pyx_tuple__19 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_velocity); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_velocity); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentPrefVelocity, 128, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentPrefVelocity, 139, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 139, __pyx_L1_error)
 
-  /* "rvo23d.pyx":131
+  /* "rvo23d.pyx":142
  *         cdef Vector3 velocity = self.thisptr.getAgentPrefVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getAgentRadius(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentRadius(agent_no)
  *     def getAgentTimeHorizon(self, size_t agent_no):
  */
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentRadius, 131, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentRadius, 142, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 142, __pyx_L1_error)
 
-  /* "rvo23d.pyx":133
+  /* "rvo23d.pyx":144
  *     def getAgentRadius(self, size_t agent_no):
  *         return self.thisptr.getAgentRadius(agent_no)
  *     def getAgentTimeHorizon(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentTimeHorizon(agent_no)
  *     def getAgentVelocity(self, size_t agent_no):
  */
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentTimeHorizon, 133, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 133, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentTimeHorizon, 144, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 144, __pyx_L1_error)
 
-  /* "rvo23d.pyx":135
+  /* "rvo23d.pyx":146
  *     def getAgentTimeHorizon(self, size_t agent_no):
  *         return self.thisptr.getAgentTimeHorizon(agent_no)
  *     def getAgentVelocity(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         cdef Vector3 velocity = self.thisptr.getAgentVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  */
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentVelocity, 135, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentVelocity, 146, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 146, __pyx_L1_error)
 
-  /* "rvo23d.pyx":138
+  /* "rvo23d.pyx":149
  *         cdef Vector3 velocity = self.thisptr.getAgentVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getGlobalTime(self):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getGlobalTime()
  *     def getNumAgents(self):
  */
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getGlobalTime, 138, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getGlobalTime, 149, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 149, __pyx_L1_error)
 
-  /* "rvo23d.pyx":140
+  /* "rvo23d.pyx":151
  *     def getGlobalTime(self):
  *         return self.thisptr.getGlobalTime()
  *     def getNumAgents(self):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getNumAgents()
  *     def getTimeStep(self):
  */
-  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getNumAgents, 140, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getNumAgents, 151, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 151, __pyx_L1_error)
 
-  /* "rvo23d.pyx":142
+  /* "rvo23d.pyx":153
  *     def getNumAgents(self):
  *         return self.thisptr.getNumAgents()
  *     def getTimeStep(self):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getTimeStep()
  * 
  */
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getTimeStep, 142, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getTimeStep, 153, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 153, __pyx_L1_error)
 
-  /* "rvo23d.pyx":145
+  /* "rvo23d.pyx":156
  *         return self.thisptr.getTimeStep()
  * 
  *     def setAgentDefaults(self, float neighbor_dist, size_t max_neighbors, float time_horizon,             # <<<<<<<<<<<<<<
  *                          float radius, float max_speed,
  *                          tuple velocity=(0, 0)):
  */
-  __pyx_tuple__27 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_neighbor_dist, __pyx_n_s_max_neighbors, __pyx_n_s_time_horizon, __pyx_n_s_radius, __pyx_n_s_max_speed, __pyx_n_s_velocity, __pyx_n_s_c_velocity); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_tuple__27 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_neighbor_dist, __pyx_n_s_max_neighbors, __pyx_n_s_time_horizon, __pyx_n_s_radius, __pyx_n_s_max_speed, __pyx_n_s_velocity, __pyx_n_s_c_velocity); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 156, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentDefaults, 145, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 145, __pyx_L1_error)
-  __pyx_tuple__29 = PyTuple_Pack(1, __pyx_tuple__4); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentDefaults, 156, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_tuple__29 = PyTuple_Pack(1, __pyx_tuple__4); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 156, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
 
-  /* "rvo23d.pyx":152
+  /* "rvo23d.pyx":163
  *                                       radius, max_speed, c_velocity)
  * 
  *     def setAgentMaxNeighbors(self, size_t agent_no, size_t max_neighbors):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentMaxNeighbors(agent_no, max_neighbors)
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):
  */
-  __pyx_tuple__30 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_neighbors); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_tuple__30 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_neighbors); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentMaxNeighbors, 152, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentMaxNeighbors, 163, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 163, __pyx_L1_error)
 
-  /* "rvo23d.pyx":154
+  /* "rvo23d.pyx":165
  *     def setAgentMaxNeighbors(self, size_t agent_no, size_t max_neighbors):
  *         self.thisptr.setAgentMaxNeighbors(agent_no, max_neighbors)
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentMaxSpeed(agent_no, max_speed)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  */
-  __pyx_tuple__32 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_speed); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __pyx_tuple__32 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_speed); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentMaxSpeed, 154, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentMaxSpeed, 165, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 165, __pyx_L1_error)
 
-  /* "rvo23d.pyx":156
+  /* "rvo23d.pyx":167
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):
  *         self.thisptr.setAgentMaxSpeed(agent_no, max_speed)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  */
-  __pyx_tuple__34 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_neighbor_dist); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_tuple__34 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_neighbor_dist); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__34);
   __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentNeighborDist, 156, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentNeighborDist, 167, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 167, __pyx_L1_error)
 
-  /* "rvo23d.pyx":158
+  /* "rvo23d.pyx":169
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentPosition(self, size_t agent_no, tuple position):
  */
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentNeighborDist, 158, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentNeighborDist, 169, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 169, __pyx_L1_error)
 
-  /* "rvo23d.pyx":160
+  /* "rvo23d.pyx":171
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentPosition(self, size_t agent_no, tuple position):             # <<<<<<<<<<<<<<
  *         cdef Vector3 c_pos = Vector3(position[0], position[1], position[2])
  *         self.thisptr.setAgentPosition(agent_no, c_pos)
  */
-  __pyx_tuple__37 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_position, __pyx_n_s_c_pos); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_tuple__37 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_position, __pyx_n_s_c_pos); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentPosition, 160, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentPosition, 171, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 171, __pyx_L1_error)
 
-  /* "rvo23d.pyx":163
+  /* "rvo23d.pyx":174
  *         cdef Vector3 c_pos = Vector3(position[0], position[1], position[2])
  *         self.thisptr.setAgentPosition(agent_no, c_pos)
  *     def setAgentPrefVelocity(self, size_t agent_no, tuple velocity):             # <<<<<<<<<<<<<<
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentPrefVelocity(agent_no, c_velocity)
  */
-  __pyx_tuple__39 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_velocity, __pyx_n_s_c_velocity); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_tuple__39 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_velocity, __pyx_n_s_c_velocity); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__39);
   __Pyx_GIVEREF(__pyx_tuple__39);
-  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentPrefVelocity, 163, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentPrefVelocity, 174, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 174, __pyx_L1_error)
 
-  /* "rvo23d.pyx":166
+  /* "rvo23d.pyx":177
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentPrefVelocity(agent_no, c_velocity)
  *     def setAgentRadius(self, size_t agent_no, float radius):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentRadius(agent_no, radius)
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):
  */
-  __pyx_tuple__41 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_radius); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_tuple__41 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_radius); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__41);
   __Pyx_GIVEREF(__pyx_tuple__41);
-  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentRadius, 166, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentRadius, 177, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 177, __pyx_L1_error)
 
-  /* "rvo23d.pyx":168
+  /* "rvo23d.pyx":179
  *     def setAgentRadius(self, size_t agent_no, float radius):
  *         self.thisptr.setAgentRadius(agent_no, radius)
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentTimeHorizon(agent_no, time_horizon)
  *     def setAgentVelocity(self, size_t agent_no, tuple velocity):
  */
-  __pyx_tuple__43 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_time_horizon); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_tuple__43 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_time_horizon); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 179, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__43);
   __Pyx_GIVEREF(__pyx_tuple__43);
-  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentTimeHorizon, 168, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentTimeHorizon, 179, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 179, __pyx_L1_error)
 
-  /* "rvo23d.pyx":170
+  /* "rvo23d.pyx":181
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):
  *         self.thisptr.setAgentTimeHorizon(agent_no, time_horizon)
  *     def setAgentVelocity(self, size_t agent_no, tuple velocity):             # <<<<<<<<<<<<<<
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentVelocity(agent_no, c_velocity)
  */
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentVelocity, 170, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentVelocity, 181, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 181, __pyx_L1_error)
 
-  /* "rvo23d.pyx":173
+  /* "rvo23d.pyx":184
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentVelocity(agent_no, c_velocity)
  *     def setTimeStep(self, float time_step):             # <<<<<<<<<<<<<<
  *         self.thisptr.setTimeStep(time_step)
  * 
  */
-  __pyx_tuple__46 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_time_step); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_tuple__46 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_time_step); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 184, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__46);
   __Pyx_GIVEREF(__pyx_tuple__46);
-  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setTimeStep, 173, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setTimeStep, 184, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 184, __pyx_L1_error)
 
-  /* "rvo23d.pyx":177
+  /* "rvo23d.pyx":188
  * 
  *     #
  *     def getAgentMaxAcceleration(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         """"""
  *         return self.thisptr.getAgentMaxAcceleration(agent_no)
  */
-  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentMaxAcceleration, 177, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentMaxAcceleration, 188, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(0, 188, __pyx_L1_error)
 
-  /* "rvo23d.pyx":181
+  /* "rvo23d.pyx":192
  *         return self.thisptr.getAgentMaxAcceleration(agent_no)
  * 
  *     def getAgentMaxDeceleration(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         """"""
  *         return self.thisptr.getAgentMaxDeceleration(agent_no)
  */
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentMaxDeceleration, 181, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentMaxDeceleration, 192, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 192, __pyx_L1_error)
 
-  /* "rvo23d.pyx":185
+  /* "rvo23d.pyx":196
  *         return self.thisptr.getAgentMaxDeceleration(agent_no)
  * 
  *     def setAgentMaxAcceleration(self, size_t agent_no, float max_acceleration):             # <<<<<<<<<<<<<<
  *         """"""
  *         self.thisptr.setAgentMaxAcceleration(agent_no, max_acceleration)
  */
-  __pyx_tuple__50 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_acceleration); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 185, __pyx_L1_error)
+  __pyx_tuple__50 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_acceleration); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__50);
   __Pyx_GIVEREF(__pyx_tuple__50);
-  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentMaxAcceleration, 185, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 185, __pyx_L1_error)
+  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentMaxAcceleration, 196, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 196, __pyx_L1_error)
 
-  /* "rvo23d.pyx":189
+  /* "rvo23d.pyx":200
  *         self.thisptr.setAgentMaxAcceleration(agent_no, max_acceleration)
  * 
  *     def setAgentMaxDeceleration(self, size_t agent_no, float max_deceleration):             # <<<<<<<<<<<<<<
  *         """"""
  *         self.thisptr.setAgentMaxDeceleration(agent_no, max_deceleration)
  */
-  __pyx_tuple__52 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_deceleration); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_tuple__52 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_deceleration); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__52);
   __Pyx_GIVEREF(__pyx_tuple__52);
-  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentMaxDeceleration, 189, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentMaxDeceleration, 200, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 200, __pyx_L1_error)
 
-  /* "rvo23d.pyx":193
+  /* "rvo23d.pyx":204
  *         self.thisptr.setAgentMaxDeceleration(agent_no, max_deceleration)
  * 
  *     def setAgentAccelerationLimits(self, size_t agent_no, float max_acceleration, float max_deceleration):             # <<<<<<<<<<<<<<
  *         """"""
  *         self.setAgentMaxAcceleration(agent_no, max_acceleration)
  */
-  __pyx_tuple__54 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_acceleration, __pyx_n_s_max_deceleration); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 193, __pyx_L1_error)
+  __pyx_tuple__54 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_acceleration, __pyx_n_s_max_deceleration); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__54);
   __Pyx_GIVEREF(__pyx_tuple__54);
-  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentAccelerationLimits, 193, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 193, __pyx_L1_error)
+  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentAccelerationLimits, 204, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 204, __pyx_L1_error)
+
+  /* "rvo23d.pyx":210
+ * 
+ *     #
+ *     def getAgentHorizontalSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentHorizontalSpeed(agent_no)
+ */
+  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentHorizontalSpeed, 210, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 210, __pyx_L1_error)
+
+  /* "rvo23d.pyx":214
+ *         return self.thisptr.getAgentHorizontalSpeed(agent_no)
+ * 
+ *     def getAgentVerticalUpSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentVerticalUpSpeed(agent_no)
+ */
+  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentVerticalUpSpeed, 214, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 214, __pyx_L1_error)
+
+  /* "rvo23d.pyx":218
+ *         return self.thisptr.getAgentVerticalUpSpeed(agent_no)
+ * 
+ *     def getAgentVerticalDownSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentVerticalDownSpeed(agent_no)
+ */
+  __pyx_codeobj__58 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentVerticalDownSpeed, 218, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__58)) __PYX_ERR(0, 218, __pyx_L1_error)
+
+  /* "rvo23d.pyx":222
+ *         return self.thisptr.getAgentVerticalDownSpeed(agent_no)
+ * 
+ *     def getAgentUseDirectionalSpeedLimits(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)
+ */
+  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_getAgentUseDirectionalSpeedLimit, 222, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 222, __pyx_L1_error)
+
+  /* "rvo23d.pyx":226
+ *         return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)
+ * 
+ *     def setAgentHorizontalSpeed(self, size_t agent_no, float max_horizontal_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)
+ */
+  __pyx_tuple__60 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_horizontal_speed); if (unlikely(!__pyx_tuple__60)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__60);
+  __Pyx_GIVEREF(__pyx_tuple__60);
+  __pyx_codeobj__61 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__60, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentHorizontalSpeed, 226, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__61)) __PYX_ERR(0, 226, __pyx_L1_error)
+
+  /* "rvo23d.pyx":230
+ *         self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)
+ * 
+ *     def setAgentVerticalUpSpeed(self, size_t agent_no, float max_vertical_up_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)
+ */
+  __pyx_tuple__62 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_vertical_up_speed); if (unlikely(!__pyx_tuple__62)) __PYX_ERR(0, 230, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__62);
+  __Pyx_GIVEREF(__pyx_tuple__62);
+  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentVerticalUpSpeed, 230, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 230, __pyx_L1_error)
+
+  /* "rvo23d.pyx":234
+ *         self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)
+ * 
+ *     def setAgentVerticalDownSpeed(self, size_t agent_no, float max_vertical_down_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)
+ */
+  __pyx_tuple__64 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_vertical_down_speed); if (unlikely(!__pyx_tuple__64)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__64);
+  __Pyx_GIVEREF(__pyx_tuple__64);
+  __pyx_codeobj__65 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__64, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentVerticalDownSpeed, 234, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__65)) __PYX_ERR(0, 234, __pyx_L1_error)
+
+  /* "rvo23d.pyx":238
+ *         self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)
+ * 
+ *     def setAgentDirectionalSpeeds(self, size_t agent_no, float max_horizontal_speed, float max_vertical_up_speed, float max_vertical_down_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)
+ */
+  __pyx_tuple__66 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_max_horizontal_speed, __pyx_n_s_max_vertical_up_speed, __pyx_n_s_max_vertical_down_speed); if (unlikely(!__pyx_tuple__66)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__66);
+  __Pyx_GIVEREF(__pyx_tuple__66);
+  __pyx_codeobj__67 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__66, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentDirectionalSpeeds, 238, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__67)) __PYX_ERR(0, 238, __pyx_L1_error)
+
+  /* "rvo23d.pyx":242
+ *         self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)
+ * 
+ *     def setAgentUseDirectionalSpeedLimits(self, size_t agent_no, bool use):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)
+ */
+  __pyx_tuple__68 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_use); if (unlikely(!__pyx_tuple__68)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__68);
+  __Pyx_GIVEREF(__pyx_tuple__68);
+  __pyx_codeobj__69 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__68, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_setAgentUseDirectionalSpeedLimit, 242, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__69)) __PYX_ERR(0, 242, __pyx_L1_error)
+
+  /* "rvo23d.pyx":246
+ *         self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)
+ * 
+ *     def enableDirectionalSpeedLimits(self, size_t agent_no, float horizontal_speed=4.0, float vertical_up_speed=3.2, float vertical_down_speed=2.4):             # <<<<<<<<<<<<<<
+ *         """
+ * 
+ */
+  __pyx_tuple__70 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_agent_no, __pyx_n_s_horizontal_speed, __pyx_n_s_vertical_up_speed, __pyx_n_s_vertical_down_speed); if (unlikely(!__pyx_tuple__70)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__70);
+  __Pyx_GIVEREF(__pyx_tuple__70);
+  __pyx_codeobj__71 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__70, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_rvo23d_pyx, __pyx_n_s_enableDirectionalSpeedLimits, 246, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__71)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __pyx_tuple__72 = PyTuple_Pack(3, __pyx_float_4_0, __pyx_float_3_2, __pyx_float_2_4); if (unlikely(!__pyx_tuple__72)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__72);
+  __Pyx_GIVEREF(__pyx_tuple__72);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  * def __setstate_cython__(self, __pyx_state):
  */
-  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(1, 1, __pyx_L1_error)
 
   /* "(tree fragment)":3
  * def __reduce_cython__(self):
@@ -9616,10 +11634,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  */
-  __pyx_tuple__57 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_pyx_state); if (unlikely(!__pyx_tuple__57)) __PYX_ERR(1, 3, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__57);
-  __Pyx_GIVEREF(__pyx_tuple__57);
-  __pyx_codeobj__58 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__57, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__58)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_tuple__74 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_pyx_state); if (unlikely(!__pyx_tuple__74)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__74);
+  __Pyx_GIVEREF(__pyx_tuple__74);
+  __pyx_codeobj__75 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__74, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__75)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -9630,6 +11648,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
 static CYTHON_SMALL_CODE int __Pyx_InitConstants(void) {
   if (__Pyx_CreateStringTabAndInitStrings() < 0) __PYX_ERR(0, 1, __pyx_L1_error);
+  __pyx_float_2_4 = PyFloat_FromDouble(2.4); if (unlikely(!__pyx_float_2_4)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_float_3_2 = PyFloat_FromDouble(3.2); if (unlikely(!__pyx_float_3_2)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_float_4_0 = PyFloat_FromDouble(4.0); if (unlikely(!__pyx_float_4_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -9682,15 +11703,15 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_6rvo23d_PyRVOSimulator = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_6rvo23d_PyRVOSimulator_spec, NULL); if (unlikely(!__pyx_ptype_6rvo23d_PyRVOSimulator)) __PYX_ERR(0, 75, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_6rvo23d_PyRVOSimulator_spec, __pyx_ptype_6rvo23d_PyRVOSimulator) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_ptype_6rvo23d_PyRVOSimulator = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_6rvo23d_PyRVOSimulator_spec, NULL); if (unlikely(!__pyx_ptype_6rvo23d_PyRVOSimulator)) __PYX_ERR(0, 86, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_6rvo23d_PyRVOSimulator_spec, __pyx_ptype_6rvo23d_PyRVOSimulator) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
   #else
   __pyx_ptype_6rvo23d_PyRVOSimulator = &__pyx_type_6rvo23d_PyRVOSimulator;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_6rvo23d_PyRVOSimulator) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_6rvo23d_PyRVOSimulator) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
   __pyx_ptype_6rvo23d_PyRVOSimulator->tp_print = 0;
@@ -9700,9 +11721,9 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_ptype_6rvo23d_PyRVOSimulator->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_PyRVOSimulator, (PyObject *) __pyx_ptype_6rvo23d_PyRVOSimulator) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_PyRVOSimulator, (PyObject *) __pyx_ptype_6rvo23d_PyRVOSimulator) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_6rvo23d_PyRVOSimulator) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_6rvo23d_PyRVOSimulator) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
   #endif
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -10013,408 +12034,539 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "rvo23d.pyx":87
+  /* "rvo23d.pyx":98
  *                                         maxSpeed, c_velocity)
  * 
  *     def addAgent(self, tuple pos, neighborDist=None,             # <<<<<<<<<<<<<<
  *                  maxNeighbors=None, timeHorizon=None,
  *                  radius=None, maxSpeed=None,
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_3addAgent, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_addAgent, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_3addAgent, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_addAgent, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_addAgent, __pyx_t_2) < 0) __PYX_ERR(0, 87, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_addAgent, __pyx_t_2) < 0) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":111
+  /* "rvo23d.pyx":122
  *         return agent_nr
  * 
  *     def doStep(self):             # <<<<<<<<<<<<<<
  *         with nogil:
  *             self.thisptr.doStep()
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_5doStep, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_doStep, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_5doStep, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_doStep, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_doStep, __pyx_t_2) < 0) __PYX_ERR(0, 111, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_doStep, __pyx_t_2) < 0) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":115
+  /* "rvo23d.pyx":126
  *             self.thisptr.doStep()
  * 
  *     def getAgentAgentNeighbor(self, size_t agent_no, size_t neighbor_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentAgentNeighbor(agent_no, neighbor_no)
  *     def getAgentMaxNeighbors(self, size_t agent_no):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_7getAgentAgentNeighbor, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentAgentNeig, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_7getAgentAgentNeighbor, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentAgentNeig, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentAgentNeighbor, __pyx_t_2) < 0) __PYX_ERR(0, 115, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentAgentNeighbor, __pyx_t_2) < 0) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":117
+  /* "rvo23d.pyx":128
  *     def getAgentAgentNeighbor(self, size_t agent_no, size_t neighbor_no):
  *         return self.thisptr.getAgentAgentNeighbor(agent_no, neighbor_no)
  *     def getAgentMaxNeighbors(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentMaxNeighbors(agent_no)
  *     def getAgentMaxSpeed(self, size_t agent_no):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_9getAgentMaxNeighbors, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentMaxNeighb, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_9getAgentMaxNeighbors, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentMaxNeighb, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentMaxNeighbors, __pyx_t_2) < 0) __PYX_ERR(0, 117, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentMaxNeighbors, __pyx_t_2) < 0) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":119
+  /* "rvo23d.pyx":130
  *     def getAgentMaxNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxNeighbors(agent_no)
  *     def getAgentMaxSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentMaxSpeed(agent_no)
  *     def getAgentNeighborDist(self, size_t agent_no):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_11getAgentMaxSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentMaxSpeed, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__14)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 119, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_11getAgentMaxSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentMaxSpeed, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__14)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentMaxSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 119, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentMaxSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":121
+  /* "rvo23d.pyx":132
  *     def getAgentMaxSpeed(self, size_t agent_no):
  *         return self.thisptr.getAgentMaxSpeed(agent_no)
  *     def getAgentNeighborDist(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentNeighborDist(agent_no)
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_13getAgentNeighborDist, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentNeighborD, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_13getAgentNeighborDist, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentNeighborD, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentNeighborDist, __pyx_t_2) < 0) __PYX_ERR(0, 121, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentNeighborDist, __pyx_t_2) < 0) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":123
+  /* "rvo23d.pyx":134
  *     def getAgentNeighborDist(self, size_t agent_no):
  *         return self.thisptr.getAgentNeighborDist(agent_no)
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentNumAgentNeighbors(agent_no)
  *     def getAgentPosition(self, size_t agent_no):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_15getAgentNumAgentNeighbors, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentNumAgentN, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__16)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_15getAgentNumAgentNeighbors, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentNumAgentN, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__16)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentNumAgentNeighbors, __pyx_t_2) < 0) __PYX_ERR(0, 123, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentNumAgentNeighbors, __pyx_t_2) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":125
+  /* "rvo23d.pyx":136
  *     def getAgentNumAgentNeighbors(self, size_t agent_no):
  *         return self.thisptr.getAgentNumAgentNeighbors(agent_no)
  *     def getAgentPosition(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         cdef Vector3 pos = self.thisptr.getAgentPosition(agent_no)
  *         return pos.x(), pos.y(), pos.z()
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_17getAgentPosition, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentPosition, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__18)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_17getAgentPosition, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentPosition, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__18)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentPosition, __pyx_t_2) < 0) __PYX_ERR(0, 125, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentPosition, __pyx_t_2) < 0) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":128
+  /* "rvo23d.pyx":139
  *         cdef Vector3 pos = self.thisptr.getAgentPosition(agent_no)
  *         return pos.x(), pos.y(), pos.z()
  *     def getAgentPrefVelocity(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         cdef Vector3 velocity = self.thisptr.getAgentPrefVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_19getAgentPrefVelocity, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentPrefVeloc, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_19getAgentPrefVelocity, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentPrefVeloc, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentPrefVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 128, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentPrefVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":131
+  /* "rvo23d.pyx":142
  *         cdef Vector3 velocity = self.thisptr.getAgentPrefVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getAgentRadius(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentRadius(agent_no)
  *     def getAgentTimeHorizon(self, size_t agent_no):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_21getAgentRadius, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentRadius, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_21getAgentRadius, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentRadius, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentRadius, __pyx_t_2) < 0) __PYX_ERR(0, 131, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentRadius, __pyx_t_2) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":133
+  /* "rvo23d.pyx":144
  *     def getAgentRadius(self, size_t agent_no):
  *         return self.thisptr.getAgentRadius(agent_no)
  *     def getAgentTimeHorizon(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getAgentTimeHorizon(agent_no)
  *     def getAgentVelocity(self, size_t agent_no):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_23getAgentTimeHorizon, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentTimeHoriz, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__22)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 133, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_23getAgentTimeHorizon, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentTimeHoriz, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__22)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentTimeHorizon, __pyx_t_2) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentTimeHorizon, __pyx_t_2) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":135
+  /* "rvo23d.pyx":146
  *     def getAgentTimeHorizon(self, size_t agent_no):
  *         return self.thisptr.getAgentTimeHorizon(agent_no)
  *     def getAgentVelocity(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         cdef Vector3 velocity = self.thisptr.getAgentVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_25getAgentVelocity, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentVelocity, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_25getAgentVelocity, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentVelocity, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 135, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":138
+  /* "rvo23d.pyx":149
  *         cdef Vector3 velocity = self.thisptr.getAgentVelocity(agent_no)
  *         return velocity.x(), velocity.y(), velocity.z()
  *     def getGlobalTime(self):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getGlobalTime()
  *     def getNumAgents(self):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_27getGlobalTime, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getGlobalTime, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_27getGlobalTime, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getGlobalTime, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getGlobalTime, __pyx_t_2) < 0) __PYX_ERR(0, 138, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getGlobalTime, __pyx_t_2) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":140
+  /* "rvo23d.pyx":151
  *     def getGlobalTime(self):
  *         return self.thisptr.getGlobalTime()
  *     def getNumAgents(self):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getNumAgents()
  *     def getTimeStep(self):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_29getNumAgents, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getNumAgents, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_29getNumAgents, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getNumAgents, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 151, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getNumAgents, __pyx_t_2) < 0) __PYX_ERR(0, 140, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getNumAgents, __pyx_t_2) < 0) __PYX_ERR(0, 151, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":142
+  /* "rvo23d.pyx":153
  *     def getNumAgents(self):
  *         return self.thisptr.getNumAgents()
  *     def getTimeStep(self):             # <<<<<<<<<<<<<<
  *         return self.thisptr.getTimeStep()
  * 
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_31getTimeStep, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getTimeStep, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_31getTimeStep, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getTimeStep, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 153, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getTimeStep, __pyx_t_2) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getTimeStep, __pyx_t_2) < 0) __PYX_ERR(0, 153, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":145
+  /* "rvo23d.pyx":156
  *         return self.thisptr.getTimeStep()
  * 
  *     def setAgentDefaults(self, float neighbor_dist, size_t max_neighbors, float time_horizon,             # <<<<<<<<<<<<<<
  *                          float radius, float max_speed,
  *                          tuple velocity=(0, 0)):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_33setAgentDefaults, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentDefaults, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_33setAgentDefaults, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentDefaults, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__29);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentDefaults, __pyx_t_2) < 0) __PYX_ERR(0, 145, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentDefaults, __pyx_t_2) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":152
+  /* "rvo23d.pyx":163
  *                                       radius, max_speed, c_velocity)
  * 
  *     def setAgentMaxNeighbors(self, size_t agent_no, size_t max_neighbors):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentMaxNeighbors(agent_no, max_neighbors)
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_35setAgentMaxNeighbors, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentMaxNeighb, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_35setAgentMaxNeighbors, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentMaxNeighb, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentMaxNeighbors, __pyx_t_2) < 0) __PYX_ERR(0, 152, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentMaxNeighbors, __pyx_t_2) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":154
+  /* "rvo23d.pyx":165
  *     def setAgentMaxNeighbors(self, size_t agent_no, size_t max_neighbors):
  *         self.thisptr.setAgentMaxNeighbors(agent_no, max_neighbors)
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentMaxSpeed(agent_no, max_speed)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_37setAgentMaxSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentMaxSpeed, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_37setAgentMaxSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentMaxSpeed, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentMaxSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 154, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentMaxSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":156
+  /* "rvo23d.pyx":167
  *     def setAgentMaxSpeed(self, size_t agent_no, float max_speed):
  *         self.thisptr.setAgentMaxSpeed(agent_no, max_speed)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_39setAgentNeighborDist, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentNeighborD, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_39setAgentNeighborDist, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentNeighborD, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentNeighborDist, __pyx_t_2) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentNeighborDist, __pyx_t_2) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":158
+  /* "rvo23d.pyx":169
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentPosition(self, size_t agent_no, tuple position):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_41setAgentNeighborDist, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentNeighborD, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_41setAgentNeighborDist, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentNeighborD, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentNeighborDist, __pyx_t_2) < 0) __PYX_ERR(0, 158, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentNeighborDist, __pyx_t_2) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":160
+  /* "rvo23d.pyx":171
  *     def setAgentNeighborDist(self, size_t agent_no, float neighbor_dist):
  *         self.thisptr.setAgentNeighborDist(agent_no, neighbor_dist)
  *     def setAgentPosition(self, size_t agent_no, tuple position):             # <<<<<<<<<<<<<<
  *         cdef Vector3 c_pos = Vector3(position[0], position[1], position[2])
  *         self.thisptr.setAgentPosition(agent_no, c_pos)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_43setAgentPosition, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentPosition, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_43setAgentPosition, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentPosition, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentPosition, __pyx_t_2) < 0) __PYX_ERR(0, 160, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentPosition, __pyx_t_2) < 0) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":163
+  /* "rvo23d.pyx":174
  *         cdef Vector3 c_pos = Vector3(position[0], position[1], position[2])
  *         self.thisptr.setAgentPosition(agent_no, c_pos)
  *     def setAgentPrefVelocity(self, size_t agent_no, tuple velocity):             # <<<<<<<<<<<<<<
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentPrefVelocity(agent_no, c_velocity)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_45setAgentPrefVelocity, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentPrefVeloc, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_45setAgentPrefVelocity, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentPrefVeloc, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentPrefVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentPrefVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":166
+  /* "rvo23d.pyx":177
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentPrefVelocity(agent_no, c_velocity)
  *     def setAgentRadius(self, size_t agent_no, float radius):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentRadius(agent_no, radius)
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_47setAgentRadius, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentRadius, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_47setAgentRadius, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentRadius, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentRadius, __pyx_t_2) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentRadius, __pyx_t_2) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":168
+  /* "rvo23d.pyx":179
  *     def setAgentRadius(self, size_t agent_no, float radius):
  *         self.thisptr.setAgentRadius(agent_no, radius)
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):             # <<<<<<<<<<<<<<
  *         self.thisptr.setAgentTimeHorizon(agent_no, time_horizon)
  *     def setAgentVelocity(self, size_t agent_no, tuple velocity):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_49setAgentTimeHorizon, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentTimeHoriz, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_49setAgentTimeHorizon, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentTimeHoriz, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentTimeHorizon, __pyx_t_2) < 0) __PYX_ERR(0, 168, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentTimeHorizon, __pyx_t_2) < 0) __PYX_ERR(0, 179, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":170
+  /* "rvo23d.pyx":181
  *     def setAgentTimeHorizon(self, size_t agent_no, float time_horizon):
  *         self.thisptr.setAgentTimeHorizon(agent_no, time_horizon)
  *     def setAgentVelocity(self, size_t agent_no, tuple velocity):             # <<<<<<<<<<<<<<
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentVelocity(agent_no, c_velocity)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_51setAgentVelocity, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentVelocity, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_51setAgentVelocity, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentVelocity, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 170, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 181, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":173
+  /* "rvo23d.pyx":184
  *         cdef Vector3 c_velocity = Vector3(velocity[0], velocity[1], velocity[2])
  *         self.thisptr.setAgentVelocity(agent_no, c_velocity)
  *     def setTimeStep(self, float time_step):             # <<<<<<<<<<<<<<
  *         self.thisptr.setTimeStep(time_step)
  * 
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_53setTimeStep, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setTimeStep, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_53setTimeStep, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setTimeStep, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 184, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setTimeStep, __pyx_t_2) < 0) __PYX_ERR(0, 173, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setTimeStep, __pyx_t_2) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":177
+  /* "rvo23d.pyx":188
  * 
  *     #
  *     def getAgentMaxAcceleration(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         """"""
  *         return self.thisptr.getAgentMaxAcceleration(agent_no)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_55getAgentMaxAcceleration, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentMaxAccele, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__48)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_55getAgentMaxAcceleration, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentMaxAccele, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__48)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentMaxAcceleration, __pyx_t_2) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentMaxAcceleration, __pyx_t_2) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":181
+  /* "rvo23d.pyx":192
  *         return self.thisptr.getAgentMaxAcceleration(agent_no)
  * 
  *     def getAgentMaxDeceleration(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         """"""
  *         return self.thisptr.getAgentMaxDeceleration(agent_no)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_57getAgentMaxDeceleration, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentMaxDecele, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_57getAgentMaxDeceleration, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentMaxDecele, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentMaxDeceleration, __pyx_t_2) < 0) __PYX_ERR(0, 181, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentMaxDeceleration, __pyx_t_2) < 0) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":185
+  /* "rvo23d.pyx":196
  *         return self.thisptr.getAgentMaxDeceleration(agent_no)
  * 
  *     def setAgentMaxAcceleration(self, size_t agent_no, float max_acceleration):             # <<<<<<<<<<<<<<
  *         """"""
  *         self.thisptr.setAgentMaxAcceleration(agent_no, max_acceleration)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_59setAgentMaxAcceleration, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentMaxAccele, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 185, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_59setAgentMaxAcceleration, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentMaxAccele, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentMaxAcceleration, __pyx_t_2) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentMaxAcceleration, __pyx_t_2) < 0) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":189
+  /* "rvo23d.pyx":200
  *         self.thisptr.setAgentMaxAcceleration(agent_no, max_acceleration)
  * 
  *     def setAgentMaxDeceleration(self, size_t agent_no, float max_deceleration):             # <<<<<<<<<<<<<<
  *         """"""
  *         self.thisptr.setAgentMaxDeceleration(agent_no, max_deceleration)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_61setAgentMaxDeceleration, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentMaxDecele, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__53)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_61setAgentMaxDeceleration, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentMaxDecele, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__53)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentMaxDeceleration, __pyx_t_2) < 0) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentMaxDeceleration, __pyx_t_2) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
-  /* "rvo23d.pyx":193
+  /* "rvo23d.pyx":204
  *         self.thisptr.setAgentMaxDeceleration(agent_no, max_deceleration)
  * 
  *     def setAgentAccelerationLimits(self, size_t agent_no, float max_acceleration, float max_deceleration):             # <<<<<<<<<<<<<<
  *         """"""
  *         self.setAgentMaxAcceleration(agent_no, max_acceleration)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_63setAgentAccelerationLimits, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentAccelerat, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__55)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 193, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_63setAgentAccelerationLimits, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentAccelerat, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__55)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentAccelerationLimits, __pyx_t_2) < 0) __PYX_ERR(0, 193, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentAccelerationLimits, __pyx_t_2) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":210
+ * 
+ *     #
+ *     def getAgentHorizontalSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentHorizontalSpeed(agent_no)
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_65getAgentHorizontalSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentHorizonta, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentHorizontalSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":214
+ *         return self.thisptr.getAgentHorizontalSpeed(agent_no)
+ * 
+ *     def getAgentVerticalUpSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentVerticalUpSpeed(agent_no)
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_67getAgentVerticalUpSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentVerticalU, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__57)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentVerticalUpSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 214, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":218
+ *         return self.thisptr.getAgentVerticalUpSpeed(agent_no)
+ * 
+ *     def getAgentVerticalDownSpeed(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentVerticalDownSpeed(agent_no)
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_69getAgentVerticalDownSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentVerticalD, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__58)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentVerticalDownSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":222
+ *         return self.thisptr.getAgentVerticalDownSpeed(agent_no)
+ * 
+ *     def getAgentUseDirectionalSpeedLimits(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_71getAgentUseDirectionalSpeedLimits, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_getAgentUseDirect, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__59)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_getAgentUseDirectionalSpeedLimit, __pyx_t_2) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":226
+ *         return self.thisptr.getAgentUseDirectionalSpeedLimits(agent_no)
+ * 
+ *     def setAgentHorizontalSpeed(self, size_t agent_no, float max_horizontal_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_73setAgentHorizontalSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentHorizonta, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__61)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentHorizontalSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 226, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":230
+ *         self.thisptr.setAgentHorizontalSpeed(agent_no, max_horizontal_speed)
+ * 
+ *     def setAgentVerticalUpSpeed(self, size_t agent_no, float max_vertical_up_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_75setAgentVerticalUpSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentVerticalU, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__63)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 230, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentVerticalUpSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 230, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":234
+ *         self.thisptr.setAgentVerticalUpSpeed(agent_no, max_vertical_up_speed)
+ * 
+ *     def setAgentVerticalDownSpeed(self, size_t agent_no, float max_vertical_down_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_77setAgentVerticalDownSpeed, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentVerticalD, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__65)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentVerticalDownSpeed, __pyx_t_2) < 0) __PYX_ERR(0, 234, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":238
+ *         self.thisptr.setAgentVerticalDownSpeed(agent_no, max_vertical_down_speed)
+ * 
+ *     def setAgentDirectionalSpeeds(self, size_t agent_no, float max_horizontal_speed, float max_vertical_up_speed, float max_vertical_down_speed):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_79setAgentDirectionalSpeeds, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentDirection, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__67)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentDirectionalSpeeds, __pyx_t_2) < 0) __PYX_ERR(0, 238, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":242
+ *         self.thisptr.setAgentDirectionalSpeeds(agent_no, max_horizontal_speed, max_vertical_up_speed, max_vertical_down_speed)
+ * 
+ *     def setAgentUseDirectionalSpeedLimits(self, size_t agent_no, bool use):             # <<<<<<<<<<<<<<
+ *         """"""
+ *         self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_81setAgentUseDirectionalSpeedLimits, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_setAgentUseDirect, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__69)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_setAgentUseDirectionalSpeedLimit, __pyx_t_2) < 0) __PYX_ERR(0, 242, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
+
+  /* "rvo23d.pyx":246
+ *         self.thisptr.setAgentUseDirectionalSpeedLimits(agent_no, use)
+ * 
+ *     def enableDirectionalSpeedLimits(self, size_t agent_no, float horizontal_speed=4.0, float vertical_up_speed=3.2, float vertical_down_speed=2.4):             # <<<<<<<<<<<<<<
+ *         """
+ * 
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_83enableDirectionalSpeedLimits, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator_enableDirectional, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__71)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__72);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6rvo23d_PyRVOSimulator, __pyx_n_s_enableDirectionalSpeedLimits, __pyx_t_2) < 0) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_6rvo23d_PyRVOSimulator);
 
@@ -10423,7 +12575,7 @@ if (!__Pyx_RefNanny) {
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  * def __setstate_cython__(self, __pyx_state):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_65__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator___reduce_cython, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_85__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator___reduce_cython, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__73)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -10434,7 +12586,7 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_67__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator___setstate_cython, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__58)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6rvo23d_14PyRVOSimulator_87__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyRVOSimulator___setstate_cython, NULL, __pyx_n_s_rvo23d, __pyx_d, ((PyObject *)__pyx_codeobj__75)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -14130,7 +16282,7 @@ __Pyx_PyType_GetName(PyTypeObject* tp)
     if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
         PyErr_Clear();
         Py_XDECREF(name);
-        name = __Pyx_NewRef(__pyx_n_s__59);
+        name = __Pyx_NewRef(__pyx_n_s__76);
     }
     return name;
 }

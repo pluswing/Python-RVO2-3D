@@ -293,6 +293,53 @@ namespace RVO {
 		agents_[agentNo]->maxDeceleration_ = maxDeceleration;
 	}
 
+	float RVOSimulator::getAgentHorizontalSpeed(size_t agentNo) const
+	{
+		return agents_[agentNo]->maxHorizontalSpeed_;
+	}
+
+	float RVOSimulator::getAgentVerticalUpSpeed(size_t agentNo) const
+	{
+		return agents_[agentNo]->maxVerticalUpSpeed_;
+	}
+
+	float RVOSimulator::getAgentVerticalDownSpeed(size_t agentNo) const
+	{
+		return agents_[agentNo]->maxVerticalDownSpeed_;
+	}
+
+	bool RVOSimulator::getAgentUseDirectionalSpeedLimits(size_t agentNo) const
+	{
+		return agents_[agentNo]->useDirectionalSpeedLimits_;
+	}
+
+	void RVOSimulator::setAgentHorizontalSpeed(size_t agentNo, float maxHorizontalSpeed)
+	{
+		agents_[agentNo]->maxHorizontalSpeed_ = maxHorizontalSpeed;
+	}
+
+	void RVOSimulator::setAgentVerticalUpSpeed(size_t agentNo, float maxVerticalUpSpeed)
+	{
+		agents_[agentNo]->maxVerticalUpSpeed_ = maxVerticalUpSpeed;
+	}
+
+	void RVOSimulator::setAgentVerticalDownSpeed(size_t agentNo, float maxVerticalDownSpeed)
+	{
+		agents_[agentNo]->maxVerticalDownSpeed_ = maxVerticalDownSpeed;
+	}
+
+	void RVOSimulator::setAgentDirectionalSpeeds(size_t agentNo, float maxHorizontalSpeed, float maxVerticalUpSpeed, float maxVerticalDownSpeed)
+	{
+		agents_[agentNo]->maxHorizontalSpeed_ = maxHorizontalSpeed;
+		agents_[agentNo]->maxVerticalUpSpeed_ = maxVerticalUpSpeed;
+		agents_[agentNo]->maxVerticalDownSpeed_ = maxVerticalDownSpeed;
+	}
+
+	void RVOSimulator::setAgentUseDirectionalSpeedLimits(size_t agentNo, bool use)
+	{
+		agents_[agentNo]->useDirectionalSpeedLimits_ = use;
+	}
+
 	void RVOSimulator::setTimeStep(float timeStep)
 	{
 		timeStep_ = timeStep;

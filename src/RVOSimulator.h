@@ -334,6 +334,71 @@ namespace RVO {
 		RVO_API void setAgentMaxDeceleration(size_t agentNo, float maxDeceleration);
 
 		/**
+		 * \brief   Returns the horizontal maximum speed of a specified agent.
+		 * \param   agentNo  The number of the agent whose horizontal maximum speed is to be retrieved.
+		 * \return  The present horizontal maximum speed of the agent.
+		 */
+		RVO_API float getAgentHorizontalSpeed(size_t agentNo) const;
+
+		/**
+		 * \brief   Returns the vertical upward maximum speed of a specified agent.
+		 * \param   agentNo  The number of the agent whose vertical upward maximum speed is to be retrieved.
+		 * \return  The present vertical upward maximum speed of the agent.
+		 */
+		RVO_API float getAgentVerticalUpSpeed(size_t agentNo) const;
+
+		/**
+		 * \brief   Returns the vertical downward maximum speed of a specified agent.
+		 * \param   agentNo  The number of the agent whose vertical downward maximum speed is to be retrieved.
+		 * \return  The present vertical downward maximum speed of the agent.
+		 */
+		RVO_API float getAgentVerticalDownSpeed(size_t agentNo) const;
+
+		/**
+		 * \brief   Returns whether directional speed limits are enabled for a specified agent.
+		 * \param   agentNo  The number of the agent whose directional speed limit status is to be retrieved.
+		 * \return  True if directional speed limits are enabled, false otherwise.
+		 */
+		RVO_API bool getAgentUseDirectionalSpeedLimits(size_t agentNo) const;
+
+		/**
+		 * \brief   Sets the horizontal maximum speed of a specified agent.
+		 * \param   agentNo              The number of the agent whose horizontal maximum speed is to be modified.
+		 * \param   maxHorizontalSpeed   The replacement horizontal maximum speed. Must be non-negative.
+		 */
+		RVO_API void setAgentHorizontalSpeed(size_t agentNo, float maxHorizontalSpeed);
+
+		/**
+		 * \brief   Sets the vertical upward maximum speed of a specified agent.
+		 * \param   agentNo              The number of the agent whose vertical upward maximum speed is to be modified.
+		 * \param   maxVerticalUpSpeed   The replacement vertical upward maximum speed. Must be non-negative.
+		 */
+		RVO_API void setAgentVerticalUpSpeed(size_t agentNo, float maxVerticalUpSpeed);
+
+		/**
+		 * \brief   Sets the vertical downward maximum speed of a specified agent.
+		 * \param   agentNo              The number of the agent whose vertical downward maximum speed is to be modified.
+		 * \param   maxVerticalDownSpeed The replacement vertical downward maximum speed. Must be non-negative.
+		 */
+		RVO_API void setAgentVerticalDownSpeed(size_t agentNo, float maxVerticalDownSpeed);
+
+		/**
+		 * \brief   Sets all directional maximum speeds of a specified agent at once.
+		 * \param   agentNo              The number of the agent whose directional maximum speeds are to be modified.
+		 * \param   maxHorizontalSpeed   The horizontal maximum speed. Must be non-negative.
+		 * \param   maxVerticalUpSpeed   The vertical upward maximum speed. Must be non-negative.
+		 * \param   maxVerticalDownSpeed The vertical downward maximum speed. Must be non-negative.
+		 */
+		RVO_API void setAgentDirectionalSpeeds(size_t agentNo, float maxHorizontalSpeed, float maxVerticalUpSpeed, float maxVerticalDownSpeed);
+
+		/**
+		 * \brief   Enables or disables directional speed limits for a specified agent.
+		 * \param   agentNo  The number of the agent whose directional speed limit status is to be modified.
+		 * \param   use      True to enable directional speed limits, false to use traditional spherical limits.
+		 */
+		RVO_API void setAgentUseDirectionalSpeedLimits(size_t agentNo, bool use);
+
+		/**
 		 * \brief   Sets the time step of the simulation.
 		 * \param   timeStep  The time step of the simulation. Must be positive.
 		 */
