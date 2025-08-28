@@ -87,6 +87,17 @@ namespace RVO {
 		 */
 		Vector3 applyDirectionalSpeedLimits(const Vector3 &velocity);
 
+		/**
+		 * \brief   Computes adaptive preferred velocity for goal proximity situations.
+		 * \return  The adaptive preferred velocity vector.
+		 */
+		Vector3 getAdaptivePrefVelocity();
+
+		/**
+		 * \brief   Applies aggressive motion correction to prevent deadlock near goals.
+		 */
+		void applyAggressiveMotionCorrection();
+
 		Vector3 newVelocity_;
 		Vector3 position_;
 		Vector3 prefVelocity_;

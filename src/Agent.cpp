@@ -178,11 +178,17 @@ namespace RVO {
 			orcaPlanes_.push_back(plane);
 		}
 
-		const size_t planeFail = linearProgram3(orcaPlanes_, maxSpeed_, prefVelocity_, false, newVelocity_);
+		// 適応的加速度制限: 目標近傍での動きを改善
+		Vector3 adaptivePrefVelocity = getAdaptivePrefVelocity();
+
+		const size_t planeFail = linearProgram3(orcaPlanes_, maxSpeed_, adaptivePrefVelocity, false, newVelocity_);
 
 		if (planeFail < orcaPlanes_.size()) {
 			linearProgram4(orcaPlanes_, planeFail, maxSpeed_, newVelocity_);
 		}
+
+		// 低速状態での積極的補正を適用
+		applyAggressiveMotionCorrection();
 	}
 
 	void Agent::insertAgentNeighbor(const Agent *agent, float &rangeSq)
@@ -245,6 +251,121 @@ namespace RVO {
 		}
 		
 		return result;
+	}
+
+	Vector3 Agent::getAdaptivePrefVelocity()
+	{
+		// 現在の優先速度の大きさを取得
+		const float prefSpeed = abs(prefVelocity_);
+		
+		// 優先速度がほぼゼロの場合（目標に到達しようとしている）
+		if (prefSpeed <= RVO_EPSILON) {
+			return prefVelocity_;
+		}
+		
+		// 優先速度の方向を取得
+		const Vector3 prefDirection = normalize(prefVelocity_);
+		
+		// 現在の速度の大きさ
+		const float currentSpeed = abs(velocity_);
+		
+		// 適応的な速度調整
+		float adaptiveSpeed = prefSpeed;
+		
+		// ケース1: 現在の速度が非常に小さい場合
+		if (currentSpeed < 0.1f) {
+			// 最低限の速度を保証（動きを止めない）
+			const float minSpeed = std::min(0.3f, maxSpeed_ * 0.2f);
+			adaptiveSpeed = std::max(prefSpeed, minSpeed);
+		}
+		
+		// ケース2: 目標が近い場合の適応的減速
+		// 注意: prefVelocity_が目標方向を示していると仮定
+		if (prefSpeed < maxSpeed_ * 0.5f) {
+			// 段階的減速ではなく、最低限の前進速度を維持
+			const float minForwardSpeed = std::min(0.5f, maxSpeed_ * 0.3f);
+			adaptiveSpeed = std::max(prefSpeed, minForwardSpeed);
+		}
+		
+		// 最大速度制限を適用
+		adaptiveSpeed = std::min(adaptiveSpeed, maxSpeed_);
+		
+		return prefDirection * adaptiveSpeed;
+	}
+
+	void Agent::applyAggressiveMotionCorrection()
+	{
+		const float newSpeed = abs(newVelocity_);
+		const float prefSpeed = abs(prefVelocity_);
+		const float currentSpeed = abs(velocity_);
+		
+		// より積極的な条件: 低速状態を幅広く検出
+		bool isLowSpeedState = (newSpeed < 0.2f && currentSpeed < 0.2f);
+		bool hasPrefVelocity = (prefSpeed > RVO_EPSILON);
+		
+		if (isLowSpeedState && hasPrefVelocity) {
+			// 優先速度の方向を取得
+			Vector3 prefDirection = normalize(prefVelocity_);
+			
+			// より積極的な速度設定
+			float correctionSpeed = std::max(0.5f, prefSpeed * 0.7f);
+			correctionSpeed = std::min(correctionSpeed, maxSpeed_ * 0.8f);
+			
+			Vector3 correctedVelocity = prefDirection * correctionSpeed;
+			
+			// ORCA制約の緩和チェック
+			int violationCount = 0;
+			float maxViolation = 0.0f;
+			
+			for (size_t i = 0; i < orcaPlanes_.size(); ++i) {
+				float violation = (orcaPlanes_[i].point - correctedVelocity) * orcaPlanes_[i].normal;
+				if (violation > 0.0f) {
+					violationCount++;
+					maxViolation = std::max(maxViolation, violation);
+				}
+			}
+			
+			// 軽微な制約違反は許容して前進を優先
+			bool allowCorrection = false;
+			if (violationCount == 0) {
+				// 制約違反なし
+				allowCorrection = true;
+			} else if (violationCount <= 2 && maxViolation < radius_ * 0.1f) {
+				// 軽微な違反のみ（半径の10%以下）
+				allowCorrection = true;
+			} else if (orcaPlanes_.size() == 0) {
+				// ORCA制約がない場合
+				allowCorrection = true;
+			}
+			
+			if (allowCorrection) {
+				newVelocity_ = correctedVelocity;
+			} else {
+				// 制約が厳しい場合、最小限の前進を試行
+				float minSpeed = std::min(0.15f, maxSpeed_ * 0.1f);
+				Vector3 minVelocity = prefDirection * minSpeed;
+				
+				// 最小限速度でも制約チェック
+				bool minViolates = false;
+				for (size_t i = 0; i < orcaPlanes_.size(); ++i) {
+					if ((orcaPlanes_[i].point - minVelocity) * orcaPlanes_[i].normal > radius_ * 0.05f) {
+						minViolates = true;
+						break;
+					}
+				}
+				
+				if (!minViolates) {
+					newVelocity_ = minVelocity;
+				}
+			}
+		}
+		
+		// 完全停止状態での特別処理
+		if (newSpeed < RVO_EPSILON && currentSpeed < RVO_EPSILON && prefSpeed > 0.1f) {
+			Vector3 prefDirection = normalize(prefVelocity_);
+			float emergencySpeed = 0.1f;
+			newVelocity_ = prefDirection * emergencySpeed;
+		}
 	}
 
 	void Agent::update()
