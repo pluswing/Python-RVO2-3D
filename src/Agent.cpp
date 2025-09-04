@@ -299,21 +299,49 @@ namespace RVO {
 		const float prefSpeed = abs(prefVelocity_);
 		const float currentSpeed = abs(velocity_);
 		
-		// より積極的な条件: 低速状態を幅広く検出
-		bool isLowSpeedState = (newSpeed < 0.2f && currentSpeed < 0.2f);
-		bool hasPrefVelocity = (prefSpeed > RVO_EPSILON);
+		// 【収束保証1】優先的収束判定: 目標極近傍では強制停止
+		if (prefSpeed <= 0.05f) { // 5cm/s以下は停止とみなす
+			if (currentSpeed < 0.1f && newSpeed < 0.1f) {
+				newVelocity_ = Vector3(0.0f, 0.0f, 0.0f);
+				return;
+			}
+		}
 		
-		if (isLowSpeedState && hasPrefVelocity) {
-			// 優先速度の方向を取得
+		// 【収束保証2】微細振動の検出と抑制
+		static int consecutiveLowMotionSteps = 0;
+		const float microMotionThreshold = 0.03f; // 3cm/s
+		
+		if (currentSpeed < microMotionThreshold && newSpeed < microMotionThreshold) {
+			consecutiveLowMotionSteps++;
+			if (consecutiveLowMotionSteps >= 3) { // 3ステップ連続で強制停止
+				newVelocity_ = Vector3(0.0f, 0.0f, 0.0f);
+				consecutiveLowMotionSteps = 0;
+				return;
+			}
+		} else {
+			consecutiveLowMotionSteps = 0;
+		}
+		
+		// 【収束保証3】目標近傍では積極的補正を制限
+		bool isNearGoal = (prefSpeed < 0.15f);
+		bool isLowSpeedState = (newSpeed < 0.2f && currentSpeed < 0.2f);
+		bool hasPrefVelocity = (prefSpeed > 0.15f); // 閾値を大幅UP
+		bool allowAggressiveCorrection = !isNearGoal;
+		
+		if (isLowSpeedState && hasPrefVelocity && allowAggressiveCorrection) {
 			Vector3 prefDirection = normalize(prefVelocity_);
 			
-			// より積極的な速度設定
-			float correctionSpeed = std::max(0.5f, prefSpeed * 0.7f);
-			correctionSpeed = std::min(correctionSpeed, maxSpeed_ * 0.8f);
+			// 【密集対応1】ORCA制約数による動的調整
+			size_t constraintCount = orcaPlanes_.size();
+			bool isDenseEnvironment = (constraintCount > 4); // 5つ以上の制約は密集状態
+			
+			// より控えめな速度設定
+			float correctionSpeed = std::max(0.2f, prefSpeed * 0.4f);
+			correctionSpeed = std::min(correctionSpeed, maxSpeed_ * 0.4f);
 			
 			Vector3 correctedVelocity = prefDirection * correctionSpeed;
 			
-			// ORCA制約の緩和チェック
+			// ORCA制約チェック
 			int violationCount = 0;
 			float maxViolation = 0.0f;
 			
@@ -325,47 +353,54 @@ namespace RVO {
 				}
 			}
 			
-			// 軽微な制約違反は許容して前進を優先
+			// 【密集対応2】制約違反許容度の動的調整
 			bool allowCorrection = false;
 			if (violationCount == 0) {
 				// 制約違反なし
 				allowCorrection = true;
-			} else if (violationCount <= 2 && maxViolation < radius_ * 0.1f) {
-				// 軽微な違反のみ（半径の10%以下）
-				allowCorrection = true;
-			} else if (orcaPlanes_.size() == 0) {
-				// ORCA制約がない場合
-				allowCorrection = true;
+			} else if (isDenseEnvironment) {
+				// 密集環境では制約違反を大幅に許容
+				float maxAllowedViolation = radius_ * 0.3f; // 通常の6倍
+				int maxAllowedViolations = constraintCount / 2; // 半分まで許容
+				
+				if (violationCount <= maxAllowedViolations && maxViolation < maxAllowedViolation) {
+					allowCorrection = true;
+				}
+			} else {
+				// 通常環境では厳格チェック
+				if (violationCount <= 1 && maxViolation < radius_ * 0.05f) {
+					allowCorrection = true;
+				}
 			}
 			
 			if (allowCorrection) {
 				newVelocity_ = correctedVelocity;
-			} else {
-				// 制約が厳しい場合、最小限の前進を試行
-				float minSpeed = std::min(0.15f, maxSpeed_ * 0.1f);
-				Vector3 minVelocity = prefDirection * minSpeed;
+			} else if (isDenseEnvironment && prefSpeed > 1.0f) {
+				// 【密集対応3】密集時の強制前進（大きな優先速度がある場合）
+				float emergencySpeed = std::min(0.3f, prefSpeed * 0.2f);
+				Vector3 emergencyVelocity = prefDirection * emergencySpeed;
 				
-				// 最小限速度でも制約チェック
-				bool minViolates = false;
+				// 緊急時は制約を大幅緩和してチェック
+				int emergencyViolations = 0;
 				for (size_t i = 0; i < orcaPlanes_.size(); ++i) {
-					if ((orcaPlanes_[i].point - minVelocity) * orcaPlanes_[i].normal > radius_ * 0.05f) {
-						minViolates = true;
-						break;
+					float violation = (orcaPlanes_[i].point - emergencyVelocity) * orcaPlanes_[i].normal;
+					if (violation > radius_ * 0.5f) { // 半径の50%以下の違反は許容
+						emergencyViolations++;
 					}
 				}
 				
-				if (!minViolates) {
-					newVelocity_ = minVelocity;
+				if (emergencyViolations <= constraintCount * 0.7f) { // 70%まで違反許容
+					newVelocity_ = emergencyVelocity;
 				}
 			}
 		}
 		
-		// 完全停止状態での特別処理
-		if (newSpeed < RVO_EPSILON && currentSpeed < RVO_EPSILON && prefSpeed > 0.1f) {
-			Vector3 prefDirection = normalize(prefVelocity_);
-			float emergencySpeed = 0.1f;
-			newVelocity_ = prefDirection * emergencySpeed;
+		// 【収束保証4】最終安全弁: 極小速度は完全停止
+		if (abs(newVelocity_) < 0.02f) {
+			newVelocity_ = Vector3(0.0f, 0.0f, 0.0f);
 		}
+		
+		// 注意: 緊急速度設定（元の364-367行目）は削除済み - 収束を阻害するため
 	}
 
 	void Agent::update()
