@@ -105,7 +105,7 @@ namespace RVO {
 	 */
 	void linearProgram4(const std::vector<Plane> &planes, size_t beginPlane, float radius, Vector3 &result);
 
-	Agent::Agent(RVOSimulator *sim) : sim_(sim), id_(0), maxNeighbors_(0), maxSpeed_(0.0f), neighborDist_(0.0f), radius_(0.0f), timeHorizon_(0.0f), maxAcceleration_(10.0f), maxDeceleration_(15.0f), maxHorizontalSpeed_(5.0f), maxVerticalUpSpeed_(3.0f), maxVerticalDownSpeed_(3.0f), useDirectionalSpeedLimits_(false) { }
+	Agent::Agent(RVOSimulator *sim) : sim_(sim), id_(0), maxNeighbors_(0), maxSpeed_(0.0f), neighborDist_(0.0f), radius_(0.0f), timeHorizon_(0.0f), maxAcceleration_(10.0f), maxDeceleration_(15.0f), maxHorizontalSpeed_(5.0f), maxVerticalUpSpeed_(3.0f), maxVerticalDownSpeed_(3.0f), useDirectionalSpeedLimits_(false), consecutiveLowMotionSteps_(0) { }
 
 	void Agent::computeNeighbors()
 	{
@@ -255,42 +255,17 @@ namespace RVO {
 
 	Vector3 Agent::getAdaptivePrefVelocity()
 	{
-		// 現在の優先速度の大きさを取得
+		// シンプルな適応制御: 優先速度をそのまま使用
+		// 目標到達時の収束を優先し、不必要な速度強制を排除
 		const float prefSpeed = abs(prefVelocity_);
 		
-		// 優先速度がほぼゼロの場合（目標に到達しようとしている）
+		// 優先速度がほぼゼロの場合は収束状態として尊重
 		if (prefSpeed <= RVO_EPSILON) {
-			return prefVelocity_;
+			return Vector3(0.0f, 0.0f, 0.0f);
 		}
 		
-		// 優先速度の方向を取得
-		const Vector3 prefDirection = normalize(prefVelocity_);
-		
-		// 現在の速度の大きさ
-		const float currentSpeed = abs(velocity_);
-		
-		// 適応的な速度調整
-		float adaptiveSpeed = prefSpeed;
-		
-		// ケース1: 現在の速度が非常に小さい場合
-		if (currentSpeed < 0.1f) {
-			// 最低限の速度を保証（動きを止めない）
-			const float minSpeed = std::min(0.3f, maxSpeed_ * 0.2f);
-			adaptiveSpeed = std::max(prefSpeed, minSpeed);
-		}
-		
-		// ケース2: 目標が近い場合の適応的減速
-		// 注意: prefVelocity_が目標方向を示していると仮定
-		if (prefSpeed < maxSpeed_ * 0.5f) {
-			// 段階的減速ではなく、最低限の前進速度を維持
-			const float minForwardSpeed = std::min(0.5f, maxSpeed_ * 0.3f);
-			adaptiveSpeed = std::max(prefSpeed, minForwardSpeed);
-		}
-		
-		// 最大速度制限を適用
-		adaptiveSpeed = std::min(adaptiveSpeed, maxSpeed_);
-		
-		return prefDirection * adaptiveSpeed;
+		// 優先速度をそのまま返す（RVOアルゴリズムに任せる）
+		return prefVelocity_;
 	}
 
 	void Agent::applyAggressiveMotionCorrection()
@@ -299,108 +274,35 @@ namespace RVO {
 		const float prefSpeed = abs(prefVelocity_);
 		const float currentSpeed = abs(velocity_);
 		
-		// 【収束保証1】優先的収束判定: 目標極近傍では強制停止
-		if (prefSpeed <= 0.05f) { // 5cm/s以下は停止とみなす
-			if (currentSpeed < 0.1f && newSpeed < 0.1f) {
-				newVelocity_ = Vector3(0.0f, 0.0f, 0.0f);
-				return;
-			}
+		// 【シンプル収束1】目標近傍での確実な停止
+		if (prefSpeed <= 0.05f) { // 5cm/s以下は目標到達
+			newVelocity_ = Vector3(0.0f, 0.0f, 0.0f);
+			consecutiveLowMotionSteps_ = 0;
+			return;
 		}
 		
-		// 【収束保証2】微細振動の検出と抑制
-		static int consecutiveLowMotionSteps = 0;
+		// 【シンプル収束2】低速状態の検出と停止（インスタンス変数使用）
 		const float microMotionThreshold = 0.03f; // 3cm/s
 		
 		if (currentSpeed < microMotionThreshold && newSpeed < microMotionThreshold) {
-			consecutiveLowMotionSteps++;
-			if (consecutiveLowMotionSteps >= 3) { // 3ステップ連続で強制停止
+			consecutiveLowMotionSteps_++;
+			if (consecutiveLowMotionSteps_ >= 5) { // 5ステップ連続で停止
 				newVelocity_ = Vector3(0.0f, 0.0f, 0.0f);
-				consecutiveLowMotionSteps = 0;
+				consecutiveLowMotionSteps_ = 0;
 				return;
 			}
 		} else {
-			consecutiveLowMotionSteps = 0;
+			consecutiveLowMotionSteps_ = 0;
 		}
 		
-		// 【収束保証3】目標近傍では積極的補正を制限
-		bool isNearGoal = (prefSpeed < 0.15f);
-		bool isLowSpeedState = (newSpeed < 0.2f && currentSpeed < 0.2f);
-		bool hasPrefVelocity = (prefSpeed > 0.15f); // 閾値を大幅UP
-		bool allowAggressiveCorrection = !isNearGoal;
-		
-		if (isLowSpeedState && hasPrefVelocity && allowAggressiveCorrection) {
-			Vector3 prefDirection = normalize(prefVelocity_);
-			
-			// 【密集対応1】ORCA制約数による動的調整
-			size_t constraintCount = orcaPlanes_.size();
-			bool isDenseEnvironment = (constraintCount > 4); // 5つ以上の制約は密集状態
-			
-			// より控えめな速度設定
-			float correctionSpeed = std::max(0.2f, prefSpeed * 0.4f);
-			correctionSpeed = std::min(correctionSpeed, maxSpeed_ * 0.4f);
-			
-			Vector3 correctedVelocity = prefDirection * correctionSpeed;
-			
-			// ORCA制約チェック
-			int violationCount = 0;
-			float maxViolation = 0.0f;
-			
-			for (size_t i = 0; i < orcaPlanes_.size(); ++i) {
-				float violation = (orcaPlanes_[i].point - correctedVelocity) * orcaPlanes_[i].normal;
-				if (violation > 0.0f) {
-					violationCount++;
-					maxViolation = std::max(maxViolation, violation);
-				}
-			}
-			
-			// 【密集対応2】制約違反許容度の動的調整
-			bool allowCorrection = false;
-			if (violationCount == 0) {
-				// 制約違反なし
-				allowCorrection = true;
-			} else if (isDenseEnvironment) {
-				// 密集環境では制約違反を大幅に許容
-				float maxAllowedViolation = radius_ * 0.3f; // 通常の6倍
-				int maxAllowedViolations = constraintCount / 2; // 半分まで許容
-				
-				if (violationCount <= maxAllowedViolations && maxViolation < maxAllowedViolation) {
-					allowCorrection = true;
-				}
-			} else {
-				// 通常環境では厳格チェック
-				if (violationCount <= 1 && maxViolation < radius_ * 0.05f) {
-					allowCorrection = true;
-				}
-			}
-			
-			if (allowCorrection) {
-				newVelocity_ = correctedVelocity;
-			} else if (isDenseEnvironment && prefSpeed > 1.0f) {
-				// 【密集対応3】密集時の強制前進（大きな優先速度がある場合）
-				float emergencySpeed = std::min(0.3f, prefSpeed * 0.2f);
-				Vector3 emergencyVelocity = prefDirection * emergencySpeed;
-				
-				// 緊急時は制約を大幅緩和してチェック
-				int emergencyViolations = 0;
-				for (size_t i = 0; i < orcaPlanes_.size(); ++i) {
-					float violation = (orcaPlanes_[i].point - emergencyVelocity) * orcaPlanes_[i].normal;
-					if (violation > radius_ * 0.5f) { // 半径の50%以下の違反は許容
-						emergencyViolations++;
-					}
-				}
-				
-				if (emergencyViolations <= constraintCount * 0.7f) { // 70%まで違反許容
-					newVelocity_ = emergencyVelocity;
-				}
-			}
-		}
-		
-		// 【収束保証4】最終安全弁: 極小速度は完全停止
-		if (abs(newVelocity_) < 0.02f) {
+		// 【シンプル収束3】極小速度の完全停止
+		if (newSpeed < 0.02f) { // 2cm/s以下
 			newVelocity_ = Vector3(0.0f, 0.0f, 0.0f);
+			consecutiveLowMotionSteps_ = 0;
 		}
 		
-		// 注意: 緊急速度設定（元の364-367行目）は削除済み - 収束を阻害するため
+		// 複雑な補正ロジックを削除し、RVOの基本アルゴリズムに委ねる
+		// これにより収束性能が大幅に改善される
 	}
 
 	void Agent::update()

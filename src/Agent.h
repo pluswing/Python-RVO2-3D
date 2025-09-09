@@ -117,6 +117,9 @@ namespace RVO {
 		float maxVerticalUpSpeed_;         // 上昇方向の最大速度 (m/s)
 		float maxVerticalDownSpeed_;       // 下降方向の最大速度 (m/s)
 		bool useDirectionalSpeedLimits_;   // 方向別制限を使用するかのフラグ
+		
+		// 収束改善用のインスタンス変数
+		int consecutiveLowMotionSteps_;    // 低速状態の連続ステップ数（各エージェント独立）
 		std::vector<std::pair<float, const Agent *> > agentNeighbors_;
 		std::vector<Plane> orcaPlanes_;
 
